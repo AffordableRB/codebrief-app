@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "report": "sustainability-scoping.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 12,
+    "scoredClaims": 12,
+    "verified": 7,
+    "fabricated": 3,
+    "unverifiable": 2,
+    "flagged": 0,
+    "skipped": 0,
+    "fabricationRate": 25,
+    "accuracyPercent": 66.7,
+    "integrityPercent": 75
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Code Ch. 10, Art. XIII",
+        "context": "Green Buildings Ordinance | Denver Code Ch. 10, Art. XIII | Applies to buildings ≥25,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The official Denver government documents explicitly confirm that Denver Code Chapter 10, Article XIII contains the Green Buildings Ordinance and applies to buildings of 25,000 square feet or greater.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/gbo/green-buildings-ordinance.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Applies to buildings ≥25,000 SF; requires green roof OR solar panels (42% roof coverage) OR cool roof + energy reduction commitment",
+        "context": "Green Buildings Ordinance | Denver Code Ch. 10, Art. XIII | Applies to buildings ≥25,000 SF; requires green roof OR solar panels (42% roof coverage) OR cool roof + energy reduction commitment",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim misrepresents the ordinance structure by presenting \"cool roof + energy reduction commitment\" as one alternative option among three, when the cool roof is actually a mandatory baseline requirement for all projects, with additional compliance options selected separately.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "IgCC 2022",
+        "context": "Denver Green Code | Based on IgCC 2022 | Mandatory for commercial/multifamily",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The Denver Green Code 2022 is based on the International Green Construction Code 2021 (IGCC 2021), not IgCC 2022.",
+      "source": "https://up.codes/viewer/denver/igcc-2021"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2022 Denver Energy Code",
+        "context": "Solar-Ready Zone | 2022 Denver Energy Code | Commercial buildings: 60% of roof area must be solar-ready zone",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 2022 Denver Energy Code exists and explicitly requires commercial buildings to have a solar-ready zone covering not less than 60% of roof area.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "60% of roof area must be solar-ready zone",
+        "context": "Commercial buildings: 60% of roof area must be solar-ready zone; pathways for conduit routing required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 60% solar-ready zone requirement for commercial buildings is explicitly stated in Denver's Energy Code (2021 and draft 2025 versions), and the conduit routing pathway requirement is also confirmed in the authoritative code sections.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CB/solar-ready-zone-commercial"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "EV charging infrastructure preparation required",
+        "context": "Electric-Ready | State requirement (effective 2023) | EV charging infrastructure preparation required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "** The requirement is a Denver local building code requirement (effective May 1, 2023), not a state requirement as claimed in the report.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides/Electrical-Vehicle-Charging-Spaces"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Energize Denver Policy",
+        "context": "Energy Benchmarking | Energize Denver Policy | Buildings ≥25,000 SF must submit annual benchmarking data",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Energize Denver Building Performance Policy is an official Denver ordinance that requires buildings 25,000 sq. ft. and larger to meet energy-saving goals including annual benchmarking data submission.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency/Cutting-Denvers-Carbon-Pollution/Efficient-Commercial-Buildings/Denver-Building-Regulations/Energize-Denver-Building-Performance-Policy"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Buildings ≥25,000 SF must submit annual benchmarking data and meet EUI targets",
+        "context": "Energy Benchmarking | Energize Denver Policy | Buildings ≥25,000 SF must submit annual benchmarking data and meet EUI targets",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative sources, including official Denver government documents and technical guidance, explicitly confirm that buildings 25,000 SF and larger must submit annual benchmarking data and meet EUI targets under the Energize Denver Policy.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/energize-denver/rules-and-tg/building-typology-and-eui-targets.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Mixed-use with residential component must pursue full WELL Certification (not WELL Core)",
+        "context": "Note: Mixed-use with residential component must pursue full WELL Certification (not WELL Core).",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No Denver building code section or policy document on denvergov.org explicitly states this requirement; while WELL Certification standards exist, this specific Denver mandate cannot be verified through available authoritative sources.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/696/documents/Denver_Building_Code/2016_Code_Policies/IECC_C101.5.1_C103.2_C408.2.4.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "Design to 20% better than ASHRAE 90.1-2019 baseline",
+        "context": "Energy Performance: Design to 20% better than ASHRAE 90.1-2019 baseline",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While \"20% better than ASHRAE 90.1-2019\" is a valid performance metric format used in Denver's energy code framework, the search results do not confirm this as a specific mandatory requirement or standard designation in Denver's building code.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-fact-sheets-c-c407-performance-pathway.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ASHRAE 90.1-2019",
+        "context": "Design to 20% better than ASHRAE 90.1-2019 baseline",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ASHRAE 90.1-2019 is explicitly confirmed as an authoritative baseline standard in Denver's 2022 Energy Code documents and is actively used for building performance compliance.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "42% of roof area for solar PV coverage",
+        "context": "Install solar PV covering 42% of roof area to satisfy Green Buildings Ordinance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 42% of roof area solar PV coverage requirement is explicitly stated in Denver's official Green Buildings Ordinance Rules and Regulations as one of the compliance options for on-site solar panels.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4/community-planning-and-development/documents/ds/gbo/gbo_rules_regs.pdf"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "report": "site-constraints-v4.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 26,
+    "scoredClaims": 18,
+    "verified": 11,
+    "fabricated": 6,
+    "unverifiable": 1,
+    "flagged": 8,
+    "skipped": 0,
+    "fabricationRate": 33.3,
+    "accuracyPercent": 63.9,
+    "integrityPercent": 66.7
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC §13.1.5.3 (Block Sensitive)",
+        "context": "Front setback per DZC §13.1.5.3 (Block Sensitive) requires 20' - 25' typical",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Front setback 20' - 25' typical",
+        "context": "Front setback per DZC §13.1.5.3 (Block Sensitive) requires 20' - 25' typical",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Zoning Code side setback requirements",
+        "context": "Side setback per Denver Zoning Code varies by zone district",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC ADU standard reference for rear setback",
+        "context": "Rear setback per DZC (ADU standard reference) within rear 35% of lot depth",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Rear setback within rear 35% of lot depth",
+        "context": "Rear setback per DZC (ADU standard reference) within rear 35% of lot depth",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "12,000 SF × 0.375 = 4,500 SF max footprint",
+        "context": "Maximum Lot Coverage per Denver Zoning Code 37.5% (lots >30' wide): 12,000 SF × 0.375 = 4,500 SF max footprint",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 37.5% maximum lot coverage for lots wider than 30 feet is confirmed in Denver Zoning Code, and the mathematical calculation (12,000 SF × 0.375 = 4,500 SF) is correct.",
+      "source": "https://landmarkk.com/zoning-lot-coverage/"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Maximum lot coverage 37.5% for lots >30' wide",
+        "context": "Maximum Lot Coverage per Denver Zoning Code 37.5% (lots >30' wide)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative sources confirm Denver Zoning Code establishes 37.5% maximum lot coverage for lots 30 feet wide or greater, with 50% coverage for smaller lots.",
+      "source": "https://landmarkk.com/zoning-lot-coverage/"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "45,000 SF ÷ 5 stories = 9,000 SF building footprint",
+        "context": "Building Footprint calculated as 45,000 SF ÷ 5 stories = 9,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The calculation methodology is mathematically incorrect and contradicts standard building code definitions; building footprint is a horizontal measurement at grade level, not derived by dividing total square footage by number of stories.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/other-forms-and-guides/residential-permitting-guide.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Municipal Code Ch. 56 impervious surface limit",
+        "context": "Impervious Surface Limit per Denver Municipal Code Ch. 56 subject to stormwater fees",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Article 10 solar access/stepbacks",
+        "context": "Solar Access/Stepbacks per DZC Article 10",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "ADA spaces 2% minimum of total parking spaces",
+        "context": "ADA Spaces per IBC/ADA 2% minimum of total spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The 2% requirement applies only to residential occupancies (R-2, R-3, R-4) and to parking lots with 501-1,000 spaces; it is not a universal minimum for all ADA parking spaces as the claim suggests.",
+      "source": "https://up.codes/viewer/denver/ibc-2018/chapter/11/accessibility"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC/ADA parking space requirements",
+        "context": "ADA Spaces per IBC/ADA 2% minimum of total spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 2% minimum ADA parking space requirement is explicitly confirmed in Denver's adopted IBC (2018 and 2021 versions) for residential occupancies and is consistent with ADA standards for larger parking facilities.",
+      "source": "https://up.codes/viewer/denver/ibc-2018/chapter/11/accessibility"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Fire lane access 20' minimum width typical",
+        "context": "Fire Lane Access per DFD standards 20' minimum width typical",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Storm sewer max discharge 0.10 CFS (44.9 GPM)",
+        "context": "Storm Sewer City of Denver DOTI max discharge 0.10 CFS (44.9 GPM)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact numerical requirement of 0.10 CFS (44.9 GPM) for storm sewer discharge is explicitly stated in multiple authoritative Denver DOTI documents.",
+      "source": "https://www.denvergov.org/files/assets/public/v/7/doti/documents/permits/sudp/groundwater_dewatering_permitting_requirements.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Article 10.2.3.1 and Section 10.6 grading and drainage",
+        "context": "Per DZC Article 10.2.3.1 and Section 10.6 site must handle storm waters through adequate grades, paving, gutters, and drainage",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While DZC Article 10.2.3.1 is verified as addressing grading and drainage, the claim's citation of \"Section 10.6\" as a related grading and drainage section cannot be confirmed on authoritative Denver sources; search results show Section 10.6.5 exists but the broader \"Section 10.6\" designation for th",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Within 10 feet of primary street: maximum 1-foot grade difference",
+        "context": "Within 10 feet of primary street: maximum 1-foot difference between original and finished grade",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact requirement is confirmed in Denver's official Zoning Tip Sheet 3 from the Community Planning and Development department, citing DZC Section 10.6.5.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Retaining walls limited to 4 feet maximum height in primary street setback",
+        "context": "Retaining walls limited to 4 feet maximum height in primary street setback",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim is explicitly confirmed in multiple authoritative Denver sources, including official zoning tip sheets and recent Board of Adjustment decisions citing the 4-foot maximum height requirement for retaining walls in primary street setbacks.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Stormwater discharge permit required for projects >1 acre",
+        "context": "Stormwater discharge permit required for projects >1 acre",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Construction Activities Stormwater Manual explicitly requires a CASDP for projects disturbing one acre or more of land.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/standards/pwes-007.0-construction_activities_stormwater_manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Construction Activities Stormwater Discharge Permit (CASDP) required",
+        "context": "Construction Activities Stormwater Discharge Permit (CASDP) required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Construction Activities Stormwater Discharge Permit (CASDP) is explicitly confirmed as a required permit in Denver's official regulatory documents for construction activities disturbing one or more acres.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/standards/pwes-007.0-construction_activities_stormwater_manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Site Development Plan (SDP) required for mixed-use construction",
+        "context": "Site Development Plan (SDP) required for mixed-use construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official sources confirm that Site Development Plans are required for commercial construction and residential projects with three or more units, which are the components of mixed-use construction.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Zoning-Permits/Site-Development-Plan-Review"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "EV charging infrastructure required per 2022 Denver Energy Code §R404.5",
+        "context": "EV charging infrastructure required per 2022 Denver Energy Code §R404.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Section R404.5 of the 2022 Denver Energy Code addresses \"Additional Electric Infrastructure,\" not EV charging infrastructure; EV charging requirements are specified in R404.4.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/policies/dec-r404.4_r404.5_r404.6.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2025 Denver Building Code",
+        "context": "Building Code compliance per 2025 Denver Building Code",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 2025 Denver Building Code is confirmed as an official, currently adopted building code for Denver, with official documentation published on the City's authoritative domain.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2022 Denver Energy Code",
+        "context": "EV charging infrastructure required per 2022 Denver Energy Code §R404.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The 2022 Denver Energy Code exists, but §R404.5 governs additional electrical infrastructure, not EV charging infrastructure; EV charging requirements are in §R404.4 (residential) and §C405.13 (commercial).",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/policies/dec-r404.4_r404.5_r404.6.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "2022 Denver Energy Code §R404.5",
+        "context": "EV charging infrastructure required per 2022 Denver Energy Code §R404.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While §R404.5 exists in the 2022 Denver Energy Code, it addresses electric infrastructure for fossil fuel appliances, not EV charging infrastructure; EV charging requirements are specified in §R404.4.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/policies/dec-r404.4_r404.5_r404.6.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Professional engineer certification required for drainage impacts",
+        "context": "Professional engineer certification required for drainage impacts",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's authoritative sources explicitly require professional engineer certification and sealing for drainage-related work, including construction drawings, grading plans, and certificates of inspection.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/doti/documents/permits/wweng/ds_storm_and_sanitary_general_guidelines.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Proposed building footprint (9,000 SF) exceeds maximum lot coverage (4,500 SF)",
+        "context": "CRITICAL ISSUE: Proposed building footprint (9,000 SF) exceeds maximum lot coverage (4,500 SF). Design revision required.",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim with these exact figures (9,000 SF footprint exceeding 4,500 SF maximum) does not appear in searchable Denver government sources; Denver's actual lot coverage regulations use percentages (37.5%-50%) rather than fixed square footage limits.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article13_ROM_Definitions.pdf"
+    }
+  ]
+}

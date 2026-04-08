@@ -1,0 +1,328 @@
+{
+  "timestamp": "2026-04-05T17:43:07.558Z",
+  "jurisdiction": "denver",
+  "method": "search-based verification",
+  "overall": {
+    "accuracy": 39.1,
+    "totalScored": 97,
+    "verified": 27,
+    "fabricated": 19,
+    "unverifiable": 51,
+    "flagged": 13,
+    "skipped": 147,
+    "status": "FAIL"
+  },
+  "reports": [
+    {
+      "file": "energy-compliance.md",
+      "accuracy": 100,
+      "summary": {
+        "totalClaims": 18,
+        "scoredClaims": 1,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 17,
+        "fabricationRate": 0,
+        "accuracyPercent": 100
+      },
+      "duration": 6
+    },
+    {
+      "file": "zoning-feasibility.md",
+      "accuracy": 83,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 10,
+        "verified": 8,
+        "fabricated": 1,
+        "unverifiable": 1,
+        "flagged": 6,
+        "skipped": 7,
+        "fabricationRate": 10,
+        "accuracyPercent": 83
+      },
+      "duration": 71
+    },
+    {
+      "file": "accessibility-review.md",
+      "accuracy": 68.7,
+      "summary": {
+        "totalClaims": 24,
+        "scoredClaims": 15,
+        "verified": 10,
+        "fabricated": 4,
+        "unverifiable": 1,
+        "flagged": 0,
+        "skipped": 9,
+        "fabricationRate": 26.7,
+        "accuracyPercent": 68.7
+      },
+      "duration": 117
+    },
+    {
+      "file": "consultant-scoping.md",
+      "accuracy": 60,
+      "summary": {
+        "totalClaims": 13,
+        "scoredClaims": 6,
+        "verified": 3,
+        "fabricated": 1,
+        "unverifiable": 2,
+        "flagged": 0,
+        "skipped": 7,
+        "fabricationRate": 16.7,
+        "accuracyPercent": 60
+      },
+      "duration": 44
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "accuracy": 45.8,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 12,
+        "verified": 4,
+        "fabricated": 3,
+        "unverifiable": 5,
+        "flagged": 0,
+        "skipped": 11,
+        "fabricationRate": 25,
+        "accuracyPercent": 45.8
+      },
+      "duration": 91
+    },
+    {
+      "file": "sustainability-scoping.md",
+      "accuracy": 30,
+      "summary": {
+        "totalClaims": 3,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 0,
+        "skipped": 2,
+        "fabricationRate": 0,
+        "accuracyPercent": 30
+      },
+      "duration": 8
+    },
+    {
+      "file": "cost-context.md",
+      "accuracy": 27.1,
+      "summary": {
+        "totalClaims": 54,
+        "scoredClaims": 48,
+        "verified": 1,
+        "fabricated": 7,
+        "unverifiable": 40,
+        "flagged": 0,
+        "skipped": 6,
+        "fabricationRate": 14.6,
+        "accuracyPercent": 27.1
+      },
+      "duration": 411
+    },
+    {
+      "file": "program-validation.md",
+      "accuracy": 15,
+      "summary": {
+        "totalClaims": 34,
+        "scoredClaims": 2,
+        "verified": 0,
+        "fabricated": 1,
+        "unverifiable": 1,
+        "flagged": 3,
+        "skipped": 29,
+        "fabricationRate": 50,
+        "accuracyPercent": 15
+      },
+      "duration": 13
+    },
+    {
+      "file": "permitting-pathway.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 15,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 1,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 12,
+        "fabricationRate": 100,
+        "accuracyPercent": 0
+      },
+      "duration": 7
+    },
+    {
+      "file": "project-schedule.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 27,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 1,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 26,
+        "fabricationRate": 100,
+        "accuracyPercent": 0
+      },
+      "duration": 8
+    },
+    {
+      "file": "site-constraints.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 21,
+        "fabricationRate": 0,
+        "accuracyPercent": 0
+      },
+      "duration": 0
+    }
+  ],
+  "fabrications": [
+    {
+      "file": "zoning-feasibility.md",
+      "claim": "DZC Article 3-8",
+      "type": "section-citation",
+      "reason": "The specific citation \"DZC Article 3-8\" does not appear in any authoritative Denver government zoning code sources; Denver's code uses different section numbering conventions.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §209.3",
+      "type": "section-citation",
+      "reason": "ADA §209.3 specifically addresses medical care and long-term care facilities, not general passenger loading zones provided for the public as the report claims.",
+      "source": "https://www.ada-compliance.com/ada-compliance/209-and-503-passenger-loading-zones-and-bus-stops"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §206.4",
+      "type": "section-citation",
+      "reason": "While ADA §206.4 is a real section addressing accessible entrances, the claim misrepresents its requirement as \"Min. 1 entrance\" when it actually requires at least 60% of public entrances to be accessible.",
+      "source": "https://www.access-board.gov/files/ada/guides/entrances.pdf"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §213.2",
+      "type": "section-citation",
+      "reason": "The specific citation \"ADA §213.2\" does not appear in any authoritative sources, including Denver's official domain, and does not match standard ADA section numbering conventions for restroom accessibility requirements.",
+      "source": null
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §206.2.2",
+      "type": "section-citation",
+      "reason": "While ADA §206.2.2 exists, it addresses accessible routes from site arrival points and between facilities on the same site, not specifically \"separate accessible routes for different occupancies\" as claimed.",
+      "source": "https://www.corada.com/documents/2010ADAStandards/206-2"
+    },
+    {
+      "file": "consultant-scoping.md",
+      "claim": "IBC Section 1705.16",
+      "type": "section-citation",
+      "reason": "IBC Section 1705.16 covers Exterior Insulation and Finish Systems (EIFS), not Fire-Resistant Penetrations; fire-resistant penetrations are covered under IBC Section 1705.17.",
+      "source": "https://www.slc.gov/buildingservices/wp-content/uploads/sites/9/2023/07/Special-Inspection-Agreement.pdf"
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "claim": "$5,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official floodplain permit fee schedule shows base permit costs of $300-$1,500, not $5,000, contradicting the claim's stated permit cost range.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "claim": "$15,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official consolidated fee schedule shows floodplain permit costs of $300-$1,500 for standard reviews and $12,000 for dry floodproofing, not the $5,000-$15,000 range claimed in the report.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "claim": "III-A",
+      "type": "zoning-district",
+      "reason": "The \"III-A\" zoning designation does not appear in Denver's current zoning code or official zone district listings; Denver uses context-based naming conventions (S-, E-, U-, G-, etc.) rather than Roman numeral designations.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/zoning/denver-zoning-code/summary_of_zone_districts.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$1",
+      "type": "dollar-figure",
+      "reason": "The fee formula ($5,385 + $3.65 per $1,000 over $1M) is authentic per Denver ADMIN 138, but the stated range of $60,000-$85,000 is fabricated—the formula produces fees in the thousands, not tens of thousands.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138."
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$39,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official ADMIN 138 Building Code Fee Policy specifies plan review fees as percentages of permit fees (10-50% depending on review type), not fixed dollar amounts of $39,000-$55,000 or 65% of permit fees; this specific fee structure does not appear in authoritative Denver sources.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$77,600",
+      "type": "dollar-figure",
+      "reason": "Denver Water's official fee schedules show 40-unit apartment building water tap fees of $2,166 per unit (pre-2026) or $2,451 per unit (2026 phase 1), not $1,940 per unit as claimed.",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$3,000",
+      "type": "dollar-figure",
+      "reason": "The official Denver Department of Transportation and Infrastructure fee schedule shows Site Development Plan Reviews for 0-9.999 acres cost $2,500, not $3,000, and uses tiered pricing by acreage ranges rather than the base-plus-per-acre formula claimed.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$500",
+      "type": "dollar-figure",
+      "reason": "The official Denver fee schedule uses flat fees by acreage bracket, not a $2,500 base plus $500 per acre increment structure.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$289,700",
+      "type": "dollar-figure",
+      "reason": "The specific dollar figures \"$289,700\" and \"$445,100\" do not appear in any searchable Denver government fee schedules or building code documents on official sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "III-A",
+      "type": "zoning-district",
+      "reason": "No authoritative Denver government sources confirm \"III-A\" as an official zoning district designation; the designation does not appear in Denver's zoning code or building code documentation.",
+      "source": "https://library.municode.com/co/denver/codes/code_of_ordinances?nodeId=TITIIREMUCO_CH59ZO"
+    },
+    {
+      "file": "program-validation.md",
+      "claim": "III-A",
+      "type": "zoning-district",
+      "reason": "No authoritative Denver government sources reference \"III-A\" as a zoning district designation in current or historical zoning codes.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "file": "permitting-pathway.md",
+      "claim": "III-A",
+      "type": "zoning-district",
+      "reason": "Denver building code uses \"IIIA\" (without hyphen) as the official construction type designation, not \"III-A\" (with hyphen) as stated in the claim.",
+      "source": "https://up.codes/viewer/denver/ibc-2021/chapter/6/types-of-construction"
+    },
+    {
+      "file": "project-schedule.md",
+      "claim": "III-A",
+      "type": "zoning-district",
+      "reason": "Denver's current zoning code uses alphanumeric designations (e.g., E-SU-DX, U-SU-A) rather than Roman numeral zoning districts like \"III-A,\" and no search results on Denver's official sources confirm \"III-A\" as a valid zoning district designation.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    }
+  ]
+}

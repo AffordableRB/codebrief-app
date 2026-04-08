@@ -1,0 +1,491 @@
+{
+  "metadata": {
+    "report": "cost-context-v3.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 37,
+    "scoredClaims": 28,
+    "verified": 1,
+    "fabricated": 0,
+    "unverifiable": 27,
+    "flagged": 5,
+    "skipped": 4,
+    "fabricationRate": 0,
+    "accuracyPercent": 32.5
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Section 508",
+        "context": "- Fire-rated separations between residential and commercial uses per IBC Section 508",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "IBC Section 508 is a real code section addressing occupancy separations, but Denver's official sources do not appear to contain specific references to this section in their online materials.",
+      "source": "https://up.codes/s/separated-occupancies"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$237",
+        "context": "| Ground Floor Retail (8,000 SF) | $237 | $268 | $298 | Search results: Midwest single-story non-residential |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and context do not appear in searchable Denver government sources, though similar cost figures exist in general construction estimation literature.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$268",
+        "context": "| Ground Floor Retail (8,000 SF) | $237 | $268 | $298 | Search results: Midwest single-story non-residential |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $268 figure and associated cost table do not appear in accessible Denver building code or official government documents; construction cost data of this type typically derives from third-party sources rather than building codes.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$298",
+        "context": "| Ground Floor Retail (8,000 SF) | $237 | $268 | $298 | Search results: Midwest single-story non-residential |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The $298 figure appears in general construction cost databases for Midwest single-story non-residential buildings, but no authoritative Denver government source (building code, fee schedule, or official analysis) contains this specific claim in the context presented.",
+      "source": "https://www.solutionsgc.com/cost-of-commercial-construction-per-square-foot-in-the-us/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$400",
+        "context": "| Residential Above (37,000 SF) | $400 | $550 | $700 | Search results: Denver residential 2024-2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The authoritative Denver fee policy document (ADMIN 138) exists and references Table No. 1 for permit fees, but the actual fee table with specific dollar amounts is not accessible in the search results.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$550",
+        "context": "| Residential Above (37,000 SF) | $400 | $550 | $700 | Search results: Denver residential 2024-2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific fee table containing the $550 figure for residential projects above 37,000 SF could not be accessed from Denver's official sources in the search results, though the policy framework exists.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$700",
+        "context": "| Residential Above (37,000 SF) | $400 | $550 | $700 | Search results: Denver residential 2024-2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific fee table (Table No. 1) from Denver's ADMIN 138 policy that would contain these dollar figures could not be accessed through available search results to verify the claim.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$372",
+        "context": "| Blended Average | $372 | $503 | $634 | Weighted by SF |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific table with the dollar figures $372, $503, and $634 labeled as \"Blended Average\" and \"Weighted by SF\" could not be located in Denver's official government sources despite targeted searches.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$503",
+        "context": "| Blended Average | $372 | $503 | $634 | Weighted by SF |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific table containing the dollar figures $372, $503, and $634 labeled as \"Blended Average\" and \"Weighted by SF\" could not be located in accessible Denver government authoritative sources despite targeted searches of building code and development fee documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$634",
+        "context": "| Blended Average | $372 | $503 | $634 | Weighted by SF |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure table with $372, $503, and $634 as blended averages weighted by SF could not be found in any accessible Denver government sources despite targeted searches of official domains.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$372/SF",
+        "context": "| Low | 45,000 SF × $372/SF | $16,740,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $372/SF figure does not appear in accessible Denver municipal building code, zoning code, or official fee schedule documents, and cannot be verified against authoritative sources.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$16,740,000",
+        "context": "| Low | 45,000 SF × $372/SF | $16,740,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While $372/SF is a documented Denver construction cost rate, the specific $16,740,000 figure and its context in a building code analysis report could not be found in authoritative Denver government sources.",
+      "source": "https://estimationqs.com/building-costs-per-square-foot-in-the-city-of-denver-co-usa/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$503/SF",
+        "context": "| Mid | 45,000 SF × $503/SF | $22,635,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $503/SF cost figure and $22,635,000 calculation do not appear in accessible Denver government sources, and without access to the original building code analysis report or its cited sources, the claim cannot be verified or contradicted.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$22,635,000",
+        "context": "| Mid | 45,000 SF × $503/SF | $22,635,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and construction cost calculation do not appear in accessible Denver government authoritative sources, and the claim cannot be verified or contradicted through available web searches.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$634/SF",
+        "context": "| High | 45,000 SF × $634/SF | $28,530,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific cost figure of $634/SF does not appear in searchable Denver government authoritative sources, though it falls within plausible ranges for high-end construction; without access to the original building code analysis report, the claim cannot be verified or contradicted.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$28,530,000",
+        "context": "| High | 45,000 SF × $634/SF | $28,530,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and cost calculation do not appear in accessible Denver government sources, and the claim cannot be verified against authoritative documentation.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$125/hour",
+        "context": "| Plan Review Fee | ⚠ VERIFY WITH DENVER CPD | $125/hour for additional reviews per search results |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$100",
+        "context": "| Express Plan Review | ⚠ VERIFY WITH DENVER CPD | 20% of permit fee (minimum $100) per search results |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$6/SF",
+        "context": "| Affordable Housing Linkage Fee | ⚠ VERIFY WITH DENVER CPD | $6/SF for commercial + residential fee structure |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$200,000",
+        "context": "| Total Est. Fees | $200,000 - $500,000 | ⚠ VERIFY ALL AMOUNTS |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$500,000",
+        "context": "| Total Est. Fees | $200,000 - $500,000 | ⚠ VERIFY ALL AMOUNTS |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,800,000",
+        "context": "| Architecture/Engineering | 8-12% | $1,800,000 - $2,700,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and percentage range cannot be located in accessible Denver building code or official government sources, despite targeted searches of authoritative jurisdictional domains.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$2,700,000",
+        "context": "| Architecture/Engineering | 8-12% | $1,800,000 - $2,700,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific cost estimate table with the $2,700,000 figure could not be found in accessible Denver building code documents or authoritative sources, though the claim is too specific to definitively rule out without access to all possible code sections.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$450,000",
+        "context": "| Permits/Fees/Impact Fees | 2-4% | $450,000 - $900,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific claim of \"$450,000 - $900,000\" at \"2-4%\" for permits/fees/impact fees cannot be located on authoritative Denver government sources, though the claim is too vague to definitively contradict without knowing the underlying project valuation or context.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$900,000",
+        "context": "| Permits/Fees/Impact Fees | 2-4% | $450,000 - $900,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific claim of \"$450,000 - $900,000\" for permits/fees/impact fees at 2-4% does not appear in searchable Denver government sources, though the context suggests it may be from a project-specific analysis rather than a standard fee schedule.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$225,000",
+        "context": "| Testing/Inspection | 1-2% | $225,000 - $450,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure range ($225,000-$450,000) for testing/inspection costs does not appear in accessible Denver government sources or official building code documents, making it impossible to confirm or contradict the claim.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$675,000",
+        "context": "| Legal/Insurance | 1-3% | $225,000 - $675,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific claim cannot be verified against authoritative Denver government sources; no official Denver building code analysis report containing this exact cost range and category was found in web-accessible sources.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,130,000",
+        "context": "| Contingency | 5-10% | $1,130,000 - $2,260,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and contingency claim cannot be found in Denver's official government sources or publicly available building code documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$2,260,000",
+        "context": "| Contingency | 5-10% | $1,130,000 - $2,260,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figures and contingency percentages cannot be located in Denver's official building code documents or government sources available through web search.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$4,280,000",
+        "context": "| Total Soft Costs | 19-35% | $4,280,000 - $7,885,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figures and soft costs table cannot be located in accessible Denver government authoritative sources despite targeted searches of official Denver documents and building code materials.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$7,885,000",
+        "context": "| Total Soft Costs | 19-35% | $4,280,000 - $7,885,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figures ($4,280,000 - $7,885,000) and soft costs percentage range (19-35%) do not appear in accessible Denver government sources or authoritative building code documentation available online.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$45",
+        "context": "- Labor rates: $45-62/hour (search results)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The claim presents a generalized labor rate range without specifying which trade classifications or code sections it references; while Denver prevailing wage documents contain rates within and around this range, the specific \"$45-62/hour\" designation does not appear as an official rate in authoritat",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/auditor/documents/denver-labor/2026/prevailing-wage-determinations/heavy-mod-0_1_2_26.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$19.29",
+        "context": "- Denver minimum wage: $19.29 effective January 1, 2026 (search results)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim is explicitly confirmed by the official City and County of Denver Department of Finance announcement that Denver's minimum wage is $19.29 effective January 1, 2026.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Finance/News/2025/Denver-Local-Minimum-Wage-Adjusts-to-19.29-per-Hour-for-2026"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "45,000 SF",
+        "context": "Size: 45,000 SF | Stories: 5",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "8,000 SF",
+        "context": "Configuration: 8,000 SF ground floor retail + 37,000 SF residential (40 units)",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "37,000 SF",
+        "context": "Configuration: 8,000 SF ground floor retail + 37,000 SF residential (40 units)",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "40 units",
+        "context": "Configuration: 8,000 SF ground floor retail + 37,000 SF residential (40 units)",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    }
+  ]
+}

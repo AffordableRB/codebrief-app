@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "report": "cost-context.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 28,
+    "scoredClaims": 18,
+    "verified": 4,
+    "fabricated": 4,
+    "unverifiable": 10,
+    "flagged": 10,
+    "skipped": 0,
+    "fabricationRate": 22.2,
+    "accuracyPercent": 50,
+    "integrityPercent": 77.8
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Section 508",
+        "context": "Fire-rated separations between residential and commercial uses per IBC Section 508",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "IBC Section 508 is a real, existing section of the International Building Code that addresses mixed-use and occupancy requirements, including fire-rated separations between different occupancy types.",
+      "source": "https://www.thebuildingcodeforum.com/forum/threads/occupancy-separation-and-area-separation-ibc-section-508.35635/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$237/SF to $298/SF for ground floor retail",
+        "context": "Ground Floor Retail (8,000 SF): Low $237, Mid $268, High $298 per SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific dollar figures ($237/SF to $298/SF) do not appear in searchable Denver government sources or official building code documents; while these figures exist as generic national commercial construction cost benchmarks, they cannot be verified as authoritative Denver building code or zoning s",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$400/SF to $700/SF for residential above",
+        "context": "Residential Above (37,000 SF): Low $400, Mid $550, High $700 per SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the $400-$700 per SF range for Denver residential construction is supported by market sources, the specific claim format and context from an official \"building code analysis report\" cannot be verified through authoritative Denver government sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$372/SF to $634/SF blended average",
+        "context": "Blended Average: Low $372, Mid $503, High $634 per SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific dollar figures ($372/SF, $503/SF, $634/SF) and \"blended average\" terminology do not appear in accessible Denver government sources, and the claim cannot be confirmed or contradicted by authoritative web-indexed sources.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "45,000 SF × $372/SF = $16,740,000",
+        "context": "Low scenario: 45,000 SF × $372/SF = $16,740,000",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific calculation does not appear in any accessible Denver government authoritative sources, though the mathematical result is correct and the cost per square foot falls within documented Denver construction cost ranges.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "45,000 SF × $503/SF = $22,635,000",
+        "context": "Mid scenario: 45,000 SF × $503/SF = $22,635,000",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific calculation cannot be found in accessible Denver government authoritative sources, and without access to the original building code analysis report itself, the claim cannot be verified or contradicted through web search.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "45,000 SF × $634/SF = $28,530,000",
+        "context": "High scenario: 45,000 SF × $634/SF = $28,530,000",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific calculation cannot be found in accessible Denver government authoritative sources, and without access to the original building code analysis report, the claim cannot be verified or contradicted.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$125/hour for additional plan reviews",
+        "context": "Plan Review Fee: $125/hour for additional reviews per search results",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "20% of permit fee (minimum $100) for express plan review",
+        "context": "Express Plan Review: 20% of permit fee (minimum $100) per search results",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$6/SF for affordable housing linkage fee",
+        "context": "Affordable Housing Linkage Fee: $6/SF for commercial + residential fee structure",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$200,000 - $500,000 total estimated fees",
+        "context": "Total Est. Fees: $200,000 - $500,000",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "8-12% of construction for architecture/engineering",
+        "context": "Architecture/Engineering: 8-12% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim of \"8-12% of construction for architecture/engineering\" does not appear in accessible Denver building code documents or official sources, though industry standards suggest lower percentages (2-5% for architecture, 1-3% for engineering).",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "2-4% of construction for permits/fees/impact fees",
+        "context": "Permits/Fees/Impact Fees: 2-4% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver does charge permits, fees, and impact fees, the search results do not contain an authoritative source explicitly stating a combined 2-4% of construction cost figure for all three categories together.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "1-2% of construction for testing/inspection",
+        "context": "Testing/Inspection: 1-2% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "No Denver Building Code section or official policy establishes a \"1-2% of construction cost\" requirement for testing/inspection; the code instead requires inspections based on work type, not cost percentage.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "1-3% of construction for legal/insurance",
+        "context": "Legal/Insurance: 1-3% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver building code or official city source was found that specifies a 1-3% construction cost requirement for legal/insurance expenses; the claim may be a general industry guideline rather than a codified requirement.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "2-4% of construction for financing",
+        "context": "Financing: 2-4% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver building code or official policy documents contain a specific \"2-4% of construction for financing\" requirement; the claim is too vague to verify and may conflate general construction financing practices with actual code requirements.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "5-10% of construction for contingency",
+        "context": "Contingency: 5-10% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The Denver Building Code does not contain a requirement for \"5-10% of construction for contingency\" as a mandatory code provision; this appears to be industry best practice presented as a code requirement.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "19-35% total soft costs",
+        "context": "Total Soft Costs: 19-35% of construction cost",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific claim of \"19-35% total soft costs\" as a Denver building code requirement does not appear in any authoritative Denver building code documents or official city sources.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$45-62/hour labor rates",
+        "context": "Labor rates: $45-62/hour (search results)",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$19.29 Denver minimum wage effective January 1, 2026",
+        "context": "Denver minimum wage: $19.29 effective January 1, 2026",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "+1.52% quarterly cost increases",
+        "context": "Quarterly cost increases: +1.52% (search results)",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Labor +5.6% year-over-year",
+        "context": "Year-over-year: Labor +5.6%, Materials +9.1%",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Materials +9.1% year-over-year",
+        "context": "Year-over-year: Labor +5.6%, Materials +9.1%",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Materials cost +15% above national average",
+        "context": "Materials cost +15% above national average (search results)",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Affordable housing requirements for 40+ unit developments",
+        "context": "Affordable housing requirements for 40+ unit developments",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's mandatory affordable housing requirements apply to residential developments of 10 or more units, not 40+ units as claimed.",
+      "source": "https://www.kaplankirsch.com/resources-and-news/denver-city-council-adopts-mandatory-affordable-housing-requirements/"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Wildfire resiliency regulations (Appendix T)",
+        "context": "Wildfire resiliency regulations (Appendix T) may apply",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The 2025 Denver Building Code explicitly designates Appendix T as \"Denver Wildfire Resiliency Regulations,\" confirming the claim's accuracy.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "HB 24-1304 parking regulation changes",
+        "context": "Parking regulation changes under HB 24-1304",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "HB 24-1304 is a real Colorado state law signed in May 2024 that makes specific parking regulation changes, and Denver has published official implementation guidance confirming how the law affects the city's parking requirements.",
+      "source": "https://leg.colorado.gov/bills/hb24-1304"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Community Planning & Development",
+        "context": "All specific fee amounts must be verified with Denver Community Planning & Development",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The agency \"Community Planning and Development\" is confirmed as an official City and County of Denver department on denvergov.org, and the claim's reference to \"Denver Community Planning & Development\" is a recognized variation of this official agency name.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development"
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "timestamp": "2026-04-05T19:41:58.418Z",
+  "jurisdiction": "denver",
+  "method": "search-based verification",
+  "overall": {
+    "accuracy": 46.6,
+    "totalScored": 81,
+    "verified": 31,
+    "fabricated": 12,
+    "unverifiable": 38,
+    "flagged": 37,
+    "skipped": 150,
+    "status": "FAIL"
+  },
+  "reports": [
+    {
+      "file": "energy-compliance.md",
+      "accuracy": 100,
+      "summary": {
+        "totalClaims": 18,
+        "scoredClaims": 1,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 17,
+        "fabricationRate": 0,
+        "accuracyPercent": 100,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "accuracy": 100,
+      "summary": {
+        "totalClaims": 7,
+        "scoredClaims": 1,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 3,
+        "skipped": 3,
+        "fabricationRate": 0,
+        "accuracyPercent": 100,
+        "integrityPercent": 100
+      },
+      "duration": 6
+    },
+    {
+      "file": "consultant-scoping.md",
+      "accuracy": 75,
+      "summary": {
+        "totalClaims": 7,
+        "scoredClaims": 2,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 0,
+        "skipped": 5,
+        "fabricationRate": 0,
+        "accuracyPercent": 75,
+        "integrityPercent": 100
+      },
+      "duration": 17
+    },
+    {
+      "file": "cost-context.md",
+      "accuracy": 51.8,
+      "summary": {
+        "totalClaims": 37,
+        "scoredClaims": 28,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 27,
+        "flagged": 5,
+        "skipped": 4,
+        "fabricationRate": 0,
+        "accuracyPercent": 51.8,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "program-validation.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 33,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 3,
+        "skipped": 29,
+        "fabricationRate": 0,
+        "accuracyPercent": 50,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "sustainability-scoping.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 3,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 0,
+        "skipped": 2,
+        "fabricationRate": 0,
+        "accuracyPercent": 50,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "permitting-pathway.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 14,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 12,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "project-schedule.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 26,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 26,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "site-constraints.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 21,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "zoning-feasibility.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 16,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 12,
+        "skipped": 4,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "code-analysis.md",
+      "accuracy": 65.5,
+      "summary": {
+        "totalClaims": 58,
+        "scoredClaims": 29,
+        "verified": 16,
+        "fabricated": 7,
+        "unverifiable": 6,
+        "flagged": 10,
+        "skipped": 19,
+        "fabricationRate": 24.1,
+        "accuracyPercent": 65.5,
+        "integrityPercent": 75.9
+      },
+      "duration": 196
+    },
+    {
+      "file": "accessibility-review.md",
+      "accuracy": 66.7,
+      "summary": {
+        "totalClaims": 26,
+        "scoredClaims": 18,
+        "verified": 11,
+        "fabricated": 5,
+        "unverifiable": 2,
+        "flagged": 0,
+        "skipped": 8,
+        "fabricationRate": 27.8,
+        "accuracyPercent": 66.7,
+        "integrityPercent": 72.2
+      },
+      "duration": 115
+    }
+  ],
+  "fabrications": [
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 Table 504.3",
+      "type": "section-citation",
+      "reason": "The claim cites \"IBC 2024 Table 504.3\" for story limits, but IBC 2024 Table 504.3 specifies building height in feet; story limits are found in Table 504.4.",
+      "source": "https://up.codes/s/number-of-stories"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 Table 504.4",
+      "type": "section-citation",
+      "reason": "IBC 2024 Table 504.4 governs \"Number of Stories,\" not \"Height Limits - Feet\"; height limits are in Table 504.3.",
+      "source": "https://up.codes/s/number-of-stories"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 Table 1006.3.1",
+      "type": "section-citation",
+      "reason": "IBC 2024 uses Table 1006.3.3 for minimum exits per story, not Table 1006.3.1, which was the designation in earlier code versions.",
+      "source": "https://up.codes/s/numbers-of-exits-and-exit-access-doorways"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 Table 1017.1",
+      "type": "section-citation",
+      "reason": "The claim cites \"IBC 2024 Table 1017.1\" for travel distance requirements, but search results consistently show that travel distance limitations are specified in Section 1017.2 and Table 1017.2, not Table 1017.1.",
+      "source": "https://up.codes/viewer/general-services-administration/ibc-2024/chapter/10/means-of-egress"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 §907.2.8",
+      "type": "section-citation",
+      "reason": "While IBC 2024 §907.2.8 exists, it covers Group R-1 occupancies, not R-2 occupancies as claimed in the report.",
+      "source": "https://www.revisor.mn.gov/rules/1305.0907/"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IPC 2024 §410.1",
+      "type": "section-citation",
+      "reason": "IPC 2024 §410.1 does not contain occupancy-based drinking fountain requirements; it addresses approval standards and restaurant exceptions, while quantity requirements are found in other sections.",
+      "source": "https://www.phcppros.com/articles/10968-ipc-code-changes-part-3"
+    },
+    {
+      "file": "code-analysis.md",
+      "claim": "IBC 2024 §3001.3",
+      "type": "section-citation",
+      "reason": "While IBC 2024 §3001.3 exists, it addresses referenced standards for elevator design, not elevator requirements based on building height; the actual height threshold is four or more stories, not three.",
+      "source": "https://up.codes/viewer/general-services-administration/ibc-2024/chapter/30/elevators-and-conveying-systems"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §208.2.4",
+      "type": "section-citation",
+      "reason": "The specific section citation \"ADA §208.2.4\" does not appear in authoritative ADA Standards documentation; the actual van accessible parking requirement is found in a different section.",
+      "source": null
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §216.5",
+      "type": "section-citation",
+      "reason": "The specific section citation \"ADA §216.5\" does not appear on Denver's official sources or in standard ADA documentation; this section number does not exist in the 2010 ADA Standards.",
+      "source": null
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §227.3",
+      "type": "section-citation",
+      "reason": "The exact citation \"ADA §227.3\" does not appear in any search results and does not correspond to a valid section in the 2010 ADA Standards; ADA sections covering sales and service counters use different numbering conventions.",
+      "source": null
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §216.2",
+      "type": "section-citation",
+      "reason": "The specific citation \"ADA §216.2\" does not appear in authoritative sources; the 2010 ADA Standards use different section numbering for room identification signage requirements.",
+      "source": null
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §216.4",
+      "type": "section-citation",
+      "reason": "The specific section \"ADA §216.4\" does not exist in the 2010 ADA Standards; section 216 only contains subsections 216.1 through 216.3.",
+      "source": null
+    }
+  ]
+}

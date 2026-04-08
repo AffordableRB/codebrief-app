@@ -1,0 +1,425 @@
+{
+  "timestamp": "2026-04-05T19:19:43.556Z",
+  "jurisdiction": "denver",
+  "method": "search-based verification",
+  "overall": {
+    "accuracy": 48,
+    "totalScored": 185,
+    "verified": 49,
+    "fabricated": 24,
+    "unverifiable": 112,
+    "flagged": 20,
+    "skipped": 160,
+    "status": "FAIL"
+  },
+  "reports": [
+    {
+      "file": "energy-compliance.md",
+      "accuracy": 100,
+      "summary": {
+        "totalClaims": 18,
+        "scoredClaims": 1,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 17,
+        "fabricationRate": 0,
+        "accuracyPercent": 100,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "cost-context-v3.md",
+      "accuracy": 51.8,
+      "summary": {
+        "totalClaims": 37,
+        "scoredClaims": 28,
+        "verified": 1,
+        "fabricated": 0,
+        "unverifiable": 27,
+        "flagged": 5,
+        "skipped": 4,
+        "fabricationRate": 0,
+        "accuracyPercent": 51.8,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "program-validation.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 33,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 3,
+        "skipped": 29,
+        "fabricationRate": 0,
+        "accuracyPercent": 50,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "sustainability-scoping.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 3,
+        "scoredClaims": 1,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 1,
+        "flagged": 0,
+        "skipped": 2,
+        "fabricationRate": 0,
+        "accuracyPercent": 50,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "permitting-pathway.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 14,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 12,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "project-schedule.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 26,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 26,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "site-constraints.md",
+      "accuracy": 0,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 0,
+        "verified": 0,
+        "fabricated": 0,
+        "unverifiable": 0,
+        "flagged": 2,
+        "skipped": 21,
+        "fabricationRate": 0,
+        "accuracyPercent": 0,
+        "integrityPercent": 100
+      },
+      "duration": 0
+    },
+    {
+      "file": "cost-context.md",
+      "accuracy": 48.9,
+      "summary": {
+        "totalClaims": 53,
+        "scoredClaims": 47,
+        "verified": 4,
+        "fabricated": 5,
+        "unverifiable": 38,
+        "flagged": 0,
+        "skipped": 6,
+        "fabricationRate": 10.6,
+        "accuracyPercent": 48.9,
+        "integrityPercent": 89.4
+      },
+      "duration": 0
+    },
+    {
+      "file": "cost-context-v2.md",
+      "accuracy": 51.1,
+      "summary": {
+        "totalClaims": 52,
+        "scoredClaims": 46,
+        "verified": 6,
+        "fabricated": 5,
+        "unverifiable": 35,
+        "flagged": 2,
+        "skipped": 4,
+        "fabricationRate": 10.9,
+        "accuracyPercent": 51.1,
+        "integrityPercent": 89.1
+      },
+      "duration": 0
+    },
+    {
+      "file": "zoning-feasibility.md",
+      "accuracy": 78.6,
+      "summary": {
+        "totalClaims": 18,
+        "scoredClaims": 7,
+        "verified": 5,
+        "fabricated": 1,
+        "unverifiable": 1,
+        "flagged": 4,
+        "skipped": 7,
+        "fabricationRate": 14.3,
+        "accuracyPercent": 78.6,
+        "integrityPercent": 85.7
+      },
+      "duration": 0
+    },
+    {
+      "file": "accessibility-review-v2.md",
+      "accuracy": 80.4,
+      "summary": {
+        "totalClaims": 30,
+        "scoredClaims": 23,
+        "verified": 18,
+        "fabricated": 4,
+        "unverifiable": 1,
+        "flagged": 2,
+        "skipped": 5,
+        "fabricationRate": 17.4,
+        "accuracyPercent": 80.4,
+        "integrityPercent": 82.6
+      },
+      "duration": 0
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "accuracy": 54.5,
+      "summary": {
+        "totalClaims": 22,
+        "scoredClaims": 11,
+        "verified": 3,
+        "fabricated": 2,
+        "unverifiable": 6,
+        "flagged": 0,
+        "skipped": 11,
+        "fabricationRate": 18.2,
+        "accuracyPercent": 54.5,
+        "integrityPercent": 81.8
+      },
+      "duration": 0
+    },
+    {
+      "file": "accessibility-review.md",
+      "accuracy": 66.7,
+      "summary": {
+        "totalClaims": 24,
+        "scoredClaims": 15,
+        "verified": 10,
+        "fabricated": 5,
+        "unverifiable": 0,
+        "flagged": 0,
+        "skipped": 9,
+        "fabricationRate": 33.3,
+        "accuracyPercent": 66.7,
+        "integrityPercent": 66.7
+      },
+      "duration": 0
+    },
+    {
+      "file": "consultant-scoping.md",
+      "accuracy": 40,
+      "summary": {
+        "totalClaims": 12,
+        "scoredClaims": 5,
+        "verified": 1,
+        "fabricated": 2,
+        "unverifiable": 2,
+        "flagged": 0,
+        "skipped": 7,
+        "fabricationRate": 40,
+        "accuracyPercent": 40,
+        "integrityPercent": 60
+      },
+      "duration": 0
+    }
+  ],
+  "fabrications": [
+    {
+      "file": "cost-context.md",
+      "claim": "$39,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official ADMIN 138 Building Code Fee Policy establishes plan review fees as percentages of permit fees (20%, 50%, or 10% depending on project type), not fixed dollar amounts of $39,000-$55,000.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$77,600",
+      "type": "dollar-figure",
+      "reason": "The claimed fee of $1,940 per unit for a 40-unit building does not match Denver Water's published SDC rates; current rates are $2,451 per unit (2026) or $2,166 per unit (pre-2026).",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$1,940 per unit",
+      "type": "dollar-figure",
+      "reason": "Denver Water's official sources show current tap fees for 40-unit apartment buildings are $2,166 per unit (rising to $2,451 in 2026), not $1,940 per unit as claimed.",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$3,000",
+      "type": "dollar-figure",
+      "reason": "The authoritative Denver fee schedule uses tiered pricing by acreage ranges, not a $2,500 base plus $500 per acre formula; the 0-9.999 acre category is $2,500 flat, not $3,000.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "cost-context.md",
+      "claim": "$500",
+      "type": "dollar-figure",
+      "reason": "The official Denver fee schedule uses flat fees by acreage bracket, not a $2,500 base plus $500 per acre increment for Site Development Plan Reviews.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "cost-context-v2.md",
+      "claim": "$200",
+      "type": "dollar-figure",
+      "reason": "No authoritative Denver building code source contains the specific \"Interior Fit-Out (Weighted Avg)\" table with the claimed $120, $160, $200 cost figures; searches of official Denver government documents returned no matches for this table.",
+      "source": null
+    },
+    {
+      "file": "cost-context-v2.md",
+      "claim": "$44,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official ADMIN 138 building code fee policy specifies plan review fees as percentages of permit fees (10%, 20%, or 50%), not as fixed dollar amounts of $44,000-$58,000, and does not reference a 65% calculation method.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "file": "cost-context-v2.md",
+      "claim": "$77,600",
+      "type": "dollar-figure",
+      "reason": "The per-unit water tap fee of $1,940 does not match Denver Water's current or recent fee schedules; current rates for 40-unit apartment buildings are $2,451 per unit (2026 phase-in) or $2,166 per unit (pre-2026).",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "file": "cost-context-v2.md",
+      "claim": "$1,940/unit",
+      "type": "dollar-figure",
+      "reason": "The claimed water tap fee of $1,940/unit for a 40-unit apartment building does not match any current or announced Denver Water System Development Charge; official sources show the current fee is $2,166/unit and the 2026 fee will be $2,451/unit.",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "file": "cost-context-v2.md",
+      "claim": "$5,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official fee schedule shows Site Development Plan Reviews start at $2,500 for 0-9.999 acres, not $5,000, and the $5,100 fee applies to 10-14.999 acres.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "zoning-feasibility.md",
+      "claim": "DZC Article 3-8",
+      "type": "section-citation",
+      "reason": "The specific citation \"DZC Article 3-8\" does not appear in Denver's official zoning code documents; the code uses sequential article numbering (Article 3, Article 8, etc.) rather than hyphenated designations.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "file": "accessibility-review-v2.md",
+      "claim": "ADA §206.4.1",
+      "type": "section-citation",
+      "reason": "While ADA §206.4.1 is a real section, it requires only 60% of public entrances to be accessible, not \"all retail entrances\" as claimed in the report.",
+      "source": "https://www.corada.com/documents/guidance-on-the-2010-adas/206-and-chapter-4-accessible-routes-7"
+    },
+    {
+      "file": "accessibility-review-v2.md",
+      "claim": "ADA §233.1",
+      "type": "section-citation",
+      "reason": "While ADA §233.1 exists, it is a general section that does not contain the specific 5% mobility features requirement; that requirement is actually in ADA §233.3.1.1, not §233.1.",
+      "source": "https://www.corada.com/documents/2010ADAStandards/233-1"
+    },
+    {
+      "file": "accessibility-review-v2.md",
+      "claim": "ADA §233.2",
+      "type": "section-citation",
+      "reason": "ADA §233.2 addresses HUD-regulated entities and defers to HUD for specific numbers; the 2% minimum requirement for communication features is actually specified in ADA §233.3.1.2, not §233.2.",
+      "source": "https://www.corada.com/documents/2010ADAStandards/233-3-1-2"
+    },
+    {
+      "file": "accessibility-review-v2.md",
+      "claim": "ADA §407.2.3",
+      "type": "section-citation",
+      "reason": "While ADA §407.2.3 exists and is a real section, the report's description of its content is inaccurate; §407.2.3 covers hoistway signage (floor designations), not hall call buttons.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-4-elevators-and-platform-lifts/"
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "claim": "$5,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official floodplain permit fee schedule shows base permit costs of $300-$1,500, not $5,000, contradicting the claim's stated permit cost range.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "claim": "$15,000",
+      "type": "dollar-figure",
+      "reason": "Denver's official consolidated fee schedule shows floodplain permit costs of $300-$1,500 for standard reviews and $12,000 for dry floodproofing, not the $5,000-$15,000 range claimed in the report.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §209.3",
+      "type": "section-citation",
+      "reason": "ADA §209.3 specifically addresses medical care and long-term care facilities, not general public passenger loading zones as the report claims.",
+      "source": "https://www.ada-compliance.com/ada-compliance/209-and-503-passenger-loading-zones-and-bus-stops"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §206.4",
+      "type": "section-citation",
+      "reason": "While ADA §206.4 is a real section addressing accessible entrances, the claim's description of \"Min. 1 entrance on accessible route\" misrepresents the actual requirement, which is at least 60% of public entrances must be accessible.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-4-entrances-doors-and-gates/"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §216.3",
+      "type": "section-citation",
+      "reason": "While ADA §216.3 exists and covers directional signs, the specific requirement for directional signs to accessible entrances is actually codified in ADA §216.6, not §216.3. The citation is incorrect for the stated purpose.",
+      "source": "https://www.ada-compliance.com/ada-compliance/216-and-703-signs"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §216.7",
+      "type": "section-citation",
+      "reason": "While ADA §216.7 exists and relates to elevators, it does not cover \"floor designation, car control instructions\" as claimed; those requirements are in section 407.2.3, not 216.7.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-7-signs/"
+    },
+    {
+      "file": "accessibility-review.md",
+      "claim": "ADA §206.2.2",
+      "type": "section-citation",
+      "reason": "While ADA §206.2.2 exists, the claim mischaracterizes its content—it addresses site arrival points and facility connections, not separate routes for different occupancies.",
+      "source": "https://www.corada.com/documents/2010ADAStandards/206-2"
+    },
+    {
+      "file": "consultant-scoping.md",
+      "claim": "IBC Section 1705.16",
+      "type": "section-citation",
+      "reason": "IBC Section 1705.16 covers Exterior Insulation and Finish Systems (EIFS), not Fire-Resistant Penetrations; fire-resistant penetrations are covered under IBC Section 1705.17.",
+      "source": "https://www.slc.gov/buildingservices/wp-content/uploads/sites/9/2023/07/Special-Inspection-Agreement.pdf"
+    },
+    {
+      "file": "consultant-scoping.md",
+      "claim": "IBC Section 1705.17",
+      "type": "section-citation",
+      "reason": "IBC Section 1705.17 exists but addresses firestops and fire-resistant joint systems, not sprinkler systems as claimed in the report.",
+      "source": "https://vikingengineers.net/section-1705-required-special-inspections-and-tests/"
+    }
+  ]
+}

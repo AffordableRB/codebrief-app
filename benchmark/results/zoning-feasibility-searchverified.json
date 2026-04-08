@@ -1,0 +1,305 @@
+{
+  "metadata": {
+    "report": "zoning-feasibility.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 23,
+    "scoredClaims": 10,
+    "verified": 8,
+    "fabricated": 1,
+    "unverifiable": 1,
+    "flagged": 6,
+    "skipped": 7,
+    "fabricationRate": 10,
+    "accuracyPercent": 83
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Article 3-8",
+        "context": "| Use Classification | DZC Article 3-8 | Mixed-use typically permitted in C-MU, R-MU, T-MU districts |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific citation \"DZC Article 3-8\" does not appear in Denver's official zoning code documents; the code uses sequential article numbering (Article 3, Article 8, etc.) rather than hyphenated designations.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC §13.1.5.3",
+        "context": "| Front Setback | DZC §13.1.5.3 | Block-sensitive (20'-25' typical) | Unknown | ⚠ VERIFY |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Article 9.4",
+        "context": "| Conservation Overlays (CO-1 through CO-8) | DZC Article 9.4 | ⚠ Site-specific verification needed |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC §12.4.7",
+        "context": "- Variances: DZC §12.4.7 - Must not substantially impair Code intent",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section 12.4.7 exists in the Denver Zoning Code and addresses variance criteria, including requirements that variances not substantially impair the intent and purpose of the Code.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4/board-of-adjustment-zoning/documents/variance.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Section 12.4.7",
+        "context": "- DZC Section 12.4.7 (Variance Requirements)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section 12.4.7 (Variance) is confirmed to exist in the Denver Zoning Code and is actively used in current variance proceedings and Board of Adjustment decisions.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/4/documents/Variance_DZC.5.24.2018.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Section 13.1.5.3",
+        "context": "- DZC Section 13.1.5.3 (Block Sensitive Setbacks)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "DZC Section 13.1.5.3 is explicitly referenced on authoritative Denver government sources and confirmed to address Block Sensitive Setbacks.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip1_blocksensitiveprimarysetback.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,500",
+        "context": "- Conditional Uses: 2-6 months processing, $1,500-$10,000 cost, public hearing required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver government source was found in web searches that explicitly states the $1,500 fee for conditional use applications.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$10,000",
+        "context": "- Conditional Uses: 2-6 months processing, $1,500-$10,000 cost, public hearing required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Search results confirm that Denver conditional use permits commonly cost $1,500–$10,000 and discretionary applications requiring public hearings take 2–6 months, matching the claim exactly.",
+      "source": "https://allpermitsearch.org/colorado/denver-city-and-county-of-colorado/zoning-permit"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "C-MU",
+        "context": "| Use Classification | DZC Article 3-8 | Mixed-use typically permitted in C-MU, R-MU, T-MU districts |",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "C-MU is a real and currently used zoning district designation in Denver that permits mixed-use development, and it is grouped with R-MU and T-MU districts as stated in the claim.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/zoning/text-amendments/adus-in-denver/citywide_adus_ch59.pdf"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "R-MU",
+        "context": "| Use Classification | DZC Article 3-8 | Mixed-use typically permitted in C-MU, R-MU, T-MU districts |",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "R-MU is confirmed as a real and currently used zoning district designation in Denver (specifically R-MU-20 and R-MU-30 variants), and mixed-use is confirmed as permitted in these districts.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/zoning/denver-zoning-code/interpretations-determinations-clarifications/pud-626-determination.pdf"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "T-MU",
+        "context": "| Use Classification | DZC Article 3-8 | Mixed-use typically permitted in C-MU, R-MU, T-MU districts |",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "T-MU is confirmed as a real Denver zoning district designation (specifically T-MU-30) referenced in multiple official Denver ordinances and zoning code documents as a mixed-use zone district.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/zoning/text-amendments/adus-in-denver/citywide_adus_ch59.pdf"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "CO-1",
+        "context": "| Conservation Overlays (CO-1 through CO-8) | DZC Article 9.4 | ⚠ Site-specific verification needed |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "CO-8",
+        "context": "| Conservation Overlays (CO-1 through CO-8) | DZC Article 9.4 | ⚠ Site-specific verification needed |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "UO-3",
+        "context": "| Historic Structure Use Overlay (UO-3) | DZC Article 9.4 | Potential additional use permissions if applicable |",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "UO-3 is confirmed as a real, currently-used Historic Structure Use Overlay in Denver's zoning code, governed by Article 9 of the DZC, as documented in multiple official Denver government sources.",
+      "source": "https://denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/rezoning/19i/luti/1332_22nd_Ave_LUTI_SR_081120.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "45,000 SF",
+        "context": "Size: 45,000 SF | Stories: 5 | Lot Size: 12,000 SF",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "12,000 SF",
+        "context": "Size: 45,000 SF | Stories: 5 | Lot Size: 12,000 SF",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "40 units",
+        "context": "| Upper Floor Residential | DZC Use Tables | R-2 residential (40 units) classification |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "60 feet",
+        "context": "| Height (feet) | DZC by district | ⚠ District-specific | 60 feet | ⚠ VERIFY |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "5 stories",
+        "context": "| Height (stories) | DZC by district | ⚠ District-specific | 5 stories | ⚠ VERIFY |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "5 units",
+        "context": "| Residential Density | DZC by district | 40 units ÷ 0.275 acres = 145.5 units/acre |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "6 months",
+        "context": "- Conditional Uses: 2-6 months processing, $1,500-$10,000 cost, public hearing required",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "300 feet",
+        "context": "- Neighbor notification within 300 feet required",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-2",
+        "context": "| Upper Floor Residential | DZC Use Tables | R-2 residential (40 units) classification |",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'performance-value' not verified (reserved for future)"
+    }
+  ]
+}

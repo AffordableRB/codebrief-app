@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "report": "consultant-scoping.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 31,
+    "scoredClaims": 19,
+    "verified": 7,
+    "fabricated": 6,
+    "unverifiable": 6,
+    "flagged": 12,
+    "skipped": 0,
+    "fabricationRate": 31.6,
+    "accuracyPercent": 52.6,
+    "integrityPercent": 68.4
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Structural Engineer required for Type III-A construction",
+        "context": "Type III-A construction requires engineered structure; 5-story mixed-use building exceeds prescriptive construction limits",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Type III-A construction is a recognized classification and Denver requires structural engineering for various projects, the specific claim that \"Structural Engineer required for Type III-A construction\" could not be verified against authoritative Denver building code sources accessible online.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC requires engineered HVAC systems for R-2 occupancy",
+        "context": "IBC requires engineered HVAC systems for R-2 occupancy and commercial spaces; mixed-use requires separate systems coordination",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The IBC does not universally require engineered HVAC systems for R-2 occupancy; rather, engineered systems are permitted as an exception to standard ventilation requirements, and no authoritative Denver source confirms this as a mandatory requirement for the jurisdiction.",
+      "source": "https://hvacprosales.com/hvac-code-compliance/imc-international-mechanical-code-hvac-compliance-guide/"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "MEP Engineer - Mechanical required for R-2 occupancy and commercial spaces",
+        "context": "IBC requires engineered HVAC systems for R-2 occupancy and commercial spaces; mixed-use requires separate systems coordination",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's building code references R-2 occupancy requirements and requires sealed drawings for certain mechanical systems, the search results do not contain explicit confirmation of the specific claim that MEP Engineer - Mechanical is required for all R-2 occupancy and commercial spaces.",
+      "source": "https://www.denvergov.org/files/assets/public/v/10/community-planning-and-development/documents/ds/building-codes/2022-denver-building-and-fire-code.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "MEP Engineer - Electrical required for commercial and residential systems",
+        "context": "Commercial and residential electrical systems require professional design; NEC compliance mandatory",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific designation \"MEP Engineer - Electrical\" does not appear in Denver's official building code documents; Denver uses \"licensed professional electrical engineer\" or \"professional engineer\" instead.",
+      "source": "https://denvergov.org/files/assets/public/v/4/community-planning-and-development/documents/ds/building-codes/policies/admin-133-electrical-plan-review-required_2023-nec.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "MEP Engineer - Plumbing required for multi-story residential",
+        "context": "Multi-story residential requires engineered plumbing systems; commercial spaces need separate design",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific designation \"MEP Engineer - Plumbing required for multi-story residential\" does not appear in Denver's Building Code, Denver Water standards, or official regulatory documents; while plumbing design requirements exist for multi-family residential, this exact consultant-requirement design",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code-june_2025.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Section 508 requires fire separation analysis for mixed-use occupancies",
+        "context": "Mixed-use occupancies per IBC Section 508 require fire separation analysis; sprinkler systems likely required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "IBC Section 508 is a real, currently-used code section that explicitly addresses mixed-use occupancies and requires fire separation analysis through Table 508.4 and related provisions, and Denver has adopted this section in its building code.",
+      "source": "https://up.codes/s/mixed-use-and-occupancy"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Fire Protection Engineer required for mixed-use occupancies",
+        "context": "Mixed-use occupancies per IBC Section 508 require fire separation analysis; sprinkler systems likely required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's building code addresses mixed-use occupancies and fire protection systems, the search results do not explicitly confirm or contradict the specific claim that a Fire Protection Engineer is required as a consultant for mixed-use occupancies per IBC Section 508.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/dbc_denver_building_code_except_energy.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Sprinkler systems likely required for mixed-use occupancies",
+        "context": "Mixed-use occupancies per IBC Section 508 require fire separation analysis; sprinkler systems likely required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While IBC Section 508 on mixed-use occupancies exists in Denver's adopted code, the search results do not explicitly confirm that sprinkler systems are \"likely required\" for all mixed-use occupancies; sprinkler requirements depend on specific occupancy classifications and building characteristics, n",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/amendment-proposals/ibc-baseline-amendments.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Civil Engineer required for site development and stormwater management",
+        "context": "Site development, utilities, stormwater management required for 12,000 SF lot development",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's authoritative stormwater and site development standards explicitly require Professional Engineer (PE) preparation and stamping of stormwater management plans and civil drawings for site development.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/standards/pwes-007.0-construction_activities_stormwater_manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Geotechnical Engineer required for Type III-A construction on 5-story building",
+        "context": "Foundation design requires soil analysis; Type III-A construction on 5-story building",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "Denver building code sources do not contain a specific requirement mandating a geotechnical engineer for Type III-A construction on 5-story buildings; geotechnical requirements are triggered by specific conditions (deep foundations, excavation, soil type) rather than construction type alone.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/policies/irc_401.4.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver mixed-use zoning has landscaping requirements",
+        "context": "Denver mixed-use zoning has landscaping requirements; pedestrian-friendly environment standards",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's zoning code (Article 10, Division 10.5) establishes landscaping standards that apply to mixed-use developments, and the code explicitly requires landscaping material standards and pedestrian-friendly environment provisions for mixed-use zone districts.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "8,000 SF retail may include restaurant/food service",
+        "context": "8,000 SF retail may include restaurant/food service requiring specialized design",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver regulations do allow retail spaces to include food service with specialized design requirements, no authoritative source explicitly confirms the specific \"8,000 SF\" threshold mentioned in the claim.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Commercial-and-Multifamily-Projects/Restaurants-and-Commercial-Kitchen-Permits"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver zoning has shielding requirements for lighting",
+        "context": "Denver zoning has shielding requirements",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver zoning code Section 10.2.3.8 explicitly requires shielding of parking lot illumination from adjacent residential districts, confirming the claim.",
+      "source": "https://denvergov.org/files/assets/public/v/10/community-planning-and-development/documents/zoning/denver-zoning-code/denver_zoning_code_article10_design_standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Section 508 for complex mixed-use occupancy classification",
+        "context": "Complex mixed-use occupancy classification per IBC Section 508; Denver GDP requirements",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While IBC Section 508 is a real section addressing mixed-use and occupancy buildings, the specific designation \"complex mixed-use occupancy classification\" does not appear in authoritative Denver or IBC sources; Section 508 addresses accessory, nonseparated, and separated occupancies, but not a cate",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver General Development Plan (GDP) requirements",
+        "context": "Complex mixed-use occupancy classification per IBC Section 508; Denver GDP requirements",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's General Development Plan (GDP) requirements are confirmed as real, documented requirements on official Denver government sources with established rules, regulations, and thresholds.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/site-development/general_development_plan_rules_regulations.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Chapter 17 for Structural Steel/Concrete special inspections",
+        "context": "Structural Steel/Concrete | IBC Chapter 17 | Special Inspector",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Chapter 17 for Fireproofing Application",
+        "context": "Fireproofing Application | Per Chapter 17 | Special Inspector",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Chapter 17 for Fire-Resistive Construction",
+        "context": "Fire-Resistive Construction | Per separation requirements | Special Inspector",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Chapter 17 for Mechanical Systems special inspections",
+        "context": "Mechanical Systems | Per Chapter 17 | Special Inspector",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "NFPA standards for Sprinkler Systems special inspections",
+        "context": "Sprinkler Systems | NFPA standards | Special Inspector",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "IBC Section 508 requires fire-resistance rated construction between occupancy groups",
+        "context": "IBC Section 508 requires fire-resistance rated construction between occupancy groups",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim is imprecise and misleading—IBC Section 508.4 (not Section 508 generally) requires fire-resistance-rated construction between separated occupancies, while Section 508.3 (nonseparated occupancies) explicitly requires no separation.",
+      "source": "https://www.woodworks.org/resources/mixed-use-code-strategies-part-2-nonseparated-occupancies-and-fire-limits/"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver zoning requires General Development Plan (GDP) review with 21-day Development Review Committee process",
+        "context": "Project may require General Development Plan (GDP) review with 21-day Development Review Committee process",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim conflates the 21-day Planning Board hearing timeline with a \"Development Review Committee process\" — the 21-day period refers to the minimum time before a Planning Board hearing, not a DRC review timeline, and the GDP process has been largely replaced by the LDR process since 2019.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/site-development/general_development_plan_rules_regulations.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "21-day Development Review Committee process for GDP",
+        "context": "Project may require General Development Plan (GDP) review with 21-day Development Review Committee process",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official GDP Rules and Regulations document confirms a 21-day period for Development Review Committee staff to provide comments on GDP applications.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/site-development/general_development_plan_rules_regulations.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver EHA program requirements apply to 40-unit residential component",
+        "context": "Verify Denver EHA program requirements for 40-unit residential component",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Building Code Section 133.2, item 13 requires special inspections statement prior to permit issuance",
+        "context": "Required per Denver Building Code Section 133.2, item 13 prior to permit issuance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Building Code Section 133.2, item 13 is explicitly referenced in authoritative sources as requiring a statement of special inspections as a condition for permit issuance.",
+      "source": "https://up.codes/viewer/denver/ibc-2018/chapter/17/special-inspections-and-tests"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Structural: 1.5-2.5% of construction cost",
+        "context": "Structural | 1.5-2.5% | Type III-A construction",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "MEP Combined: 3.0-4.5% of construction cost",
+        "context": "MEP Combined | 3.0-4.5% | Mixed-use complexity",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Civil: 1.0-2.0% of construction cost",
+        "context": "Civil | 1.0-2.0% | Site development",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Fire Protection: 0.5-1.0% of construction cost",
+        "context": "Fire Protection | 0.5-1.0% | Mixed occupancy analysis",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Acoustical: 0.3-0.8% of construction cost",
+        "context": "Acoustical | 0.3-0.8% | Residential/commercial separation",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Food Service: 1.0-2.0% of construction cost",
+        "context": "Food Service | 1.0-2.0% | If restaurant included",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-04-05T00:43:06.603Z",
+  "jurisdiction": "Denver, Colorado",
+  "overall": {
+    "accuracy": 56.9,
+    "fabricationRate": 1.6,
+    "totalClaims": 257,
+    "status": "FAIL"
+  },
+  "reports": [
+    {
+      "file": "sustainability-scoping.md",
+      "accuracy": 83.3,
+      "summary": {
+        "totalClaims": 3,
+        "scoredClaims": 3,
+        "correct": 2,
+        "incorrect": 0,
+        "unknown": 1,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 83.3
+      }
+    },
+    {
+      "file": "energy-compliance.md",
+      "accuracy": 66.7,
+      "summary": {
+        "totalClaims": 18,
+        "scoredClaims": 18,
+        "correct": 6,
+        "incorrect": 0,
+        "unknown": 12,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 66.7
+      }
+    },
+    {
+      "file": "risk-due-diligence.md",
+      "accuracy": 63,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 23,
+        "correct": 6,
+        "incorrect": 0,
+        "unknown": 17,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 63
+      }
+    },
+    {
+      "file": "cost-context.md",
+      "accuracy": 58.3,
+      "summary": {
+        "totalClaims": 54,
+        "scoredClaims": 54,
+        "correct": 9,
+        "incorrect": 0,
+        "unknown": 45,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 58.3
+      }
+    },
+    {
+      "file": "project-schedule.md",
+      "accuracy": 53.7,
+      "summary": {
+        "totalClaims": 27,
+        "scoredClaims": 27,
+        "correct": 2,
+        "incorrect": 0,
+        "unknown": 25,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 53.7
+      }
+    },
+    {
+      "file": "accessibility-review.md",
+      "accuracy": 52.1,
+      "summary": {
+        "totalClaims": 24,
+        "scoredClaims": 24,
+        "correct": 1,
+        "incorrect": 0,
+        "unknown": 23,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 52.1
+      }
+    },
+    {
+      "file": "program-validation.md",
+      "accuracy": 51.6,
+      "summary": {
+        "totalClaims": 34,
+        "scoredClaims": 31,
+        "correct": 1,
+        "incorrect": 0,
+        "unknown": 30,
+        "flagged": 3,
+        "fabricationRate": 0,
+        "accuracyPercent": 51.6
+      }
+    },
+    {
+      "file": "consultant-scoping.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 13,
+        "scoredClaims": 13,
+        "correct": 0,
+        "incorrect": 0,
+        "unknown": 13,
+        "flagged": 0,
+        "fabricationRate": 0,
+        "accuracyPercent": 50
+      }
+    },
+    {
+      "file": "permitting-pathway.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 15,
+        "scoredClaims": 13,
+        "correct": 0,
+        "incorrect": 0,
+        "unknown": 13,
+        "flagged": 2,
+        "fabricationRate": 0,
+        "accuracyPercent": 50
+      }
+    },
+    {
+      "file": "site-constraints.md",
+      "accuracy": 50,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 21,
+        "correct": 0,
+        "incorrect": 0,
+        "unknown": 21,
+        "flagged": 2,
+        "fabricationRate": 0,
+        "accuracyPercent": 50
+      }
+    },
+    {
+      "file": "zoning-feasibility.md",
+      "accuracy": 47.1,
+      "summary": {
+        "totalClaims": 23,
+        "scoredClaims": 17,
+        "correct": 3,
+        "incorrect": 4,
+        "unknown": 10,
+        "flagged": 6,
+        "fabricationRate": 23.5,
+        "accuracyPercent": 47.1
+      }
+    }
+  ]
+}

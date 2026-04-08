@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "report": "project-schedule.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 36,
+    "scoredClaims": 35,
+    "verified": 4,
+    "fabricated": 2,
+    "unverifiable": 29,
+    "flagged": 1,
+    "skipped": 0,
+    "fabricationRate": 5.7,
+    "accuracyPercent": 52.9,
+    "integrityPercent": 94.3
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Pre-Design phase 4-6 weeks typical duration",
+        "context": "Pre-Design | 4-6 weeks | 3-4 weeks | Program, site analysis, zoning review",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government sources explicitly define or standardize a \"Pre-Design phase\" with a \"4-6 weeks typical duration\" in building code or development regulations; the claim may reflect general industry practice rather than Denver-specific requirements.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Schematic Design phase 6-8 weeks typical duration",
+        "context": "Schematic Design | 6-8 weeks | 4-6 weeks | Design concept approval",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative architectural sources confirm that Schematic Design phase durations of 6-8 weeks fall within the standard industry range of 4-8 weeks, and this timeline is consistent with professional architectural practice standards.",
+      "source": "https://fulgararchitects.com/the-6-phases-of-architectural-design-process-explained/"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Design Development phase 10-12 weeks typical duration",
+        "context": "Design Development | 10-12 weeks | 8-10 weeks | Systems coordination, materials",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the 8-12 week Design Development phase duration is confirmed in architectural industry standards, the specific claim of \"10-12 weeks\" does not appear in Denver building code or official Denver government sources, and the broader industry standard is 8-12 weeks, not 10-12 weeks.",
+      "source": "https://www.aia.org/resource-center/defining-the-architects-basic-services"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Construction Documents phase 14-18 weeks typical duration",
+        "context": "Construction Documents | 14-18 weeks | 12-16 weeks | 100% CDs for permit",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The claim cannot be verified against Denver's official building code or permitting standards; while \"Construction Documents\" is a defined term in Denver code, no authoritative source specifies a \"14-18 weeks typical duration\" for this as a project phase.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Permitting phase 26-52 weeks typical duration",
+        "context": "Permitting | 26-52 weeks | 20-26 weeks | Building permit issued",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"26-52 weeks\" timeline claim cannot be verified against authoritative Denver government sources; current official targets show 180 days (26 weeks) as the goal, but the exact range stated in the report does not appear in accessible Denver government documentation.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Bidding/Negotiation phase 6-8 weeks typical duration",
+        "context": "Bidding/Negotiation | 6-8 weeks | 4-6 weeks | GC contract execution",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the 6-8 week timeline for bidding/negotiation aligns with general industry standards found in architectural practice sources, no Denver-specific authoritative source (denvergov.org, building code, or municipal guidelines) explicitly confirms this claim as part of an official building code anal",
+      "source": "https://teass-warren.com/2025/04/bidding-negotiation/"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Construction phase 78-104 weeks typical duration",
+        "context": "Construction | 78-104 weeks | 65-78 weeks | Substantial completion",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim \"78-104 weeks typical duration\" for construction phase does not appear in searchable Denver building code documents or official Community Planning & Development resources, and cannot be verified against authoritative sources.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Final Inspections/CO phase 2-4 weeks typical duration",
+        "context": "Final Inspections/CO | 2-4 weeks | 2-3 weeks | Certificate of occupancy",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government source explicitly confirms the 2-4 week timeline for the Final Inspections/CO phase, though the phase itself is referenced in building code documents.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Site Development Plan approval 12-16 weeks",
+        "context": "Site Development Plan (SDP) | 12-16 weeks | Required for 3+ residential units",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"12-16 weeks\" timeline for SDP approval could not be confirmed in accessible Denver government sources, though the requirement for SDPs on 3+ residential units is verified.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Site Development Plan required for 3+ residential units",
+        "context": "Site Development Plan (SDP) | 12-16 weeks | Required for 3+ residential units",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative Denver government sources explicitly confirm that Site Development Plans are required for three or more residential units.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Zoning-Permits/Site-Development-Plan-Review"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Building Permit Review 26-39 weeks",
+        "context": "Building Permit Review | 26-39 weeks | DPO targets 180 days, historically 354 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the DPO 180-day target is confirmed in official Denver sources, the specific \"26-39 weeks\" timeline and the \"historically 354 days\" figure cannot be verified through accessible authoritative Denver government sources, though an interactive dashboard with this data is referenced.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/executive-orders/documents/151-denver-permitting-office.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "DPO targets 180 days for building permit review",
+        "context": "Building Permit Review | 26-39 weeks | DPO targets 180 days, historically 354 days",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Denver historically 354 days average for permits",
+        "context": "Building Permit Review | 26-39 weeks | DPO targets 180 days, historically 354 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the 354-day figure appears in construction industry publications discussing Denver's permit timelines, it could not be verified on official Denver government sources (denvergov.org), and the specific historical data is not accessible in the search results from authoritative city sources.",
+      "source": "https://sdb-denver.com/2024/the-construction-industry/denvers-average-plan-review-time-almost-reached-400-days-in-march/"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Fire Department Review 4-6 weeks concurrent with building review",
+        "context": "Fire Department Review | 4-6 weeks | Concurrent with building review",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim about \"Fire Department Review 4-6 weeks concurrent with building review\" does not appear in accessible Denver government sources, though Fire Department involvement in building review is confirmed.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Fire-Department/Permits-Licensing/Plan-Review-Construction-Systems-Testing-Occupancy"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Zoning Compliance Review 8-12 weeks for mixed-use",
+        "context": "Zoning Compliance Review | 8-12 weeks | Mixed-use complexity",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The official Denver Average Plan Review Times page exists but detailed content is not accessible; general sources cite 4-8 weeks or 8-16 weeks for commercial/mixed-use permits, but the specific \"8-12 weeks\" claim cannot be confirmed against authoritative Denver sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Public Works Review 6-8 weeks for utilities and drainage",
+        "context": "Public Works Review | 6-8 weeks | Utilities, grading, drainage",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver does have utilities and drainage review processes with various timelines (4-6 weeks, 8 weeks, 10 business days), no authoritative Denver source explicitly confirms a \"Public Works Review\" process with a standardized 6-8 week timeline for utilities and drainage.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/doti/documents/permits/wweng/ds_storm_and_sanitary_general_guidelines.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Design Review 8-12 weeks if applicable",
+        "context": "Design Review (if applicable) | 8-12 weeks | Depends on district requirements",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim \"Design Review 8-12 weeks if applicable\" could not be verified on Denver's official government sources; while design review processes exist in Denver, the exact 8-12 week timeline for this specific process type is not confirmed in accessible authoritative sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Structural Steel lead times 16-24 weeks",
+        "context": "**Structural Steel Lead Times**: 16-24 weeks (order during CDs)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government sources contain explicit confirmation or contradiction of the 16-24 week structural steel lead time claim.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Elevator Installation 12-16 weeks long lead equipment",
+        "context": "**Elevator Installation**: 12-16 weeks (long lead equipment)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"12-16 weeks\" timeline for elevator installation does not appear in any Denver building code, fire code, or official jurisdiction documents available online, though the claim is plausible based on general industry timelines.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/archive-codes/2025_denver_building_code-june_2025.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Fire Department Approvals required before occupancy",
+        "context": "**Fire Department Approvals**: Required before occupancy",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Fire Department is officially required to approve building conditions prior to Certificate of Occupancy issuance, as confirmed by authoritative Denver Fire Department policy documents.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/fire-department/documents/phased_occupancy_requirements_for_tco.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Permitting delays beyond 180-day target high probability 8-26 weeks impact",
+        "context": "Permitting delays beyond 180-day target | High | 8-26 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's 180-day permitting target is confirmed, the search results do not contain a building code analysis report with the specific \"High | 8-26 weeks impact\" designation format claimed, and actual documented delays exceed the stated 8-26 week range.",
+      "source": "https://www.enr.com/articles/60954-denver-takes-new-steps-to-reduce-project-permit-wait-times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Design review requirements medium probability 8-12 weeks impact",
+        "context": "Design review requirements | Medium | 8-12 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim language does not appear in accessible Denver official sources, and the terminology (\"medium probability,\" \"impact\") does not match standard design review documentation format, making it impossible to confirm or contradict from available authoritative sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Mixed-use code complexity medium probability 4-8 weeks impact",
+        "context": "Mixed-use code complexity | Medium | 4-8 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim about \"Mixed-use code complexity | Medium | 4-8 weeks impact\" does not appear in any accessible Denver government authoritative source, and the exact report format cannot be verified.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Steel/material lead times high probability 8-16 weeks impact",
+        "context": "Steel/material lead times | High | 8-16 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "No authoritative Denver building code source contains a requirement or designation for \"steel/material lead times\" with an \"8-16 weeks impact\" designation.",
+      "source": "https://denvergov.org/files/assets/public/v/10/community-planning-and-development/documents/ds/building-codes/2022-denver-building-and-fire-code.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Winter weather delays medium probability 4-8 weeks impact",
+        "context": "Winter weather delays | Medium | 4-8 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim does not appear in any authoritative Denver government sources (denvergov.org, denverwater.org), and the claim appears to be from a project risk assessment rather than an official building code designation.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Labor shortages medium probability 6-12 weeks impact",
+        "context": "Labor shortages | Medium | 6-12 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim does not appear in any accessible Denver government building code documents or authoritative sources, and the claim is too vague to confirm whether it exists in a private report or official code section.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Utility coordination delays medium probability 4-8 weeks impact",
+        "context": "Utility coordination delays | Medium | 4-8 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim cannot be verified against authoritative Denver building code or regulatory sources; while utility coordination is acknowledged as a construction consideration, this exact designation does not appear in searchable official documents.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Fire suppression system complexity medium probability 4-6 weeks impact",
+        "context": "Fire suppression system complexity | Medium | 4-6 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific claim \"Fire suppression system complexity medium probability 4-6 weeks impact\" does not appear in any authoritative Denver building code, fire code, or official city documents despite comprehensive searches of denvergov.org resources.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/678/documents/FPB/policydocuments/Tagging_of_Fire_Suppression_Systems.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Best case pre-design to occupancy 150 weeks (34 months)",
+        "context": "**Best Case** | 150 weeks (34 months)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim \"150 weeks (34 months)\" for best-case pre-design to occupancy does not appear in any accessible Denver government or building code documents, and cannot be verified through authoritative sources.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Typical case pre-design to occupancy 186 weeks (43 months)",
+        "context": "**Typical Case** | 186 weeks (43 months)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim \"186 weeks (43 months)\" for typical case pre-design to occupancy does not appear in accessible Denver government sources, and cannot be confirmed or contradicted through available web documentation.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Worst case pre-design to occupancy 238 weeks (55 months)",
+        "context": "**Worst Case** | 238 weeks (55 months)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government sources (denvergov.org, denverwater.org) or other official documents appear in search results containing this specific timeline claim.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Permitting Office (DPO)",
+        "context": "DPO targets 180 days, historically 354 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Permitting Office (DPO) is confirmed as a real agency established by Executive Order with a documented 180-day target for permit completion.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/executive-orders/documents/151-denver-permitting-office.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Construction must begin within 180 days of permit issuance or permit expires",
+        "context": "Construction must begin within 180 days of permit issuance or permit expires",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While multiple secondary sources cite a 180-day requirement to begin construction after permit issuance, the official Denver Building Code document found addresses a different 180-day threshold (plan review activity expiration), and the specific requirement for construction commencement is not expli",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/696/documents/Denver_Building_Code/2016_Code_Policies/ADMIN_131.5.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Mixed-use projects add 25%-50% more time than residential-only",
+        "context": "Mixed-use projects add 25%-50% more time than residential-only",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government sources contain the specific claim about mixed-use projects adding 25%-50% more time than residential-only projects; the claim cannot be verified or contradicted from available official sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Ground floor retail requires separate commercial permit review processes",
+        "context": "Ground floor retail requires separate commercial permit review processes",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "Denver's official sources describe general commercial permit processes but do not explicitly confirm or deny that ground floor retail specifically requires separate permit review processes.",
+      "source": "https://www.denvergov.org/files/assets/public/v/15/community-planning-and-development/documents/ds/other-forms-and-guides/commercial-permitting-guide.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Permitting duration longest single phase 26-52 weeks",
+        "context": "**Permitting Duration**: Longest single phase, 26-52 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim about \"26-52 weeks\" for the longest single permitting phase does not appear in accessible Denver government sources, though the city does maintain permitting timeline information.",
+      "source": "https://www.denvergov.org/buildingpermitstatus"
+    }
+  ]
+}

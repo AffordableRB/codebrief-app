@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "report": "program-validation.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 20,
+    "scoredClaims": 17,
+    "verified": 0,
+    "fabricated": 0,
+    "unverifiable": 17,
+    "flagged": 3,
+    "skipped": 0,
+    "fabricationRate": 0,
+    "accuracyPercent": 50,
+    "integrityPercent": 100
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Retail Gross Area: 8,000 SF ÷ 0.87 = 9,195 SF",
+        "context": "Retail Gross Area | 8,000 SF ÷ 0.87 | 9,195 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific calculation and 0.87 divisor methodology for retail gross area could not be found in accessible Denver building code or zoning code authoritative sources.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Residential Gross Area: 37,000 SF ÷ 0.77 = 48,052 SF",
+        "context": "Residential Gross Area | 37,000 SF ÷ 0.77 | 48,052 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Total Required Gross Building Area: 9,195 + 48,052 = 57,247 SF",
+        "context": "Total Required Gross Building Area | 9,195 + 48,052 | 57,247 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Building Area Increase: 57,247 - 45,000 = +12,247 SF",
+        "context": "Building Area Increase | 57,247 - 45,000 | +12,247 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Average Floor Plate: 57,247 SF ÷ 5 stories = 11,449 SF/floor",
+        "context": "Average Floor Plate | 57,247 SF ÷ 5 stories | 11,449 SF/floor",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Typical Residential Floor: 48,052 SF ÷ 4 floors = 12,013 SF/floor",
+        "context": "Typical Residential Floor | 48,052 SF ÷ 4 floors | 12,013 SF/floor",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Floor Plate Efficiency: 11,449 SF ÷ 12,000 SF lot = 95.4% lot coverage",
+        "context": "Floor Plate Efficiency | 11,449 SF ÷ 12,000 SF lot | 95.4% lot coverage",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Floor plate exceeds typical 60-foot width standard for residential",
+        "context": "⚠ **VERIFY:** Floor plate exceeds typical 60-foot width standard for residential (requires ~183 ft × 66 ft footprint)",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Maximum FAR: 4.77 (57,247÷12,000)",
+        "context": "Maximum FAR | ⚠ VERIFY Denver zone | 4.77 (57,247÷12,000) | TBD",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Residential Parking Required: 40 units × 1.5 spaces/unit = 60 spaces",
+        "context": "Residential Parking Required | 40 units × 1.5 spaces/unit | 60 spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Commercial Parking Required: 8,000 SF ÷ 200 SF × 1 space = 40 spaces",
+        "context": "Commercial Parking Required | 8,000 SF ÷ 200 SF × 1 space | 40 spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Total Required Parking: 60 + 40 = 100 spaces",
+        "context": "Total Required Parking | 60 + 40 | 100 spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Surface Parking Area: 100 × 400 SF/space = 40,000 SF",
+        "context": "Surface Parking Area | 100 × 400 SF/space | 40,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Structured Parking Area: 100 × 350 SF/space = 35,000 SF",
+        "context": "Structured Parking Area | 100 × 350 SF/space | 35,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Available Lot Area after building: 12,000 - 11,449 = 551 SF",
+        "context": "Available Lot Area (after building) | 12,000 - 11,449 | 551 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Parking requirements: 1.5 spaces per residential unit, 1 space per 200 SF commercial",
+        "context": "Parking requirements: Denver zoning (estimated 1.5/residential unit, 1/200 SF commercial)",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Ground floor retail depth: ensure 25-30 feet minimum per code requirements",
+        "context": "Ground floor retail depth: ensure 25-30 feet minimum per code requirements",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Structured parking: +$25,000-35,000 per space vs. surface",
+        "context": "Structured parking: +$25,000-35,000 per space vs. surface",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Type III-A construction suitable for 5 stories",
+        "context": "Type III-A construction suitable for 5 stories",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Shared parking reduction of 10% allowed in mixed-use",
+        "context": "Consider shared parking reduction (10% allowed in mixed-use)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "report": "risk-due-diligence.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 25,
+    "scoredClaims": 11,
+    "verified": 6,
+    "fabricated": 1,
+    "unverifiable": 4,
+    "flagged": 14,
+    "skipped": 0,
+    "fabricationRate": 9.1,
+    "accuracyPercent": 72.7,
+    "integrityPercent": 90.9
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Building Code §1613",
+        "context": "Seismic Design Category B minimum - structural design impact per Denver Building Code §1613",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section 1613 exists in the Denver Building Code and is correctly identified as covering earthquake loads, which is directly relevant to seismic design categories and structural design impacts.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Building Code §1609",
+        "context": "115 mph (Risk Category II) east of Federal Blvd per Denver Building Code §1609",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Building Code §1609 is a real, currently-used section governing wind loads, and the 115 mph wind speed for Risk Category II east of Federal Boulevard is confirmed in official Denver city documents and Colorado state regulations.",
+      "source": "https://denver.prelive.opencities.com/files/assets/public/v/4/community-planning-and-development/documents/ds/inspections/roofing_guidelines_and_checklist.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "115 mph wind speed Risk Category II east of Federal Blvd",
+        "context": "115 mph (Risk Category II) east of Federal Blvd, higher speeds west - affects envelope design",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Roofing Guidelines confirm 115 mph wind speed requirement for areas east of Federal Boulevard, consistent with Risk Category II building code standards.",
+      "source": "https://test.denvergov.org/files/assets/public/v/4/community-planning-and-development/documents/ds/inspections/roofing_guidelines_and_checklist.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Building Code",
+        "context": "Standard Colorado Front Range loads - verify specific requirements per Denver Building Code",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Fire Code",
+        "context": "Potential WUI requirements depending on location per Denver Fire Code",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Clean Water Act §404",
+        "context": "Federal permits required if wetlands present per Clean Water Act §404",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Colorado 401 Certification",
+        "context": "State permits required by Dec 2025 for water impacts per Colorado 401 Certification",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "State permits required by Dec 2025",
+        "context": "State permits required by Dec 2025 for water impacts",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative source confirms a specific \"state permits required by Dec 2025 for water impacts\" deadline in Denver; the claim is too vague and lacks supporting documentation in official jurisdictional records.",
+      "source": "https://cdphe.colorado.gov/water-quality-permits"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Endangered Species Act",
+        "context": "ESA consultation may be required per Endangered Species Act",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver stormwater ordinance",
+        "context": "Detention/treatment requirements for 12,000 SF lot per Denver stormwater ordinance",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Municipal Code Chapter 30",
+        "context": "If in 1 of 52 historic districts: full design review required per Denver Municipal Code Chapter 30",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Municipal Code Chapter 30",
+        "context": "Design review for exterior alterations per Denver Municipal Code Chapter 30",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Zoning Code",
+        "context": "Additional design standards may apply per Denver Zoning Code",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Section 106 review",
+        "context": "Cultural resource survey may be required per Section 106 review",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "zoning-district",
+        "text": "U-MX-3 or similar designation",
+        "context": "Mixed-use zoning verification needed - may require U-MX-3 or similar designation",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Large-scale mixed-use projects have increased documentation requirements per 2025 code",
+        "context": "Large-scale mixed-use projects have increased documentation requirements per 2025 code",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While the 2025 Denver Building Code exists and mixed-use projects are addressed in Denver regulations, no authoritative source on denvergov.org explicitly confirms the specific claim about increased documentation requirements for large-scale mixed-use projects in the 2025 code.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Type III-A Construction height/area limitations for combustible construction",
+        "context": "Height/area limitations for combustible construction - verify compliance for Type III-A",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver expansive clay soils common - geotechnical study essential",
+        "context": "Denver expansive clay soils common - geotechnical study essential",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official building code (IRC R401.4 policy) explicitly requires geotechnical investigation reports when expansive soils are present, and the Colorado Geological Survey documents that expansive clay soils are common throughout the Denver metro area.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/policies/irc_401.4.pdf"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver public art ordinance",
+        "context": "May require 1% of construction cost for public art per Denver public art ordinance",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "1% of construction cost for public art",
+        "context": "May require 1% of construction cost for public art",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "2-4 month additional timeline if historic/design overlay applies",
+        "context": "Design Review Process: 2-4 month additional timeline if historic/design overlay applies",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's official sources confirm that historic and design overlay reviews add time to the design review process, no authoritative Denver source explicitly states the specific \"2-4 month additional timeline\" figure claimed in the report.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Landmark-Preservation/Landmark-Reviews-and-Demolition/Landmark-Design-Review"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "3-6 month delay if variances required",
+        "context": "Variance Hearings: 3-6 month delay if variances required - includes public hearing process",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official Board of Adjustment documentation states variance hearings typically occur within 5-8 weeks of filing, not the 3-6 months claimed in the report.",
+      "source": "https://denvergov.org/files/assets/public/v/1/board-of-adjustment-zoning/documents/info-pamphlet-2020.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "6-12 month delay if wetlands/ESA issues identified",
+        "context": "Environmental Review: 6-12 month delay if wetlands/ESA issues identified",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government source (denvergov.org, building code, or official environmental review documents) explicitly confirms the \"6-12 month delay if wetlands/ESA issues identified\" timeline, though wetlands and ESA review requirements are documented.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/economic-development/documents/hud/supplement-to-hud-environmental-review-web-content-052421.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2025 building code",
+        "context": "Enhanced documentation requirements per 2025 building code",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official government sources confirm the 2025 building code exists and was adopted on June 13, 2025, with documented enhanced documentation requirements for certain project types.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Building-Codes-Policies-and-Guides/Building-and-Fire-Code-Adoption-Process"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Zoning Code (2010, amended 2023)",
+        "context": "Denver Zoning Code (2010, amended 2023) referenced in sources",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Zoning Code was adopted in 2010 and has been amended multiple times through July 5, 2023, as confirmed by official Denver government legislative history documents.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    }
+  ]
+}

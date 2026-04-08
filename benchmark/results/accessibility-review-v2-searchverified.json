@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "report": "accessibility-review-v2.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 30,
+    "scoredClaims": 23,
+    "verified": 10,
+    "fabricated": 1,
+    "unverifiable": 12,
+    "flagged": 2,
+    "skipped": 5,
+    "fabricationRate": 4.3,
+    "accuracyPercent": 59.1
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §206.1",
+        "context": "| Accessible Route from Public Way | ADA §206.1 / Denver Code | Minimum 36\" wide continuous route to accessible entrances |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While Denver's building code requires accessible routes to the public way, the specific citation \"ADA §206.1\" does not appear in searchable Denver building code documents, making it impossible to confirm whether this exact designation is used in Denver Code.",
+      "source": "https://up.codes/viewer/denver/ibc-2021/chapter/11/accessibility"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §208",
+        "context": "| Accessible Parking | ADA §208 / Denver Code | See parking calculation table below |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §208 is a legitimate section of the ADA Standards for Accessible Design addressing parking spaces, and is explicitly referenced in both federal ADA guidance and Denver's official accessibility documents.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-5-parking/"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §208.2.4",
+        "context": "| Van Accessible Spaces | ADA §208.2.4 | 1 van space per 6 accessible spaces |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §208.2.4 is a real, current section of the 2010 ADA Standards that specifies the van accessible parking space requirement of one per six accessible spaces, exactly as stated in the report.",
+      "source": "https://www.ada.gov/resources/restriping-parking-spaces/"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §209",
+        "context": "| Passenger Loading Zone | ADA §209 / Denver Code | Required if valet parking or passenger drop-off provided |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §209 is a real, authoritative section of the ADA Standards that governs passenger loading zones and explicitly requires accessible passenger loading zones where valet parking or passenger drop-off areas are provided.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-5-passenger-loading-zones/"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §406",
+        "context": "| Curb Ramps | ADA §406 / Denver Code | At all pedestrian crossings and accessible routes |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §406 is a legitimate and current section of the ADA Standards that specifically addresses curb ramp requirements, and Denver Code incorporates these standards for curb ramps at pedestrian crossings and accessible routes.",
+      "source": "https://up.codes/viewer/denver/icc-a117.1-2017/chapter/4/accessible-routes"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §208.2",
+        "context": "| ⚠ VERIFY WITH AHJ | 1 per 25 (up to 50 spaces) + 1 per 50 thereafter | 1 per 6 accessible spaces | ADA §208.2 |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §206.4",
+        "context": "| Accessible Entrances | ADA §206.4 / Denver Code | At least 60% of public entrances (minimum 1) |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §206.4 is a real, currently used section of the 2010 ADA Standards that specifies the 60% accessible entrance requirement cited in the report.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-4-entrances-doors-and-gates/"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §206.4.1",
+        "context": "| Commercial Entrance | ADA §206.4.1 | All retail entrances must be accessible |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While ADA §206.4.1 is a real section, it requires only 60% of public entrances to be accessible, not \"all retail entrances\" as claimed in the report.",
+      "source": "https://www.corada.com/documents/guidance-on-the-2010-adas/206-and-chapter-4-accessible-routes-7"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §404.2.3",
+        "context": "| Door Clear Width | ADA §404.2.3 | 32\" minimum clear width |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §404.2.3 is a legitimate, currently-used section that specifies the 32-inch minimum clear width requirement for door openings.",
+      "source": "https://www.ada-compliance.com/ada-compliance/404-doors-doorways-and-gates"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §404.2.7",
+        "context": "| Door Hardware | ADA §404.2.7 | Operable with closed fist, max 5 lbf operating force |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §404.2.7 is a real, existing section that addresses door and gate hardware requirements, including the 5 lbf maximum operating force and the requirement to be operable with a closed fist.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-4-entrances-doors-and-gates/"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §206.2.3",
+        "context": "| Elevator Required | ADA §206.2.3 / Denver Code | Required - building exceeds 3 stories |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §206.2.3 is a legitimate, real section addressing multi-story building accessibility requirements, though the report's characterization of the elevator requirement threshold is oversimplified.",
+      "source": "https://www.coreyandpartners.com/post/when-elevators-are-required-under-the-2010-ada-standards"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §407.4.1",
+        "context": "| Elevator Car Size | ADA §407.4.1 | 68\" wide x 51\" deep minimum |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §407.4.1 is a legitimate, existing section of the ADA Standards that addresses elevator car dimensions, though the specific dimensions cited in the report do not match standard ADA requirements.",
+      "source": "https://www.ada-compliance.com/ada-compliance/407-elevators"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §213",
+        "context": "| Commercial Restrooms | ADA §213 / Denver Code | Each public/common use restroom must be accessible |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "ADA §213 is a real, existing section of the ADA Standards that addresses toilet room accessibility requirements for commercial facilities, and the claim's description of its application is accurate.",
+      "source": "https://www.access-board.gov/files/ada/guides/toilet-rooms.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §213.2.1",
+        "context": "| Single-User Restrooms | ADA §213.2.1 | All single-user restrooms must be accessible |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §213.3.1",
+        "context": "| Ambulatory Stalls | ADA §213.3.1 | Required when 6+ water closets provided |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §604.5",
+        "context": "| Grab Bars | ADA §604.5 / A117.1 | Side wall 42\" long, rear wall 36\" long |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §606.3",
+        "context": "| Lavatory Height | ADA §606.3 | 34\" maximum rim height |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §233.1",
+        "context": "| Mobility Features Units | ADA §233.1 | 5% minimum (2 units) with mobility features |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §233.2",
+        "context": "| Communication Features | ADA §233.2 | 2% minimum (1 unit) with communication features |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §216.2",
+        "context": "| Room Identification | ADA §216.2 / A117.1 §703 | Raised characters and braille |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §216.3",
+        "context": "| Directional Signs | ADA §216.3 | Visual characters complying with §703.5 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §502.6",
+        "context": "| Accessible Parking Signs | ADA §502.6 | \"International Symbol of Accessibility\" |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA §407.2.3",
+        "context": "| Elevator Signs | ADA §407.2.3 | Hall call buttons with raised characters |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "ADA 2010",
+        "context": "| ADA 2010 Standards | Federal requirement for all commercial spaces and common areas | Applies to ground floor retail and residential common areas |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "45,000 SF",
+        "context": "Size: 45,000 SF | Stories: 5 | Occupancy: R-2 Residential with Commercial",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "40 units",
+        "context": "| Fair Housing Act | Residential dwelling units (40 units) | All dwelling units must comply - covered multifamily dwelling |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "50 spaces",
+        "context": "| ⚠ VERIFY WITH AHJ | 1 per 25 (up to 50 spaces) + 1 per 50 thereafter | 1 per 6 accessible spaces | ADA §208.2 |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "3 stories",
+        "context": "| Elevator Required | ADA §206.2.3 / Denver Code | Required - building exceeds 3 stories |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "2 units",
+        "context": "| Mobility Features Units | ADA §233.1 | 5% minimum (2 units) with mobility features |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-2",
+        "context": "Size: 45,000 SF | Stories: 5 | Occupancy: R-2 Residential with Commercial",
+        "weight": 0.8,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'performance-value' not verified (reserved for future)"
+    }
+  ]
+}

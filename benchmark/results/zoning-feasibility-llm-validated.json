@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "report": "zoning-feasibility.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 21,
+    "scoredClaims": 15,
+    "verified": 8,
+    "fabricated": 4,
+    "unverifiable": 3,
+    "flagged": 6,
+    "skipped": 0,
+    "fabricationRate": 26.7,
+    "accuracyPercent": 63.3,
+    "integrityPercent": 73.3
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Mixed-use zones (RX, CC, MX, MS, IMX, GMX) permit residential/commercial combinations",
+        "context": "Use Classification - Mixed Use | Per Denver Zoning Code | Mixed-use zones (RX, CC, MX, MS, IMX, GMX) permit residential/commercial combinations",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official zoning code documents confirm all six zone designations (RX, CC, MX, MS, IMX, GMX) exist and are designed to permit residential/commercial combinations.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Commercial uses permitted in mixed-use districts",
+        "context": "Use Classification - Retail | Per Denver Zoning Code | Commercial uses permitted in mixed-use districts",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Zoning Code documents confirm that mixed-use zone districts are designed to accommodate commercial uses alongside residential and other uses, with specific use tables and regulations governing which commercial uses are permitted in each mixed-use district.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Residential uses permitted in mixed-use districts",
+        "context": "Use Classification - Multi-family | Per Denver Zoning Code | Residential uses permitted in mixed-use districts",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Zoning Code documents from official sources explicitly confirm that residential uses are permitted in mixed-use districts, with multiple zone district types (U-MX, E-MX, etc.) designed to accommodate residential development alongside commercial uses.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/zoning/denver-zoning-code/summary_of_zone_districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Height varies by district from 2 stories to unlimited",
+        "context": "Height (Stories) | Per Denver Zoning Code | Varies by district (2 stories to unlimited)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Zoning Code Summary of Zone Districts confirms that height requirements vary by district, with some districts allowing unlimited maximum height and others having lower story limits.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "FAR varies by district, residential 0.5, commercial 1.2 typical",
+        "context": "FAR | Per Denver Zoning Code | Varies (residential 0.5, commercial 1.2 typical)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While search results confirm FAR varies by district in Denver zoning code, the specific values of 0.5 for residential and 1.2 for commercial are not explicitly confirmed in accessible authoritative sources.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Complete_Denver_Zoning_Code.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "FAR 3.75 calculated as 45,000 SF ÷ 12,000 SF",
+        "context": "FAR | Per Denver Zoning Code | Varies (residential 0.5, commercial 1.2 typical) | 3.75 (45,000 SF ÷ 12,000 SF)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific FAR 3.75 calculation (45,000 SF ÷ 12,000 SF) could not be located in accessible authoritative Denver Zoning Code sources, though the FAR calculation methodology itself is correct.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Complete_Denver_Zoning_Code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Front setback block-sensitive range typically 20'-25'",
+        "context": "Front Setback | Per Denver Zoning Code | Block-sensitive range (typically 20'-25')",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim of a \"typically 20'-25'\" block-sensitive range is not supported by Denver Zoning Code authoritative sources; block-sensitive setbacks are determined contextually by neighboring structures and vary widely.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip1_blocksensitiveprimarysetback.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Side setbacks vary by zone in 0'-5' range",
+        "context": "Side Setbacks | Per Denver Zoning Code | Varies by zone (0'-5' range shown in results)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Zoning Code standards show side setbacks vary by zone district, with requirements ranging from 0 feet (Downtown/General Urban contexts) to 5 feet (Suburban and Urban Edge contexts), confirming the 0'-5' range claim.",
+      "source": "https://www.siteplancreator.com/site-plans/denver-co"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Rear setback minimum 5 feet varies by zone",
+        "context": "Rear Setback | Per Denver Zoning Code | Varies by zone (5' minimum shown)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While search results confirm that rear setback requirements vary by zone in Denver and that 5 feet is a common minimum in several districts, the current Denver Zoning Code documents were not fully accessible to verify the specific claim against the authoritative source.",
+      "source": "https://denvergov.org/content/denvergov/en/community-planning-and-development/zoning/denver-zoning-code.html"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "Residential density 40 units ÷ 0.28 acres = 143 units/acre",
+        "context": "Residential Density | Per Denver Zoning Code | 40 units ÷ 0.28 acres = 143 units/acre",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Article 9 Denver Zoning Code - Conservation Overlay",
+        "context": "Conservation Overlay | Article 9 Denver Zoning Code | VERIFY if CO-6, CO-7, CO-8, or other overlays apply to site",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Division 9.4 Denver Zoning Code - Use Overlay",
+        "context": "Use Overlay | Division 9.4 Denver Zoning Code | VERIFY if UO-3 Historic Structure or other UO districts apply",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Article 9 Denver Zoning Code - Design Overlay",
+        "context": "Design Overlay | Article 9 Denver Zoning Code | VERIFY if Design Overlay (DO) requirements apply",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Article 9 Denver Zoning Code - Airport Influence Overlay",
+        "context": "Airport Influence | Article 9 Denver Zoning Code | VERIFY if Airport Influence Overlay applies",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Major variance required for FAR exceedance",
+        "context": "FAR Exceedance: Proposed FAR of 3.75 significantly exceeds typical Denver allowances (0.5-1.2 per search results) | Relief Type: Major variance required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's zoning code does not establish a distinct \"major variance\" category for FAR exceedances; all variances go through the same Board of Adjustment process under Section 12.4.7 regardless of the standard involved.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4/board-of-adjustment-zoning/documents/variance.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Board of Adjustment review required for variance with hardship demonstration",
+        "context": "FAR Exceedance | Process: Board of Adjustment review with hardship demonstration",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Board of Adjustment documents confirm that variance requests require Board of Adjustment review and must demonstrate hardship or justifying circumstances under Sections 12.4.7.5 and 12.4.7.6 of the Denver Zoning Code.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/board-of-adjustment-zoning/documents/variance_dzc.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "2-6 months for discretionary variance applications",
+        "context": "FAR Exceedance | Timeline: 2-6 months for discretionary applications",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official permitting guidance specifies zoning variances take 2 to 3 months, not the claimed 2-6 months range.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/4/documents/Navigating_Commercial_Permitting_Process_IECC_Highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "Variance fees typically $1,000-$5,000",
+        "context": "FAR Exceedance | Cost: Variance fees typically $1,000-$5,000 VERIFY WITH AGENCY",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Neighbor notification within 300 feet required for variances",
+        "context": "Public Process Requirements | Neighbor notification within 300 feet required for variances",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official sources consistently reference 200 feet for RNO notification in variance cases, not 300 feet; no authoritative source on denvergov.org confirms a 300-foot neighbor notification requirement for variances.",
+      "source": "https://denvergov.org/files/assets/public/v/13/community-planning-and-development/documents/zoning/denver-zoning-code/denver_zoning_code_article12_administration.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Variance expires if construction not started within 3 years",
+        "context": "Public Process Requirements | Variance expires if construction not started within 3 years",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Board of Adjustment documentation explicitly confirms that variances authorizing construction expire if construction is not started within 3 years from the date the variance was granted.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4/board-of-adjustment-zoning/documents/variance.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "Denver Zoning Code adopted 2010, amendments through July 5, 2023",
+        "context": "Sources | Denver Zoning Code (adopted 2010, amendments through July 5, 2023)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Zoning Code adoption date of 2010 and amendments through July 5, 2023 are explicitly confirmed in official Denver government legislative history documents.",
+      "source": "https://denvergov.org/files/assets/public/v/10/community-planning-and-development/documents/zoning/text-amendments/legislative-history/leg_history_table.pdf"
+    }
+  ]
+}

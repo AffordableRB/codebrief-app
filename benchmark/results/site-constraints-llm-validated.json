@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "report": "site-constraints.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 32,
+    "scoredClaims": 29,
+    "verified": 11,
+    "fabricated": 11,
+    "unverifiable": 7,
+    "flagged": 3,
+    "skipped": 0,
+    "fabricationRate": 37.9,
+    "accuracyPercent": 50,
+    "integrityPercent": 62.1
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC 13.1.5.3 Block Sensitive",
+        "context": "Front setback code reference DZC 13.1.5.3 Block Sensitive with required distance 20'-25'",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC Rule of Measurement 13.1.5.13",
+        "context": "Maximum lot coverage requirement per DZC Rule of Measurement 13.1.5.13 is 37.5% for lots >30' wide",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific section citation \"DZC Rule of Measurement 13.1.5.13\" does not appear in any search results from Denver's official government sources, and site-restricted searches of denvergov.org returned no matches for this exact designation.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Municipal Code 56-102",
+        "context": "Stormwater threshold of 500+ SF new impervious surface requires plan per Denver Municipal Code 56-102",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver Municipal Code 56-102 exists and governs stormwater requirements, the specific 500+ SF threshold for requiring a stormwater plan could not be confirmed in accessible authoritative sources; Denver's documented threshold for CASDP requirements is 1 acre of disturbance.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/standards/pwes-007.0-construction_activities_stormwater_manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC 10.6.5",
+        "context": "Grading within 10' of street limited to 1 foot max grade change per DZC 10.6.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Zoning Code Section 10.6.5 exists and is part of Division 10.6 (Site Grading Standards), as confirmed by official denvergov.org documents that reference Section 10.6.5.3 within grading standards provisions.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "ADA Standards",
+        "context": "ADA spaces required at 4% minimum, resulting in 3-4 ADA spaces required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "Denver's zoning code requires ADA-compliant accessible parking but the search results do not contain the specific \"4% minimum\" requirement cited in the report.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Front setback 20'-25' based on adjacent structures",
+        "context": "Front setback code reference DZC 13.1.5.3 with required distance 20'-25'",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Side setback 5' typical residential",
+        "context": "Side setback requirement 5' typical residential per DZC zone district specific",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative Denver sources confirm that 5-foot side setbacks are typical for residential zones in Denver's current zoning code.",
+      "source": "https://www.siteplancreator.com/site-plans/denver-co"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Rear setback 5' typical with alley access",
+        "context": "Rear setback requirement 5' typical with alley access per DZC zone district specific",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "\"DZC zone district\" is not a valid zone designation; DZC refers to the Denver Zoning Code itself, not a specific zone district, while the 5-foot rear setback requirement with alley access is accurate.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "12,000 - 4,000 = 8,100 SF buildable footprint",
+        "context": "Buildable footprint calculated as gross lot area minus all setback areas equals 8,100 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The arithmetic is incorrect; 12,000 - 4,000 = 8,000 SF, not 8,100 SF as claimed.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/other-forms-and-guides/residential-site-plans-elevation-examples.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "8,100 SF × 5 stories = 40,500 SF maximum building area",
+        "context": "Maximum building area calculated as buildable footprint multiplied by 5 stories equals 40,500 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific calculation method and formula cannot be confirmed or contradicted through available authoritative Denver sources; the claim's calculation approach does not appear in accessible Denver Zoning Code materials.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Maximum lot coverage 37.5% for lots >30' wide",
+        "context": "Maximum lot coverage per DZC Rule of Measurement 13.1.5.13 is 37.5% for lots >30' wide",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While 37.5% maximum lot coverage for lots >30' wide is accurate, DZC 13.1.5.13 is a Rule of Measurement defining what counts toward building coverage, not the section establishing maximum lot coverage percentages,",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "12,000 × 0.375 = 4,500 SF maximum lot coverage",
+        "context": "Maximum lot coverage calculation: 12,000 SF lot × 37.5% = 4,500 SF limit",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's zoning code establishes a 37.5% maximum building coverage for most lots, and the mathematical calculation (12,000 SF × 37.5% = 4,500 SF) is correct and consistent with how the code is applied.",
+      "source": "https://s3.amazonaws.com/arcb-wall/3192715396/wall/Vb377p4PAUHl920aI732.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Front porch exemption 400 SF max exempt",
+        "context": "Front porch exemption per DZC allows 400 SF maximum exempt from coverage requirement",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The 400 SF maximum appears in former Denver Chapter 59 code, but current DZC building coverage provisions for front porches could not be confirmed on authoritative sources to contain this specific exemption.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/zoning/text-amendments/housing-affordability/council/2-dzc_eha_amendment_04282022_cc_draft_red.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Stormwater threshold 500+ SF new impervious requires plan",
+        "context": "Stormwater threshold per Denver Municipal Code 56-102 requires plan for 500+ SF new impervious",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver Municipal Code 56-102 exists and governs stormwater, the specific 500 SF threshold for new impervious surface requiring a plan could not be confirmed in accessible authoritative Denver sources.",
+      "source": "https://library.municode.com/co/denver/codes/code_of_ordinances?nodeId=TITIIREMUCO_CH56UT"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Uninterrupted building length 36 feet maximum",
+        "context": "Uninterrupted building length per DZC zone district limited to 36 feet maximum",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Grading within 10' of street 1 foot max grade change",
+        "context": "Grading within 10' of primary street per DZC 10.6.5 limited to 1 foot maximum grade change",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The numerical requirement (1 foot max grade change within 10') is correct and verified, but the section citation is incorrect—the requirement is in DZC 10.6.2, not DZC 10.6.5.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "40 units × 1.0-1.5 spaces = 40-60 residential parking spaces",
+        "context": "Residential parking requirement calculated as 40 units × 1.0-1.5 spaces per DZC zone district",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "\"DZC\" is the Denver Zoning Code system itself, not a specific zone district designation, and the parking ratio of \"1.0-1.5 spaces per dwelling unit\" does not appear in authoritative Denver zoning code documents.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "8,000 SF × 3-4/1,000 SF = 24-32 retail parking spaces",
+        "context": "Retail parking requirement calculated as 8,000 SF × 3-4 spaces per 1,000 SF per DZC zone district",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "\"DZC\" is the abbreviation for Denver Zoning Code (the regulatory document), not a zone district designation; Denver's actual zone districts use different letter codes (S-, UE-, U-, GU-, C-, D-), and no authoritative source on denvergov.org references a \"DZC zone district.\"",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Summary_of_Zone_Districts.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Total required parking spaces 64-92 spaces",
+        "context": "Total required parking spaces calculated as 40-60 residential plus 24-32 retail equals 64-92 spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific parking space ranges (64-92 total, 40-60 residential, 24-32 retail) do not appear in authoritative Denver government sources; they appear to be a hypothetical calculation example rather than an actual code requirement, and Denver's parking requirements were eliminated citywide in August",
+      "source": "https://denvergov.org/content/dam/denvergov/Portals/646/documents/Zoning/DZC/Denver_Zoning_Code_Article10_Design_Standards.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "ADA spaces 4% minimum, 3-4 spaces required",
+        "context": "ADA spaces required at 4% minimum per ADA Standards, resulting in 3-4 ADA spaces",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The ADA Standards use a tiered requirement table (not a flat 4% minimum), and the 4% figure only applies to on-street parking under PROWAG, not to general parking lot requirements as the claim suggests.",
+      "source": "https://www.access-board.gov/ada/guides/chapter-5-parking/"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Fire lane access 20' wide required",
+        "context": "Fire lane access per Denver Fire Code requires 20' wide access",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Fire Code explicitly requires fire apparatus access roads to have a minimum unobstructed width of 20 feet, as confirmed in both the 2018 and 2021 versions of the code.",
+      "source": "https://up.codes/viewer/denver/ifc-2021/chapter/5/fire-service-features"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Retaining walls maximum 4 feet height in setback areas",
+        "context": "Retaining walls limited to maximum 4 feet height in setback areas with 4-foot separation",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official zoning code and development services documents explicitly confirm that retaining walls in Primary Street Setback areas have a maximum height of 4 feet with 4-foot separation between successive walls.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "WQCV requirement capture 80th percentile storm event",
+        "context": "Water quality capture volume requirement must capture 80th percentile storm event",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Urban Storm Drainage Manual and MHFD technical documents explicitly confirm that WQCV requirements are based on capturing the 80th percentile storm event.",
+      "source": "https://denvergov.org/files/assets/public/v/2/doti/documents/permits/sspr-stormsanitary/urban-storm-drainage-manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "DZC 10.6.5",
+        "context": "Grade change limit maximum 1 foot difference within 10 feet of primary street per DZC 10.6.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section 10.6.5 of the Denver Zoning Code is confirmed on official Denver government sources and explicitly addresses the 1-foot grade change limit within 10 feet of the primary street.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/commercial-zoning/zoning_tip3_gradingstandards_primary_set_back.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Municipal Code 56-102",
+        "context": "Stormwater management plan required for 500+ SF new impervious surface per Municipal Code 56-102",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Municipal Code 56-102 is confirmed to exist and is actively cited in Denver's official stormwater management documents as governing stormwater requirements.",
+      "source": "https://denver.prelive.opencities.com/files/assets/public/v/2/doti/documents/permits/dotipt-401.3-construction_activities_stormwater_discharge_permit.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Professional engineer required for construction drawings and drainage design",
+        "context": "Professional engineer required for construction drawings and drainage design",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Storm Drainage Design Technical Criteria and Construction Activities Stormwater Manual explicitly require that construction drawings and drainage design be prepared by a professional engineer licensed in Colorado.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/711/documents/StormMasterPlan/StormDrainageDesignTechnicalCriteria.pdf"
+    },
+    {
+      "claim": {
+        "type": "consultant-requirement",
+        "text": "Licensed Colorado engineer required for drainage plans",
+        "context": "Professional certification: Licensed Colorado engineer required for drainage plans",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative Denver government sources explicitly require Colorado-licensed Professional Engineers for drainage plans and related submissions.",
+      "source": "https://www.denvergov.org/files/assets/public/v/7/doti/documents/permits/sudp/groundwater_dewatering_permitting_requirements.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "CASDP permit required for 500+ SF new impervious surface",
+        "context": "Construction Activities Stormwater Discharge Permit (CASDP) required for 500+ SF new impervious",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's CASDP is required for projects disturbing 1+ acre, not for 500+ SF of new impervious surface; the 500 SF threshold applies to stormwater management plans, not CASDP permits.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/standards/pwes-007.0-construction_activities_stormwater_manual.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Sewer use permit required",
+        "context": "Sanitary sewer service requires sewer use permit per Denver Water",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The sewer use permit requirement is correctly identified, but it is incorrectly attributed to Denver Water; the permit is actually required and issued by the City and County of Denver's Department of Transportation and Infrastructure.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Documents/Wastewater-Permits/Sewer-Use-and-Drainage-Permits"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Industrial pretreatment program compliance required",
+        "context": "Stormwater quality requires industrial pretreatment program compliance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim incorrectly attributes industrial pretreatment program compliance (a wastewater/sanitary sewer requirement) to stormwater quality requirements; Denver's regulations address stormwater pollution prevention through BMPs and management plans, not through the industrial pretreatment program.",
+      "source": "https://www.denvergov.org"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Building area 45,000 SF exceeds calculated buildable envelope 40,500 SF",
+        "context": "Proposed building area 45,000 SF exceeds maximum building area 40,500 SF - NON-COMPLIANT",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim with these exact square footage figures (45,000 SF vs. 40,500 SF) does not appear in searchable Denver government authoritative sources, and appears to be project-specific rather than a general code provision.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Community-Planning-and-Development/Denver-Zoning-Code"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Lot coverage likely exceeds 37.5% maximum",
+        "context": "Proposed building footprint 9,000 SF exceeds lot coverage limit 4,500 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's zoning code establishes a 37.5% maximum building coverage limit on most lots, confirmed in official city documents and Board of Adjustment decisions.",
+      "source": "https://s3.amazonaws.com/arcb-wall/3192715396/wall/Vb377p4PAUHl920aI732.pdf"
+    }
+  ]
+}

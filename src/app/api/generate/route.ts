@@ -120,10 +120,38 @@ export async function POST(req: Request) {
     // Phase 2: LLM synthesis — use report-type-specific prompt
     const userPrompt = buildUserPrompt(input, searchResults, reportType.userPromptSuffix);
 
+    // ANTI-FABRICATION RULES — prepended to every system prompt
+    // Prevents the LLM from inventing section numbers, zone codes, or dollar figures
+    // when the web search results don't explicitly contain them.
+    const ANTI_FABRICATION_RULES = `
+ANTI-FABRICATION RULES — HIGHEST PRIORITY:
+
+1. NEVER invent code section numbers. If the web search results do not explicitly contain a specific section number (§, Article, Chapter, Table), do NOT cite one. Instead, write "per [jurisdiction] code" or "per IBC" generically and mark the item ⚠ VERIFY WITH AHJ. Fabricating section numbers like "DZC §13.1.5.3" when that section does not appear in the search results is the worst thing you can do.
+
+2. NEVER invent zone district designations. Zone codes like "C-MU", "R-MU", "T-MU", "C-MX-5", "U-MX-3" must appear in the web search results verbatim. If you are unsure what the actual zone designations are for a jurisdiction, write "the applicable zone district (VERIFY WITH AHJ)" — do NOT guess.
+
+3. NEVER invent specific dollar figures. Fees, tap charges, permit costs must come from the search results. If you do not have a verified figure, write "fee varies — VERIFY WITH [AGENCY]" instead of making up a number.
+
+4. NEVER invent specific timelines. If a permit review takes X days, that figure must be from search results or a published agency target. Otherwise say "timeline varies — verify with jurisdiction."
+
+5. When in doubt, flag with ⚠ VERIFY WITH AHJ. A correctly flagged uncertain item is ALWAYS better than a fabricated specific citation. The architect using this report will trust honest uncertainty more than confident fabrication.
+
+6. Calculations (FAR, occupant load, exit width, etc.) must be mathematically correct and show the work. Math errors are worse than fabrications because they're easy to verify.
+
+7. General code concepts from IBC/IFC/IPC/IECC/ADA that are standard across jurisdictions can be cited confidently. Jurisdiction-specific local amendments and zone designations require verified source backing.
+
+REMEMBER: The reader is a licensed professional who will verify your citations. A verified 85% accurate report with honest ⚠ flags builds trust. A 95% accurate-looking report with fabricated specifics destroys it forever when the fabrication is caught.
+
+═══════════════════════════════════════════════════════════
+
+`;
+
+    const enhancedSystemPrompt = ANTI_FABRICATION_RULES + reportType.systemPrompt;
+
     const stream = anthropic.messages.stream({
       model: "claude-sonnet-4-20250514",
       max_tokens: 8000,
-      system: reportType.systemPrompt,
+      system: enhancedSystemPrompt,
       messages: [{ role: "user", content: userPrompt }],
     });
 

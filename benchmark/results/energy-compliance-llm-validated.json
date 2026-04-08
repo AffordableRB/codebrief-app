@@ -1,0 +1,734 @@
+{
+  "metadata": {
+    "report": "energy-compliance.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 55,
+    "scoredClaims": 54,
+    "verified": 29,
+    "fabricated": 19,
+    "unverifiable": 6,
+    "flagged": 1,
+    "skipped": 0,
+    "fabricationRate": 35.2,
+    "accuracyPercent": 59.3,
+    "integrityPercent": 64.8
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2021 International Energy Conservation Code (IECC)",
+        "context": "Energy Code | 2021 International Energy Conservation Code (IECC)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver has officially adopted the 2021 International Energy Conservation Code (IECC) as confirmed by multiple authoritative sources including Denver's official building code documents and the UpCodes platform.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2022 Denver Energy Code (DEC)",
+        "context": "Local Amendments | 2022 Denver Energy Code (DEC)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative denvergov.org sources explicitly confirm the 2022 Denver Energy Code (DEC) as the official code designation currently used by Denver.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-fact-sheets-c-c406-prescriptive-pathway.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "ASHRAE 90.1-2019",
+        "context": "Commercial Reference | ASHRAE 90.1-2019",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple official Denver government documents confirm that ASHRAE 90.1-2019 is the current standard referenced in Denver's 2022 Energy Code for commercial building compliance.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-fact-sheets-c-c407-performance-pathway.pdf"
+    },
+    {
+      "claim": {
+        "type": "climate-zone",
+        "text": "Climate Zone 5A (Cool/Dry)",
+        "context": "Climate Zone | 5A (Cool/Dry)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official building code designates the city as Climate Zone 5B, not 5A; the moisture designation \"A\" indicates moist conditions, while Denver is classified as \"B\" (dry).",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Heating Design Temperature 5°F",
+        "context": "Heating Design Temperature | 5°F ⚠ VERIFY WITH LOCAL WEATHER DATA",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C402.1.3 - Roof Insulation (All Other)",
+        "context": "Roof Insulation (All Other) | Table C402.1.3 | R-25 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Table C402.1.3 exists in Denver's code, but the specific designation \"Roof Insulation (All Other)\" with R-25 ci does not match the actual requirements found in authoritative Denver sources, which specify R-49 for \"Roof attic and other.\"",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-dec-training-commercial-prescriptive.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-25 ci roof insulation for commercial portions",
+        "context": "Roof Insulation (All Other) | Table C402.1.3 | R-25 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver Energy Code Table C402.1.3 specifies R-30 for roof insulation above deck in commercial buildings, not R-25 ci as claimed.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-dec-training-commercial-performance.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-7.5 ci or R-13+R-7.5 ci above-grade wall for commercial",
+        "context": "Above-Grade Wall (All Other) | Table C402.1.3 | R-7.5 ci or R-13+R-7.5 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact insulation values (R-7.5 ci and R-13+R-7.5 ci) for above-grade wood-framed and other commercial walls are explicitly confirmed in Denver's official 2022 Energy Code training documents referencing Table C402.1.3.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-dec-training-commercial-prescriptive.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-7.5 ci below-grade wall for commercial",
+        "context": "Below-Grade Wall | Table C402.1.3 | R-7.5 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Below-grade walls in Denver's energy code are specified using C-factors in Table C402.1.4, not R-values in Table C402.1.3; R-7.5 ci appears in Denver code but only for above-grade walls.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/green-code/commercial-energy/ce07-building-envelope.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-10 for 24 inch slab-on-grade for commercial",
+        "context": "Slab-on-Grade | Table C402.1.3 | R-10 for 24\"",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Table C402.1.3 exists in Denver's Energy Code and contains slab-on-grade insulation requirements, the actual table content was not accessible in the search results to verify the specific claim about R-10 for 24 inch commercial slabs.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-38 ci roof insulation for residential portions",
+        "context": "Roof Insulation (Group R) | Table C402.1.3 | R-38 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The cited section \"Table C402.1.3\" is a commercial energy code table, not a residential code table; residential roof insulation requirements would be found in Table R402.1.3, not C402.1.3.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-13+R-7.5 ci above-grade wall for residential",
+        "context": "Above-Grade Wall (Group R) | Table C402.1.3 | R-13+R-7.5 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The R-13+R-7.5 ci above-grade wall specification for Group R (residential) is explicitly confirmed in multiple official Denver Energy Code documents from 2022.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-10 ci below-grade wall for residential",
+        "context": "Below-Grade Wall (Group R) | Table C402.1.3 | R-10 ci",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Table C402.1.3 exists in Denver's energy code and contains Group R insulation requirements, the search results do not display the actual table contents showing the specific R-value for below-grade walls for residential occupancies.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-10 for 24 inch slab-on-grade for residential",
+        "context": "Slab-on-Grade (Group R) | Table C402.1.3 | R-10 for 24\"",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Table C402.1.3 exists in Denver's building code and slab-on-grade insulation requirements are documented, the specific complete table showing the exact R-10 for 24\" designation for residential Group R could not be located in the accessible Denver government sources.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C402.4 - Window U-Factor",
+        "context": "Window U-Factor | Table C402.4 | U-0.32",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Table C402.4 is a legitimate IECC code section for fenestration U-factors, the site-restricted search of Denver's official domain returned no results, and the specific table designation cannot be confirmed in Denver's adopted building code without access to the full code document.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "efficiency-value",
+        "text": "U-0.32 window U-factor",
+        "context": "Window U-Factor | Table C402.4 | U-0.32",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The U-0.32 window U-factor value is confirmed in Denver building code documents, appearing in the 2021 IECC standards adopted by Denver and referenced in Table C402.4 for commercial fenestration requirements.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/code-adoption/amendment-proposals/iecc/iecc_r402.1_res.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C402.4 - Skylight U-Factor",
+        "context": "Skylight U-Factor | Table C402.4 | U-0.50",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Table C402.4 - Skylight U-Factor with U-0.50 is explicitly documented in Denver's official 2022 Denver Energy Code building envelope guidance.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/green-code/commercial-energy/ce07-building-envelope.pdf"
+    },
+    {
+      "claim": {
+        "type": "efficiency-value",
+        "text": "U-0.50 skylight U-factor",
+        "context": "Skylight U-Factor | Table C402.4 | U-0.50",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim accurately cites Table C402.4 with the correct skylight U-factor of 0.50, which is confirmed in official Denver Energy Code documents.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-dec-training-commercial-prescriptive.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C402.5 - Continuous air barrier required",
+        "context": "Air Barrier | C402.5 | Continuous air barrier required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section C402.5 is confirmed in authoritative Denver Energy Code documents as addressing air barrier requirements, with continuous air barrier explicitly required as a mandatory provision.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Continuous air barrier required",
+        "context": "Air Barrier | C402.5 | Continuous air barrier required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim is explicitly confirmed in Denver's official building code documents; section C402.5 requires a continuous air barrier as a mandatory requirement for the thermal envelope.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Amendment requires 0.40 CFM/SF @ 75 Pa air leakage",
+        "context": "Air Leakage | Denver Amendment | 0.40 CFM/SF @ 75 Pa",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's Energy Code 2021 and amendment documentation explicitly confirm the 0.40 CFM/SF @ 75 Pa air leakage requirement for building thermal envelopes.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver requires COP ≥ 1.5 for heat pumps operating at 5°F",
+        "context": "Heat Pumps (Operating at 5°F) | Denver Amendment | COP ≥ 1.5",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim is explicitly confirmed in Denver's official Draft 2025 Denver Energy Code document, which specifies the COP ≥ 1.5 requirement for heat pumps operating at 5°F.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver requires COP ≥ 1.75 for heat pumps all others at 5°F",
+        "context": "Heat Pumps (All Others at 5°F) | Denver Amendment | COP ≥ 1.75",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact requirement for heat pumps to have a COP ≥ 1.75 when operating at 5°F is explicitly stated in Denver's official energy code documents and confirmed in authoritative code databases.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver limits electric resistance to ≤ 1.35W/SF of conditioned area",
+        "context": "Electric Resistance Limit | Denver Amendment | ≤ 1.35W/SF of conditioned area",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact limit of 1.35W/SF of conditioned area for electric resistance is explicitly stated in Denver's official Draft 2025 Denver Energy Code amendment document.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C403.3.2 - Cooling per ASHRAE 90.1-2019",
+        "context": "Cooling | Table C403.3.2 | Per ASHRAE 90.1-2019",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific table designation \"Table C403.3.2 - Cooling per ASHRAE 90.1-2019\" does not appear in authoritative ASHRAE 90.1-2019 standard documents; ASHRAE 90.1-2019 uses different table numbering conventions (6.8.1 series for equipment efficiency).",
+      "source": "https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/90_1_2019_y_20211209.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C403.3 - ASHRAE 62.1 ventilation rates",
+        "context": "Ventilation | C403.3 | ASHRAE 62.1 rates",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Section 403.3 exists in Denver's mechanical code and addresses ventilation rates, but the exact designation \"C403.3 - ASHRAE 62.1 ventilation rates\" does not appear as a formal section title in authoritative Denver building code documents; the \"C\" prefix is incorrect for mechanical code sections.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/amendment-proposals/imc/imc_403.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C403.5 - Economizer required for cooling capacity ≥ 54,000 Btu/h",
+        "context": "Economizer | C403.5 | Required for cooling capacity ≥ 54,000 Btu/h",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The official Denver Energy Code specifies economizer requirements at 33,000 Btu/h for Individual Fan Systems in non-Group R buildings, not 54,000 Btu/h as claimed.",
+      "source": "https://denvergov.org/files/assets/public/v/1/climate-action/documents/buildings-and-homes/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Economizer required for cooling capacity ≥ 54,000 Btu/h",
+        "context": "Economizer | C403.5 | Required for cooling capacity ≥ 54,000 Btu/h",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While the 54,000 Btu/h threshold was historically correct for earlier IECC versions, Denver's current draft 2025 Energy Code has lowered the economizer requirement threshold to 33,000 Btu/h for non-residential buildings, making the cited 54,000 Btu/h figure outdated and inaccurate for current Denver",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C403.6 - Energy recovery required per Table C403.6.1",
+        "context": "Energy Recovery | C403.6 | Required per Table C403.6.1",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific section \"C403.6 - Energy recovery required per Table C403.6.1\" does not appear in Denver's official energy code documents; energy recovery requirements are actually located in sections C403.7.4.1 and C403.7.4.2.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Energy recovery required per Table C403.6.1",
+        "context": "Energy Recovery | C403.6 | Required per Table C403.6.1",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific citation \"Table C403.6.1\" does not appear in authoritative Denver building code sources; energy recovery requirements are found in other sections like C403.7.4.2 with Tables C403.7.4.2(1) and C403.7.4.2(2).",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C403.11.1 - Duct insulation R-8 exterior, R-5 unconditioned",
+        "context": "Duct Insulation | C403.11.1 | R-8 (exterior), R-5 (unconditioned)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim specifies R-5 for unconditioned spaces, but C403.11.1 actually requires R-6 for unconditioned spaces; the R-5 value does not appear in authoritative code sources.",
+      "source": "https://up.codes/s/duct-and-plenum-insulation-and-sealing-mandatory"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "R-8 duct insulation for exterior, R-5 for unconditioned",
+        "context": "Duct Insulation | C403.11.1 | R-8 (exterior), R-5 (unconditioned)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim specifies R-8 for exterior ducts, but Denver is in Climate Zone 5 where C403.11.1 requires R-12 for exterior ducts; additionally, unconditioned spaces require R-6, not R-5.",
+      "source": "https://up.codes/s/duct-and-plenum-insulation-and-sealing-mandatory"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C403.11.2 - Pipe insulation per Table C403.11.2",
+        "context": "Pipe Insulation | C403.11.2 | Per Table C403.11.2",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The correct section designation for pipe insulation in Denver's energy code is C403.11.3 (with Table C403.11.3), not C403.11.2 as claimed.",
+      "source": "https://up.codes/s/piping-insulation-mandatory"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C405.4.2 - Interior LPD retail 1.2 W/SF",
+        "context": "Interior LPD - Retail | Table C405.4.2 | 1.2 W/SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific table designation \"Table C405.4.2\" and the value \"1.2 W/SF\" for interior retail lighting could not be located in accessible Denver building code sources, though Section C405 lighting requirements do exist in Denver's energy code.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "1.2 W/SF interior lighting power density for retail",
+        "context": "Interior LPD - Retail | Table C405.4.2 | 1.2 W/SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Table C405.4.2 is confirmed to exist in Denver's 2019 Building Code framework, the specific retail lighting power density value of 1.2 W/SF could not be verified from accessible authoritative Denver sources.",
+      "source": "https://www.denvergov.org/files/assets/public/v/5/community-planning-and-development/documents/ds/other-forms-and-guides/iecc/2019-commercial-energy-code-modeling-report.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Table C405.4.2 - Interior LPD multifamily residential 0.6 W/SF",
+        "context": "Interior LPD - Multifamily Residential | Table C405.4.2 | 0.6 W/SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The specific table designation \"Table C405.4.2\" for interior LPD multifamily residential at 0.6 W/SF does not appear in Denver's official building code sources; the 2022 Denver Energy Code specifies 0.45 W/SF for multifamily dwelling units.",
+      "source": "https://denver.prelive.opencities.com/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "performance-value",
+        "text": "0.6 W/SF interior lighting power density for multifamily residential",
+        "context": "Interior LPD - Multifamily Residential | Table C405.4.2 | 0.6 W/SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claimed value of 0.6 W/SF for multifamily residential interior lighting power density contradicts Denver's current code requirement of 0.45 W/SF, and the cited section C405.4.2 does not govern interior residential lighting power allowances.",
+      "source": "https://denver.prelive.opencities.com/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C405.2 - Automatic shutoff and daylight responsive lighting controls",
+        "context": "Lighting Controls | C405.2 | Automatic shutoff, daylight responsive",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "C405.2 exists in Denver's energy code, but automatic shutoff and daylight responsive controls are separate subsections (C405.2.1 and C405.2.4), not combined under a single C405.2 section with that title.",
+      "source": "https://up.codes/s/lighting-controls-mandatory"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Automatic shutoff and daylight responsive lighting controls required",
+        "context": "Lighting Controls | C405.2 | Automatic shutoff, daylight responsive",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section C405.2 is a real, currently used section in the IECC that Denver has adopted, and it explicitly requires both automatic shutoff and daylight responsive lighting controls as mandatory provisions.",
+      "source": "https://up.codes/s/lighting-controls-mandatory"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C405.2.3 - Daylight responsive controls required in daylight zones",
+        "context": "Daylight Responsive Controls | C405.2.3 | Required in daylight zones",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section C405.2.3 exists in Denver's Energy Code and does address daylight-responsive controls required in daylight zones, though the actual requirements have specific conditions and exceptions.",
+      "source": "https://up.codes/viewer/denver/iecc-2018/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Daylight responsive controls required in daylight zones",
+        "context": "Daylight Responsive Controls | C405.2.3 | Required in daylight zones",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Section C405.2.3 exists in Denver's Energy Code and does require daylight responsive controls in daylight zones, though with specific wattage thresholds.",
+      "source": "https://up.codes/viewer/denver/iecc-2018/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Amendment requires dedicated solar zone for R1/R2 occupancies",
+        "context": "Solar-Ready | Denver Amendment | Dedicated solar zone required for R1/R2 occupancies",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Amendment (Section C405.14 of the Denver Energy Code) explicitly requires all newly constructed buildings of Occupancy Groups R1 and R2 to designate a dedicated solar-ready zone on building plans.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Amendment requires 200A minimum electrical panel with reserved space for solar/storage",
+        "context": "Electrical Panel | Denver Amendment | 200A minimum with reserved space for solar/storage",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Amendment C405.14.6 explicitly requires a 200A minimum electrical service panel with reserved spaces for both solar and energy storage systems, as confirmed in the official Denver Energy Code document.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Amendment requires EV charging infrastructure per building type",
+        "context": "EV-Ready | Denver Amendment | EV charging infrastructure per building type",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Amendment documents on denvergov.org explicitly establish EV charging infrastructure requirements that vary by building type (residential, commercial, occupancy groups), confirming the claim.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/code-adoption/amendment-proposals/iecc/65.1-iecc-n1101-ev-ready-residential.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "C408 - HVAC, DHW, lighting systems commissioning",
+        "context": "Commissioning | C408 | HVAC, DHW, lighting systems",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The official section title in Denver's building code is \"C408 - Maintenance Information and System Commissioning,\" not \"C408 - HVAC, DHW, lighting systems commissioning\" as claimed.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/2025_dbc-december_2025_printing_draft.pdf"
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Commissioning required for HVAC, DHW, lighting systems",
+        "context": "Commissioning | C408 | HVAC, DHW, lighting systems",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official building code documents explicitly confirm that C408 requires commissioning for HVAC, DHW (service water heating), and lighting systems as mandatory requirements for commercial buildings.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-dec-training-commercial-performance.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Amendment requires thermal envelope verification testing",
+        "context": "Envelope Testing | Denver Amendment | Thermal envelope verification required",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver Amendments C402.5.1.2.3 and C402.5.1.3 explicitly require thermal envelope performance verification and testing, confirmed in official Denver Building Code documents.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-denver-energy-code-highlights.pdf"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Denver Green Buildings Ordinance",
+        "context": "Cool Roof (>25,000 SF) | Green Buildings Ordinance | Required plus one additional green option",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Green Buildings Ordinance is a real, currently enforced ordinance that requires cool roofs for buildings over 25,000 SF plus selection of an additional green building compliance option.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Commercial-and-Multifamily-Projects/Green-Buildings-Ordinance"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Cool roof required for buildings >25,000 SF plus one additional green option",
+        "context": "Cool Roof (>25,000 SF) | Green Buildings Ordinance | Required plus one additional green option",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Green Buildings Ordinance documents explicitly confirm that buildings over 25,000 SF must include a cool roof plus one additional green building option.",
+      "source": "https://www.denvergov.org/content/dam/denvergov/Portals/696/documents/Green-buildings-handout.pdf"
+    },
+    {
+      "claim": {
+        "type": "ordinance-name",
+        "text": "Energize Denver Municipal Ordinance",
+        "context": "Energize Denver | Municipal Ordinance | Annual energy reporting required (>25,000 SF)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Energize Denver Municipal Ordinance is confirmed as a real, current Denver ordinance with annual energy reporting requirements for buildings over 25,000 square feet, as documented on official denvergov.org sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency/Cutting-Denvers-Carbon-Pollution/Efficient-Commercial-Buildings/Denver-Building-Regulations/Energize-Denver-Building-Performance-Policy"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Energize Denver requires annual energy reporting for buildings >25,000 SF",
+        "context": "Energize Denver | Municipal Ordinance | Annual energy reporting required (>25,000 SF)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Official Denver government sources explicitly confirm that Energize Denver requires annual energy benchmarking/reporting for buildings 25,000 square feet and larger.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency/Cutting-Denvers-Carbon-Pollution/Efficient-Commercial-Buildings/Denver-Building-Regulations/Energize-Denver-Building-Performance-Policy/Buildings-25000-sq-ft-or-Larger"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver prohibits fossil fuel gas furnaces and water heaters in new commercial buildings",
+        "context": "Electrification | No fossil fuel gas furnaces or water heaters in new commercial buildings",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's 2022 Energy Code (Sections C403.2.4 and C404.10) explicitly prohibits fossil fuel furnaces and fossil fuel water heaters in new commercial buildings, as confirmed by official Denver government documents.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/climate-action/documents/hpbh/nze/2022-denver-energy-code-fact-sheets-c-electrification-for-service-water-heating.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver air leakage requirement 0.40 CFM/SF @ 75 Pa is more stringent than base IECC",
+        "context": "Air Leakage | 0.40 CFM/SF @ 75 Pa (more stringent than base IECC)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's 0.40 CFM/ft² @ 75 Pa requirement matches the 2021 IECC standard and is less stringent than the 2024 IECC requirement of 0.35 CFM/ft², contradicting the claim that it is more stringent than base IECC.",
+      "source": "https://up.codes/viewer/denver/iecc-2021/chapter/CE_4/ce-commercial-energy-efficiency"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver requires solar and EV ready infrastructure for mandatory future systems",
+        "context": "Solar/EV Ready | Mandatory infrastructure for future systems",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's 2022 Energy Code mandates solar-ready zones and EV-ready infrastructure as required provisions for future systems in new construction.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/draft_denver_energy_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Energize Denver has performance targets for 2025, 2027, 2030 compliance years",
+        "context": "Energize Denver | Performance targets: 2025, 2027, 2030 compliance years",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative sources explicitly confirm that Energize Denver has performance targets for 2025, 2027, and 2030 compliance years.",
+      "source": "https://www.cmta.com/news/energize-denver-faq"
+    }
+  ]
+}

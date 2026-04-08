@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "report": "permitting-pathway.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 28,
+    "scoredClaims": 24,
+    "verified": 9,
+    "fabricated": 4,
+    "unverifiable": 11,
+    "flagged": 4,
+    "skipped": 0,
+    "fabricationRate": 16.7,
+    "accuracyPercent": 60.4,
+    "integrityPercent": 83.3
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Buildings 25,000+ SF must meet cool roof + flexible compliance",
+        "context": "Green Buildings Ordinance Compliance | Community Planning & Development | ✓ Yes | Buildings 25,000+ SF must meet cool roof + flexible compliance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Official Denver government sources explicitly confirm that buildings 25,000+ SF must install a cool roof and select from multiple Green Buildings Ordinance compliance options.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/High-Performance-Buildings-and-Homes/Energize-Denver-Hub/Buildings-25000-sq-ft-or-Larger/Roof-Replacement-Requirements-Green-Buildings-Ordinance/Green-Buildings-Ordinance-Energy-Program"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Site Development Plan required for new commercial construction + 3+ residential units",
+        "context": "Site Development Plan (SDP) | Community Planning & Development | ✓ Yes | New commercial construction + 3+ residential units",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Community Planning and Development website explicitly confirms that Site Development Plans are required for new commercial construction and three or more residential units.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Zoning-Permits/Site-Development-Plan-Review"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Zoning Permit required for all new construction",
+        "context": "Zoning Permit | Community Planning & Development | ✓ Yes | All new construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "While zoning permits are generally required for new construction in Denver, the claim of \"all new construction\" is contradicted by authoritative sources that explicitly exempt certain minor detached structures from zoning permit requirements.",
+      "source": "https://denvergov.org/files/assets/public/v/13/community-planning-and-development/documents/zoning/denver-zoning-code/denver_zoning_code_article12_administration.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Building Permit required for all construction",
+        "context": "Building Permit | Denver Permitting Office (DPO) | ✓ Yes | All construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's official sources confirm that permits are required for construction projects, the search results do not provide explicit confirmation or contradiction of whether permits are required for literally \"all construction\" without exception, as the jurisdiction uses a tiered permitting syste",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Fire Department Review required for multi-story mixed-use building",
+        "context": "Fire Department Review | Denver Fire Department | ✓ Yes | Multi-story mixed-use building",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver Fire Department clearly conducts plan reviews and has authority over building design, the search results do not explicitly confirm or deny that Fire Department Review is categorically required for all multi-story mixed-use buildings.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/2025_denver_fire_code_legislative_review_draft_clean.pdf"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Sewer Use & Drainage Permit required for new construction",
+        "context": "Sewer Use & Drainage Permit (SUDP) | Department of Public Works | ✓ Yes | New construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Department of Transportation and Infrastructure website explicitly confirms that a Sewer Use and Drainage Permit (SUDP) must be obtained before any building or construction may begin.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Documents/Wastewater-Permits/Sewer-Use-and-Drainage-Permits"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Neighbor Notification required 10 working days before excavation permit",
+        "context": "Neighbor Notification | Building Official | ✓ Yes | Required 10 working days before excavation permit",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Multiple authoritative Denver government sources explicitly confirm that written evidence of neighbor notification must be provided to the building official 10 working days before an excavation permit is issued.",
+      "source": "https://denver.prelive.opencities.com/files/assets/public/v/1/community-planning-and-development/documents/ds/other-forms-and-guides/total-demo-notification-form.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "SDP Pre-Application Meeting 2-3 weeks",
+        "context": "Pre-Application | SDP Pre-Application Meeting | 2-3 weeks",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government source explicitly confirms or contradicts the existence of an \"SDP Pre-Application Meeting\" with a 2-3 week timeline; the term does not appear in official SDP process documentation.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Zoning-Permits/Site-Development-Plan-Review"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Site Development Plan Review 60-90 days",
+        "context": "Entitlements | Site Development Plan Review | 60-90 days ⚠",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Zoning Permit 30-45 days",
+        "context": "Zoning | Zoning Permit (can start with SDP) | 30-45 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "No authoritative Denver government source confirms a 30-45 day zoning permit timeline; current official timelines target 180 days, and historical data shows actual processing times have been significantly longer.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Zoning-Permits"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Architectural/Engineering Plans 30-60 days",
+        "context": "Plan Preparation | Architectural/Engineering Plans | 30-60 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "No authoritative Denver government source (denvergov.org) explicitly confirms a \"30-60 days\" timeline for architectural/engineering plan preparation; the claim is too vague to verify against specific code sections or official guidelines.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Building Permit Submittal 2-5 days",
+        "context": "Building Permit Application | Building Permit Submittal | 2-5 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific claim \"Building Permit Submittal 2-5 days\" does not appear in Denver's official permitting guides, code policies, or authoritative sources accessible on denvergov.org, and the terminology and timeline cannot be verified against current Denver building permit procedures.",
+      "source": "https://www.denvergov.org/files/assets/public/v/15/community-planning-and-development/documents/ds/other-forms-and-guides/commercial-permitting-guide.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Building Plans Review 20 business days initial",
+        "context": "Plan Review | Building Plans Review (Major Project Log) | 20 business days (initial)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Building Permit Policy ADMIN 131A explicitly establishes 20 business days as the target initial review timeline for major commercial building projects.",
+      "source": "https://denvergov.org/files/assets/public/v/6/community-planning-and-development/documents/ds/building-codes/policies/admin-131a.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Agency Reviews +10-20 business days",
+        "context": "Agency Reviews | Fire, Public Works, Environmental Health | +10-20 business days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"+10-20 business days\" timeline for agency reviews by Fire, Public Works, and Environmental Health does not appear in Denver's official permitting documentation or authoritative sources, though general review timelines are documented differently.",
+      "source": "https://www.denvergov.org/buildingpermitstatus"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Address review comments 10-30 days",
+        "context": "Revisions | Address review comments | 10-30 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"10-30 days\" timeline for addressing review comments does not appear in Denver's official building code documents, permitting guides, or administrative policies accessible on denvergov.org, and cannot be verified against authoritative sources.",
+      "source": "https://www.denvergov.org/files/assets/public/v/5/community-planning-and-development/documents/ds/other-forms-and-guides/residential-permitting-guide.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Second review cycle 10 business days",
+        "context": "Re-Review | Second review cycle | 10 business days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Search results from Denver permit expediting specialists indicate re-evaluations take 5 additional business days, not 10 business days, contradicting the claim.",
+      "source": "https://www.burnhamnationwide.com/denver-building-permit-process"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Final permit approval 3-5 days",
+        "context": "Permit Issuance | Final permit approval | 3-5 days",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"3-5 days\" timeline for final permit approval is not found in accessible Denver government sources, though Denver maintains daily-updated review time data that is not fully visible in search results.",
+      "source": "https://www.denvergov.org/buildingpermitstatus"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Best Case 6-8 months",
+        "context": "Estimated Total Timeline | Best Case: 6-8 months (all approvals run smoothly)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific \"Best Case 6-8 months\" timeline does not appear in searchable Denver government documents; while Denver provides various permit timelines, this exact estimate is not found on authoritative sources.",
+      "source": "https://www.denvergov.org/buildingpermitstatus"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Typical Case 8-12 months",
+        "context": "Estimated Total Timeline | Typical Case: 8-12 months (includes one revision cycle)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The authoritative Denver government page for plan review times exists but the search results do not display the specific timeline figures needed to verify the \"8-12 months\" claim.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Worst Case 12-18 months",
+        "context": "Estimated Total Timeline | Worst Case: 12-18 months (multiple revisions, appeals, agency delays)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific phrase \"Worst Case 12-18 months\" does not appear in any authoritative Denver government sources, official building code documents, or published permitting timelines, though 12-18 months falls within the range of actual project delays reported in Denver.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Average-Plan-Review-Times"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Community Planning & Development",
+        "context": "Site Development Plan (SDP) | Community Planning & Development | ✓ Yes",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "\"Community Planning & Development\" (also referenced as \"Community Planning and Development\") is an officially recognized agency of the City and County of Denver that handles building permits, site development plans, and related development review functions.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Permitting Office (DPO)",
+        "context": "Building Permit | Denver Permitting Office (DPO) | ✓ Yes | All construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Permitting Office (DPO) is confirmed as a real agency established by Executive Order and referenced on official denvergov.org websites for building and development permitting.",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/executive-orders/documents/151-denver-permitting-office.pdf"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Fire Department",
+        "context": "Fire Department Review | Denver Fire Department | ✓ Yes | Multi-story mixed-use building",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The Denver Fire Department is confirmed as a real, currently active agency of the City and County of Denver, documented on official government sources.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Fire-Department"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Department of Public Works",
+        "context": "Sewer Use & Drainage Permit (SUDP) | Department of Public Works | ✓ Yes | New construction",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Current Denver authoritative sources identify the responsible agency for SUDP permits as the Department of Transportation & Infrastructure (DOTI), not \"Department of Public Works.\"",
+      "source": "https://www.denvergov.org/files/assets/public/v/1/doti/documents/permits/sudp/2026-sewer-permit-fees.pdf"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Building Department",
+        "context": "Excavation/Shoring Permit | Denver Building Department | ⚠ Likely | 5-story construction requiring deep excavation",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Dept. of Environmental Health",
+        "context": "Environmental Health Review | Dept. of Environmental Health | ⚠ Possible | Commercial/restaurant use triggers review",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Geotechnical Report must be less than 2 years old",
+        "context": "Geotechnical Report | Building Permit | Soils analysis (must be <2 years old)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Denver's official Building Permit Policy IRC R401.4 explicitly states that geotechnical reports must be within two years of submittal to be considered \"current.\"",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/policies/irc_401.4.pdf"
+    },
+    {
+      "claim": {
+        "type": "timeline",
+        "text": "Denver Permitting Office promises 180-day turnaround",
+        "context": "⚠ VERIFY WITH JURISDICTION: The new Denver Permitting Office (DPO) promises 180-day turnaround, but actual timelines may vary based on current workload and project complexity.",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    }
+  ]
+}

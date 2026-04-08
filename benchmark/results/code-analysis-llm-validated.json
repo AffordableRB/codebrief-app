@@ -1,0 +1,973 @@
+{
+  "metadata": {
+    "report": "code-analysis.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 74,
+    "scoredClaims": 65,
+    "verified": 7,
+    "fabricated": 3,
+    "unverifiable": 55,
+    "flagged": 9,
+    "skipped": 0,
+    "fabricationRate": 4.6,
+    "accuracyPercent": 53.1,
+    "integrityPercent": 95.4
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2024 IBC with Denver amendments per D.R.M.C. Sec. 10-16",
+        "context": "Denver Building Code (DBC) | 2024 IBC with Denver amendments per D.R.M.C. Sec. 10-16",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "Official Denver government documents confirm that D.R.M.C. Sec. 10-16 is the actual statutory section through which Denver adopts and amends the 2024 International Building Code and Fire Code.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2024 IFC with Denver amendments per D.R.M.C. Sec. 10-16",
+        "context": "Denver Fire Code (DFC) | 2024 IFC with Denver amendments per D.R.M.C. Sec. 10-16",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim is explicitly confirmed in Denver's official 2025 Denver Fire Code document, which states \"The 2024 International Fire Code adopted in D.R.M.C. Sec. 10-16 is amended in the following particulars.\"",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/2025_dfc-december_2025_printing_draft.pdf"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2024 IPC with Denver amendments",
+        "context": "Denver Plumbing Code (DPC) | 2024 IPC with Denver amendments",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "code-version",
+        "text": "2021 IECC with Denver amendments",
+        "context": "Denver Energy Code (DEC) | 2021 IECC with Denver amendments",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §302",
+        "context": "Occupancy Classification | IBC 2024 §302 | Ground floor: M, Floors 2-5: R-2",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "IBC 2024 §302 is a real code section, but Denver's official sources do not appear to reference it in publicly available online documents.",
+      "source": "https://up.codes/s/occupancy-classification-and-use-designation"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §602",
+        "context": "Construction Type | IBC 2024 §602 | Type III-A specified",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC Table 601",
+        "context": "verify fire-resistance ratings per IBC Table 601",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 504.3",
+        "context": "Height Limits - Stories | IBC 2024 Table 504.3 | Type III-A: R-2 = 4 stories max",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim incorrectly attributes story limits to IBC 2024 Table 504.3, which specifies height in feet; story limits are found in Table 504.4.",
+      "source": "https://up.codes/s/height-in-feet"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Type III-A R-2 maximum 4 stories",
+        "context": "Type III-A: R-2 = 4 stories max, M = 4 stories max. Project = 5 stories - EXCEEDS LIMIT",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The claim that Type III-A R-2 construction has a maximum of 4 stories is consistent with standard building code Table 504.4 limits for this construction type and occupancy classification.",
+      "source": "https://up.codes/viewer/denver/ibc-2018/chapter/5/general-building-heights-and-areas"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 504.4",
+        "context": "Height Limits - Feet | IBC 2024 Table 504.4 | Type III-A: R-2 = 65 ft max",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Table 504.4 governs number of stories, not height in feet; height limits in feet are specified in Table 504.3, not Table 504.4.",
+      "source": "https://up.codes/s/number-of-stories"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Type III-A R-2 maximum 65 feet height",
+        "context": "Type III-A: R-2 = 65 ft max, M = 65 ft max. Project = 60 ft - COMPLIES if sprinklered",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific Table 503 height and area limits for Type III-A R-2 construction from Denver Building Code could not be located in available search results, despite multiple searches of official Denver building code documents.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/2025_denver_building_code_legislative_review_draft_clean.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 506.2",
+        "context": "Allowable Area per Floor | IBC 2024 Table 506.2 | Type III-A: R-2 = 12,000 SF, M = 9,000 SF",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Type III-A R-2 allowable area 12,000 SF per floor",
+        "context": "Type III-A: R-2 = 12,000 SF, M = 9,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "The specific allowable area table for Type III-A construction with R-2 occupancy could not be located in accessible Denver building code documents through web search.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Type III-A M allowable area 9,000 SF per floor",
+        "context": "Type III-A: R-2 = 12,000 SF, M = 9,000 SF",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While Denver's building code documents were located, the actual allowable area table (Table 506.2) containing the specific numerical values for Type III-A construction types and occupancies could not be accessed through the available search results.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/dbc_denver_building_code_except_energy.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §903.2",
+        "context": "Sprinkler Requirement | IBC 2024 §903.2 | Required for 5-story building",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "While IBC 2024 §903.2 is a real section in the International Building Code covering sprinkler requirements, the claim cannot be verified against Denver's official adopted building code documents, which were not accessible in the search results.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Automatic sprinkler system required for 5-story building and mixed occupancy",
+        "context": "Sprinkler Requirement | IBC 2024 §903.2 | Required for 5-story building and mixed occupancy - REQUIRED",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claim misrepresents IBC 2024 §903.2 by suggesting a blanket sprinkler requirement for \"5-story building and mixed occupancy,\" when actual code requirements are occupancy-specific and condition-dependent, not based on building height and mixed-use status alone.",
+      "source": "https://up.codes/viewer/denver/ibc-2021/chapter/9/fire-protection-and-life-safety-systems"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 508.4",
+        "context": "Occupancy Separation | IBC 2024 Table 508.4 | R-2/M separation requirements",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "Denver Building Code §1613.2.5.3",
+        "context": "Seismic Design | Denver Building Code §1613.2.5.3 | Seismic Design Category B minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact section citation §1613.2.5.3 is confirmed on authoritative sources and correctly describes the Seismic Design Category B minimum requirement for Denver.",
+      "source": "https://up.codes/s/seismic-design-category-minimum"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver requires Seismic Design Category B minimum",
+        "context": "Seismic Design | Denver Building Code §1613.2.5.3 | Seismic Design Category B minimum - APPLIES",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact claim is confirmed on authoritative sources; Section 1613.2.5.3 of Denver Building Code explicitly requires Seismic Design Category B as a minimum for all buildings and structures.",
+      "source": "https://up.codes/s/seismic-design-category-minimum"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1004.5",
+        "context": "Occupant Load - Retail | IBC 2024 Table 1004.5 | 8,000 SF ÷ 30 = 267 occupants",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "IBC 2024 Table 1004.5 exists and is the authoritative source for occupant load calculations; the retail factor of 30 gross sf/person is confirmed in current code references.",
+      "source": "https://usmadesupply.com/resources/building-codes-standards/emergency-life-safety/ibc-chapter-10"
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "8,000 SF ÷ 30 = 267 occupants (retail)",
+        "context": "Occupant Load - Retail | IBC 2024 Table 1004.5 | 8,000 SF ÷ 30 = 267 occupants",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The cited IBC 2024 Table 1004.5 retail occupant load factor of 30 gross SF/person is confirmed, and the mathematical calculation (8,000 ÷ 30 = 267) is correct.",
+      "source": "https://denvergov.org/files/assets/public/v/1/community-planning-and-development/documents/ds/building-codes/code-adoption/dbc_denver_building_code_except_energy.pdf"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1004.5",
+        "context": "Occupant Load - Residential | IBC 2024 Table 1004.5 | 40 units × 2 = 80 occupants",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "40 units × 2 = 80 occupants (residential)",
+        "context": "Occupant Load - Residential | IBC 2024 Table 1004.5 | 40 units × 2 = 80 occupants (assuming 2 per unit)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1006.3.1",
+        "context": "Number of Exits - Retail | IBC 2024 Table 1006.3.1 | 267 occupants requires minimum 2 exits",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "267 occupants requires minimum 2 exits",
+        "context": "Number of Exits - Retail | IBC 2024 Table 1006.3.1 | 267 occupants requires minimum 2 exits",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1006.3.1",
+        "context": "Number of Exits - Residential | IBC 2024 Table 1006.3.1 | 80 occupants requires minimum 2 exits per floor",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "80 occupants requires minimum 2 exits per floor",
+        "context": "Number of Exits - Residential | IBC 2024 Table 1006.3.1 | 80 occupants requires minimum 2 exits per floor",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1005.1",
+        "context": "Exit Width - Retail | IBC 2024 §1005.1 | 267 × 0.2\" = 53.4\" minimum total width",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "267 × 0.2\" = 53.4\" minimum exit width",
+        "context": "Exit Width - Retail | IBC 2024 §1005.1 | 267 × 0.2\" = 53.4\" minimum total width",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1017.1",
+        "context": "Travel Distance | IBC 2024 Table 1017.1 | M occupancy: 200 ft max (250 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "M occupancy travel distance 200 ft max, 250 ft if sprinklered",
+        "context": "M occupancy: 200 ft max (250 ft if sprinklered), R-2: 200 ft max (250 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "R-2 occupancy travel distance 200 ft max, 250 ft if sprinklered",
+        "context": "M occupancy: 200 ft max (250 ft if sprinklered), R-2: 200 ft max (250 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 1006.2.1",
+        "context": "Common Path of Travel | IBC 2024 Table 1006.2.1 | M: 75 ft max (100 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "M occupancy common path of travel 75 ft max, 100 ft if sprinklered",
+        "context": "M: 75 ft max (100 ft if sprinklered), R-2: 125 ft max",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "R-2 occupancy common path of travel 125 ft max",
+        "context": "M: 75 ft max (100 ft if sprinklered), R-2: 125 ft max",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1020.4",
+        "context": "Dead-End Corridors | IBC 2024 §1020.4 | 20 ft max (50 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Dead-end corridors 20 ft max, 50 ft if sprinklered",
+        "context": "Dead-End Corridors | IBC 2024 §1020.4 | 20 ft max (50 ft if sprinklered)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1013",
+        "context": "Exit Signs & Emergency Lighting | IBC 2024 §1013 | Required throughout means of egress",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Exit signs and emergency lighting required throughout means of egress",
+        "context": "Exit Signs & Emergency Lighting | IBC 2024 §1013 | Required throughout means of egress",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §903.2.8, §903.2.1.5",
+        "context": "Automatic Sprinkler System | IBC 2024 §903.2.8, §903.2.1.5 | Required for R-2 over 4 stories",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Automatic sprinkler system required for R-2 over 4 stories and mixed occupancy",
+        "context": "Automatic Sprinkler System | IBC 2024 §903.2.8, §903.2.1.5 | Required for R-2 over 4 stories and mixed occupancy - REQUIRED",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §907.2.8, §907.2.19",
+        "context": "Fire Alarm System | IBC 2024 §907.2.8, §907.2.19 | Required for R-2 over 3 stories",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Fire alarm system required for R-2 over 3 stories and M over certain occupant loads",
+        "context": "Fire Alarm System | IBC 2024 §907.2.8, §907.2.19 | Required for R-2 over 3 stories and M over certain occupant loads - REQUIRED",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §905.3.1",
+        "context": "Standpipes | IBC 2024 §905.3.1 | Required for buildings over 30 ft in height",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Standpipes required for buildings over 30 ft in height",
+        "context": "Standpipes | IBC 2024 §905.3.1 | Required for buildings over 30 ft in height - REQUIRED",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 602",
+        "context": "Fire Separation Distance | IBC 2024 Table 602 | Varies by property line proximity",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 Table 508.4",
+        "context": "Fire Barriers - Mixed Occupancy | IBC 2024 Table 508.4 | R-2/M separation requirements",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "narrative-claim",
+        "text": "Denver Fire Code requires hydraulic calculations based on Denver Water supply data within 12 months",
+        "context": "Hydraulic Calculations | Denver Fire Code | Based on Denver Water supply data within 12 months, reduced by 10% static or 10 psi",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Water Closets - Male (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 125 = 3 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "267 occupants: 1 per 125 = 3 minimum water closets (male retail)",
+        "context": "Water Closets - Male (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 125 = 3 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Water Closets - Female (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 65 = 5 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "267 occupants: 1 per 65 = 5 minimum water closets (female retail)",
+        "context": "Water Closets - Female (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 65 = 5 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Lavatories - Male (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 200 = 2 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "267 occupants: 1 per 200 = 2 minimum lavatories (male retail)",
+        "context": "Lavatories - Male (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 200 = 2 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Lavatories - Female (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 150 = 2 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "267 occupants: 1 per 150 = 2 minimum lavatories (female retail)",
+        "context": "Lavatories - Female (Retail) | IPC 2024 Table 403.1 | 267 occupants: 1 per 150 = 2 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Water Closets - Residential | IPC 2024 Table 403.1 | 1 per dwelling unit = 40 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "1 per dwelling unit = 40 minimum water closets (residential)",
+        "context": "Water Closets - Residential | IPC 2024 Table 403.1 | 1 per dwelling unit = 40 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 Table 403.1",
+        "context": "Lavatories - Residential | IPC 2024 Table 403.1 | 1 per dwelling unit = 40 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "1 per dwelling unit = 40 minimum lavatories (residential)",
+        "context": "Lavatories - Residential | IPC 2024 Table 403.1 | 1 per dwelling unit = 40 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 §410.1",
+        "context": "Drinking Fountains | IPC 2024 §410.1 | 1 per 1,000 occupants = 1 minimum",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "calculation",
+        "text": "1 per 1,000 occupants = 1 minimum drinking fountain",
+        "context": "Drinking Fountains | IPC 2024 §410.1 | 1 per 1,000 occupants = 1 minimum (hi-lo pair required per ADA)",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IPC 2024 §413.4",
+        "context": "Service Sink | IPC 2024 §413.4 | 1 required for building maintenance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Service sink required for building maintenance",
+        "context": "Service Sink | IPC 2024 §413.4 | 1 required for building maintenance",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IECC 2021 Table 301.3",
+        "context": "Climate Zone | IECC 2021 Table 301.3 | Denver = Climate Zone 5B",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "climate-zone",
+        "text": "Denver = Climate Zone 5B",
+        "context": "Climate Zone | IECC 2021 Table 301.3 | Denver = Climate Zone 5B",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IECC 2021 Chapter 4",
+        "context": "Envelope Requirements | IECC 2021 Chapter 4 | Refer to separate Energy Compliance Targets report",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §3001.3",
+        "context": "Elevator Required | IBC 2024 §3001.3 | Yes - building over 3 stories",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "system-requirement",
+        "text": "Elevator required for building over 3 stories",
+        "context": "Elevator Required | IBC 2024 §3001.3 | Yes - building over 3 stories",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1105.1",
+        "context": "Accessible Entrances | IBC 2024 §1105.1 | Minimum 1 accessible entrance per occupancy",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "Minimum 1 accessible entrance per occupancy",
+        "context": "Accessible Entrances | IBC 2024 §1105.1 | Minimum 1 accessible entrance per occupancy",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1106.1",
+        "context": "Accessible Parking | IBC 2024 §1106.1 | Trigger varies by total parking provided",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY"
+    },
+    {
+      "claim": {
+        "type": "section-citation",
+        "text": "IBC 2024 §1107",
+        "context": "Type A/B Units | IBC 2024 §1107 | Refer to separate ADA/Accessibility Review",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "agency-name",
+        "text": "Denver Community Planning and Development",
+        "context": "All specific section citations should be confirmed with Denver Community Planning and Development",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.5,
+      "note": "API error: 400",
+      "source": null
+    }
+  ]
+}

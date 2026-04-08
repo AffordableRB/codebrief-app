@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "report": "cost-context-v2.md",
+    "jurisdiction": "denver"
+  },
+  "summary": {
+    "totalClaims": 52,
+    "scoredClaims": 46,
+    "verified": 6,
+    "fabricated": 5,
+    "unverifiable": 35,
+    "flagged": 2,
+    "skipped": 4,
+    "fabricationRate": 10.9,
+    "accuracyPercent": 35.9
+  },
+  "verdicts": [
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$180",
+        "context": "| Building Shell & Core | $180 | $220 | $260 | Market data adjusted from search results |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While $180 aligns with Denver construction cost ranges found in market data, the specific table format and attribution to a \"building code analysis report\" cannot be verified against authoritative Denver building code sources.",
+      "source": "https://www.denvergov.org/files/assets/public/v/2/community-planning-and-development/documents/ds/building-codes/policies/dec_c401.2.1_and_dgc_101.4.1-core_shell_tenant_finish.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$220",
+        "context": "| Building Shell & Core | $180 | $220 | $260 | Market data adjusted from search results |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver government sources contain the specific dollar figures ($180, $220, $260) for Building Shell & Core costs referenced in the report table.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$260",
+        "context": "| Building Shell & Core | $180 | $220 | $260 | Market data adjusted from search results |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figures ($180, $220, $260) for Building Shell & Core costs do not appear in any authoritative Denver government sources, and the claim's attribution to \"market data adjusted from search results\" cannot be verified against official Denver building code or development fee documenta",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$120",
+        "context": "| Interior Fit-Out (Weighted Avg) | $120 | $160 | $200 | Retail higher cost, residential moderate |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific interior fit-out cost table with $120/$160/$200 figures cannot be located in Denver's official building code or planning documents available online, making it impossible to verify the claim against authoritative sources.",
+      "source": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$160",
+        "context": "| Interior Fit-Out (Weighted Avg) | $120 | $160 | $200 | Retail higher cost, residential moderate |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific cost table with \"$120 | $160 | $200\" for Interior Fit-Out weighted averages does not appear in accessible Denver government building code or official policy documents, and the source document cannot be verified through authoritative web sources.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$200",
+        "context": "| Interior Fit-Out (Weighted Avg) | $120 | $160 | $200 | Retail higher cost, residential moderate |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "No authoritative Denver building code source contains the specific \"Interior Fit-Out (Weighted Avg)\" table with the claimed $120, $160, $200 cost figures; searches of official Denver government documents returned no matches for this table.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$40",
+        "context": "| Site Work & Utilities | $40 | $60 | $80 | Dual utility systems, parking |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $40 figure for Site Work & Utilities with dual utility systems and parking cannot be located in Denver's official building code documents or authoritative sources, and the claim is too vague to definitively verify or contradict without access to the original report context.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$60",
+        "context": "| Site Work & Utilities | $40 | $60 | $80 | Dual utility systems, parking |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific cost table with the $60 figure for \"Site Work & Utilities\" with \"Dual utility systems, parking\" does not appear in accessible Denver building code or development guidance documents, and the claim is too vague to definitively confirm or contradict without access to the original report so",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$80",
+        "context": "| Site Work & Utilities | $40 | $60 | $80 | Dual utility systems, parking |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific \"$80\" cost figure for \"Site Work & Utilities\" with \"Dual utility systems, parking\" does not appear in any accessible Denver building code, official fee schedule, or authoritative government source despite targeted searches of denvergov.org and related official documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$340",
+        "context": "| Total Construction | $340 | $440 | $540 | Denver market 2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific table with the dollar figures $340, $440, and $540 for \"Total Construction\" in Denver market 2026 does not appear in any accessible authoritative Denver government sources or official building code documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$440",
+        "context": "| Total Construction | $340 | $440 | $540 | Denver market 2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and table format cannot be located on Denver's official government sources despite targeted searches, making it impossible to verify whether this claim originates from an authoritative Denver building code analysis report.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$540",
+        "context": "| Total Construction | $340 | $440 | $540 | Denver market 2026 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver government sources could be located containing the specific table with these exact dollar figures ($340, $440, $540) labeled as \"Total Construction\" for Denver market 2026.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$400",
+        "context": "Note: Search results indicated $400-700/SF range; analysis suggests lower end more realistic for this size/type",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The $400 figure is confirmed as the lower end of the documented $400-700/SF construction cost range for Denver as of 2025.",
+      "source": "https://sdb-denver.com/2022/the-construction-industry/how-much-does-it-cost-to-build-a-house-in-denver/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$340/SF",
+        "context": "| Low Range | 45,000 SF × $340/SF | $15,300,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver municipal or building code source could be located that explicitly references the $340/SF cost figure in the context of a 45,000 SF project totaling $15,300,000.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$15,300,000",
+        "context": "| Low Range | 45,000 SF × $340/SF | $15,300,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure, square footage, and per-square-foot cost cannot be located in Denver's official government sources or publicly available building code documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$440/SF",
+        "context": "| Mid Range | 45,000 SF × $440/SF | $19,800,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $440/SF cost figure and the associated table do not appear in any accessible authoritative Denver government sources or official building code documents, though the figure itself falls within reasonable current Denver construction cost ranges.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$19,800,000",
+        "context": "| Mid Range | 45,000 SF × $440/SF | $19,800,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver government sources were found containing this specific dollar figure or construction cost calculation in web-accessible documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$540/SF",
+        "context": "| High Range | 45,000 SF × $540/SF | $24,300,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "No authoritative Denver government source on the web explicitly confirms the $540/SF cost figure in a building code analysis report; while the figure falls within plausible luxury construction cost ranges, the specific citation cannot be verified through official Denver sources.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$24,300,000",
+        "context": "| High Range | 45,000 SF × $540/SF | $24,300,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and cost calculation do not appear in accessible Denver government authoritative sources, and the claim cannot be confirmed or contradicted through available web-indexed documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$67,000",
+        "context": "| Building Permit Fee | $67,000 - $89,000 | Denver fee schedule: $5,385 + $3.65/$1K over $1M |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific fee range and formula cannot be confirmed from the accessible portions of Denver's official ADMIN 138 fee policy document found in search results, though the document exists as the authoritative source.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$89,000",
+        "context": "| Building Permit Fee | $67,000 - $89,000 | Denver fee schedule: $5,385 + $3.65/$1K over $1M |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The fee formula cited in the report ($5,385 + $3.65/$1K over $1M) is confirmed in Denver's official ADMIN 138 Building Code Fee Policy, and the $89,000 figure represents a mathematically valid permit fee under this schedule.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$5,385",
+        "context": "| Building Permit Fee | $67,000 - $89,000 | Denver fee schedule: $5,385 + $3.65/$1K over $1M |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The exact dollar figure of $5,385 and the fee structure of $3.65 per $1K over $1M are explicitly confirmed in Denver's official ADMIN 138 Building Code Fee Policy document.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$3.65",
+        "context": "| Building Permit Fee | $67,000 - $89,000 | Denver fee schedule: $5,385 + $3.65/$1K over $1M |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The $3.65 per $1,000 figure for construction projects over $1 million is confirmed in authoritative sources describing Denver's building permit fee schedule.",
+      "source": "https://www.angi.com/articles/how-much-does-it-cost-build-house/co/denver"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1",
+        "context": "| Building Permit Fee | $67,000 - $89,000 | Denver fee schedule: $5,385 + $3.65/$1K over $1M |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The claim to verify is listed as \"$1\" which appears to be a placeholder or incomplete reference; however, the fee formula provided in the context ($5,385 + $3.65/$1K over $1M) is verified as accurate on authoritative Denver sources.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$44,000",
+        "context": "| Plan Review Fee | $44,000 - $58,000 | 65% of building permit fee |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official ADMIN 138 building code fee policy specifies plan review fees as percentages of permit fees (10%, 20%, or 50%), not as fixed dollar amounts of $44,000-$58,000, and does not reference a 65% calculation method.",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$58,000",
+        "context": "| Plan Review Fee | $44,000 - $58,000 | 65% of building permit fee |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While Denver does use a 65% calculation for plan review fees on commercial projects, the specific dollar range of $44,000-$58,000 does not appear as a fixed fee category in Denver's official ADMIN 138 policy or accessible fee schedules; these figures would be project-valuation-dependent rather than ",
+      "source": "https://denvergov.org/files/assets/public/v/9/community-planning-and-development/documents/ds/building-codes/policies/admin_138.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$60,680",
+        "context": "| Affordable Housing Linkage Fee | $60,680 | $1.64/SF × 37,000 SF residential |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The $1.64/SF rate is confirmed as Denver's linkage fee for multi-family residential, and the calculation ($1.64 × 37,000 SF = $60,680) is arithmetically correct.",
+      "source": "https://www.ottenjohnson.com/news/denver-releases-updated-proposal-for-affordable-housing-mandate/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1.64/SF",
+        "context": "| Affordable Housing Linkage Fee | $60,680 | $1.64/SF × 37,000 SF residential |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "VERIFIED",
+      "score": 1,
+      "note": "The $1.64/SF rate for Denver's Affordable Housing Linkage Fee on multi-family residential projects is confirmed in authoritative sources discussing Denver's current fee structure.",
+      "source": "https://www.ottenjohnson.com/news/denver-releases-updated-proposal-for-affordable-housing-mandate/"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$77,600",
+        "context": "| Water Tap Fees | $77,600 | $1,940/unit × 40 units |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The per-unit water tap fee of $1,940 does not match Denver Water's current or recent fee schedules; current rates for 40-unit apartment buildings are $2,451 per unit (2026 phase-in) or $2,166 per unit (pre-2026).",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,940/unit",
+        "context": "| Water Tap Fees | $77,600 | $1,940/unit × 40 units |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "The claimed water tap fee of $1,940/unit for a 40-unit apartment building does not match any current or announced Denver Water System Development Charge; official sources show the current fee is $2,166/unit and the 2026 fee will be $2,451/unit.",
+      "source": "https://www.denverwater.org/tap/fees-connect-denver-waters-system-increase"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$15,000",
+        "context": "| Sanitary Connection Fees | $15,000 - $25,000 | ⚠ VERIFY WITH DENVER WATER |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$25,000",
+        "context": "| Sanitary Connection Fees | $15,000 - $25,000 | ⚠ VERIFY WITH DENVER WATER |",
+        "weight": 0,
+        "flagged": true
+      },
+      "verdict": "FLAGGED",
+      "score": null,
+      "note": "Appropriately flagged with ⚠ VERIFY WITH AHJ"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$5,000",
+        "context": "| Survey/Site Development Review | $5,000 | $2,500 each per search results |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "FABRICATION",
+      "score": -1,
+      "note": "Denver's official fee schedule shows Site Development Plan Reviews start at $2,500 for 0-9.999 acres, not $5,000, and the $5,100 fee applies to 10-14.999 acres.",
+      "source": "https://www.denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/other-forms-and-guides/doti-consolidated-fee-schedule.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$2,500",
+        "context": "| Survey/Site Development Review | $5,000 | $2,500 each per search results |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While $2,500 appears in Denver's official fee schedules for site plan review, the specific table entry showing \"Survey/Site Development Review | $5,000 | $2,500 each\" could not be located in authoritative sources.",
+      "source": "https://www.denvergov.org/files/assets/public/v/4/community-planning-and-development/documents/ds/site-development/pud-pbg-site-plan-rules-and-regulations.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$269,280",
+        "context": "| Total Fees Estimate | $269,280 - $315,280 | |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific fee estimate of $269,280 - $315,280 does not appear in accessible Denver government sources, and without access to the original building code analysis report or its source documents, the claim cannot be verified against authoritative sources.",
+      "source": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Development-Fees"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$315,280",
+        "context": "| Total Fees Estimate | $269,280 - $315,280 | |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific fee estimate range of $269,280 - $315,280 does not appear in accessible Denver government sources, and without access to the original building code analysis report or its source document, the claim cannot be verified or contradicted.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,224,000",
+        "context": "| Architecture/Engineering | 8-12% | $1,224,000 - $2,916,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure \"$1,224,000\" and the cost range \"$1,224,000 - $2,916,000\" for Architecture/Engineering at 8-12% do not appear in any searchable Denver government sources or official building code documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$2,916,000",
+        "context": "| Architecture/Engineering | 8-12% | $1,224,000 - $2,916,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and cost range table entry cannot be located in any accessible Denver government or building code authoritative sources, despite targeted searches of official Denver documents and fee schedules.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$153,000",
+        "context": "| Testing & Inspection | 1-2% | $153,000 - $486,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure \"$153,000\" and the cost range \"$153,000 - $486,000\" for testing and inspection do not appear in any accessible Denver government sources, though the claim cannot be definitively contradicted without access to the original report's source document.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$486,000",
+        "context": "| Testing & Inspection | 1-2% | $153,000 - $486,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure \"$486,000\" for Testing & Inspection costs (1-2% range) could not be found in any authoritative Denver government sources despite targeted searches of official city websites and building code documentation.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$365,000",
+        "context": "| Insurance & Bonding | 1-1.5% | $153,000 - $365,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure of $365,000 in the context of a 1-1.5% insurance and bonding range cannot be confirmed or contradicted through available Denver government sources or building code databases.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$306,000",
+        "context": "| Financing Costs | 2-4% | $306,000 - $972,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific $306,000 financing cost figure and the associated table context cannot be found in Denver's official building code documents or government sources, making it impossible to verify the claim's accuracy.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$972,000",
+        "context": "| Financing Costs | 2-4% | $306,000 - $972,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific financing costs table with the $306,000-$972,000 range cannot be located in Denver's official building code documents or authoritative sources despite targeted searches.",
+      "source": "https://denvergov.org/files/assets/public/v/3/community-planning-and-development/documents/ds/building-codes/2025_denver_building_code.pdf"
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$1,836,000",
+        "context": "| Contingency | 12-18% | $1,836,000 - $4,374,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figures ($1,836,000 - $4,374,000) for a contingency range do not appear in any accessible Denver government sources or building code analysis documents.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$4,374,000",
+        "context": "| Contingency | 12-18% | $1,836,000 - $4,374,000 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure of $4,374,000 and its associated contingency range (12-18% with $1,836,000 minimum) do not appear in any accessible Denver government sources or building code analysis documents available online.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$4,094,280",
+        "context": "| Total Soft Costs | 25-40% | $4,094,280 - $9,914,280 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and soft costs range could not be found in accessible Denver government authoritative sources despite targeted searches.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$9,914,280",
+        "context": "| Total Soft Costs | 25-40% | $4,094,280 - $9,914,280 |",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "The specific dollar figure and soft costs range cannot be located in accessible Denver government authoritative sources despite targeted searches of official city domains.",
+      "source": null
+    },
+    {
+      "claim": {
+        "type": "dollar-figure",
+        "text": "$300",
+        "context": "- Timeline: Permitting process typically 4-6 months for projects >$300K value",
+        "weight": 1,
+        "flagged": false
+      },
+      "verdict": "UNVERIFIABLE",
+      "score": 0.3,
+      "note": "While Denver's permitting process does involve timelines and project valuations, the specific claim linking a \"$300K\" threshold to a \"4-6 months\" permitting timeline cannot be verified against authoritative Denver sources, which reference different valuation thresholds for classification purposes.",
+      "source": "https://denvergov.org/files/assets/public/v/6/community-planning-and-development/documents/ds/building-codes/policies/admin-131a.pdf"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "45,000 SF",
+        "context": "Size: 45,000 SF | Stories: 5",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "37,000 SF",
+        "context": "| Affordable Housing Linkage Fee | $60,680 | $1.64/SF × 37,000 SF residential |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "40 units",
+        "context": "| Water Tap Fees | $77,600 | $1,940/unit × 40 units |",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    },
+    {
+      "claim": {
+        "type": "numerical-requirement",
+        "text": "6 months",
+        "context": "- Timeline: Permitting process typically 4-6 months for projects >$300K value",
+        "weight": 0.6,
+        "flagged": false
+      },
+      "verdict": "SKIPPED",
+      "score": null,
+      "note": "Claim type 'numerical-requirement' not verified (reserved for future)"
+    }
+  ]
+}
