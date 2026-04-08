@@ -1,0 +1,43 @@
+{
+  "name": "Austin Mixed-Use Cross-Validation",
+  "purpose": "Prove the benchmarking approach generalizes beyond Denver",
+  "success_criteria": "Austin scores within 10 percentage points of Denver",
+  "project_input": {
+    "buildingType": "Mixed-Use (Residential/Commercial)",
+    "location": "Austin, Texas",
+    "squareFootage": "35000",
+    "stories": "4",
+    "buildingHeight": "52",
+    "constructionType": "Type III-A",
+    "occupancyType": "R-2 Residential (apartment, dormitory)",
+    "occupantLoad": "",
+    "lotSize": "10000",
+    "additionalNotes": "Ground floor 6000 SF retail, 29000 SF residential above (30 units), downtown location"
+  },
+  "reports_to_test": [
+    "code-analysis",
+    "zoning-feasibility",
+    "energy-compliance",
+    "cost-context",
+    "risk-due-diligence",
+    "site-constraints",
+    "sustainability-scoping",
+    "permitting-pathway",
+    "accessibility-review",
+    "consultant-scoping",
+    "project-schedule"
+  ],
+  "jurisdiction_domains": {
+    "austin": ["austintexas.gov", "austin-tx.elaws.us", "library.municode.com"]
+  },
+  "known_austin_facts_for_sanity_check": [
+    "Austin adopted 2024 IBC effective July 10, 2025",
+    "Austin Land Development Code Section 25-2-492 covers site development",
+    "Austin uses SF-2, SF-3, SF-4, SF-5, SF-6 for single-family zones",
+    "Austin impervious cover varies by watershed: Barton Springs 15-25%, WSR 20-25%",
+    "Austin is in IECC Climate Zone 2A (hot-humid)",
+    "Austin maximum height in residential zones is 32 feet with 45-degree setback plane"
+  ],
+  "estimated_cost": "$2.50-3.00 USD for first run (cold cache)",
+  "estimated_time": "15-20 minutes"
+}
