@@ -38,11 +38,15 @@ export default function LoginPage() {
 
   async function handleGoogle() {
     setError("");
-    const { error: authError } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/dashboard` },
-    });
-    if (authError) setError(authError.message);
+    try {
+      const { error: authError } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: `${window.location.origin}/dashboard` },
+      });
+      if (authError) setError(authError.message);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to connect to authentication service");
+    }
   }
 
   return (
