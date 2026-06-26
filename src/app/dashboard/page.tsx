@@ -24,6 +24,13 @@ interface Profile {
   stripe_customer_id: string | null;
 }
 
+interface VerificationScore {
+  total: number;
+  confirmed: number;
+  verify: number;
+  score: number;
+}
+
 const PLAN_LIMITS: Record<string, number> = {
   free: 2,
   solo: 15,
@@ -38,13 +45,59 @@ const PLAN_LABELS: Record<string, string> = {
   enterprise: "Enterprise",
 };
 
+function parseVerificationScore(content: string): VerificationScore {
+  const lines = content.split("\n");
+  const tableRows = lines.filter((line) => {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith("|")) return false;
+    if (/^\|[\s\-:]+\|$/.test(trimmed)) return false;
+    if (/^\|[\s\-:|]+$/.test(trimmed)) return false;
+    const cells = trimmed.split("|").filter((c) => c.trim());
+    if (cells.length < 2) return false;
+    const first = cells[0].trim().toLowerCase();
+    if (
+      [
+        "requirement", "item", "category", "constraint", "risk", "fee",
+        "fixture", "assembly", "standard", "system", "phase", "approval",
+        "sign", "hazard", "metric", "scenario", "calculation", "factor",
+        "space", "setback", "discipline", "parameter", "code", "overlay",
+        "utility", "document", "inspection", "concept", "strategy", "#",
+      ].includes(first)
+    )
+      return false;
+    return true;
+  });
+
+  const total = tableRows.length;
+  const verifyCount = tableRows.filter(
+    (row) => row.includes("⚠") || row.toLowerCase().includes("verify")
+  ).length;
+  const confirmed = total - verifyCount;
+  const score = total > 0 ? Math.round((confirmed / total) * 100) : 100;
+
+  return { total, confirmed, verify: verifyCount, score };
+}
+
+function extractSources(content: string): string {
+  const parts = content.split(/###\s*Sources\s*\n/i);
+  if (parts.length < 2) return "";
+  return parts[parts.length - 1].trim();
+}
+
+function getBriefWithoutSources(content: string): string {
+  const idx = content.search(/###\s*Sources/i);
+  if (idx === -1) return content;
+  return content.slice(0, idx).trim();
+}
+
 export default function DashboardPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
   const [briefs, setBriefs] = useState<Brief[]>([]);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [dataLoading, setDataLoading] = useState(true);
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [showSourcesInBrief, setShowSourcesInBrief] = useState(false);
 
   useEffect(() => {
     if (!authLoading && !user) router.push("/login");
@@ -58,7 +111,9 @@ export default function DashboardPage() {
       const [briefsRes, profileRes] = await Promise.all([
         supabase
           .from("briefs")
-          .select("id, created_at, building_type, location, square_footage, stories, occupancy_type, brief_content")
+          .select(
+            "id, created_at, building_type, location, square_footage, stories, occupancy_type, brief_content"
+          )
           .eq("user_id", user!.id)
           .order("created_at", { ascending: false })
           .limit(20),
@@ -92,6 +147,26 @@ export default function DashboardPage() {
     if (data.url) window.location.href = data.url;
   }
 
+  function handleDownloadSources(brief: Brief) {
+    const sources = extractSources(brief.brief_content);
+    const blob = new Blob(
+      [
+        `Sources — ${brief.building_type} | ${brief.location}\n${"—".repeat(
+          50
+        )}\n\n${sources}`,
+      ],
+      { type: "text/plain" }
+    );
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `sources-${brief.location
+      .replace(/[^a-zA-Z0-9]/g, "-")
+      .toLowerCase()}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   if (authLoading || dataLoading) {
     return (
       <div
@@ -101,9 +176,15 @@ export default function DashboardPage() {
         <div className="flex flex-col items-center gap-4">
           <div
             className="w-8 h-8 border border-t-transparent animate-spin"
-            style={{ borderColor: "var(--border-medium)", borderTopColor: "var(--text-primary)" }}
+            style={{
+              borderColor: "var(--border-medium)",
+              borderTopColor: "var(--text-primary)",
+            }}
           />
-          <p className="text-xs tracking-widest uppercase" style={{ color: "var(--text-muted)" }}>
+          <p
+            className="text-xs tracking-widest uppercase"
+            style={{ color: "var(--text-muted)" }}
+          >
             Loading
           </p>
         </div>
@@ -117,23 +198,50 @@ export default function DashboardPage() {
   const used = profile?.briefs_used || 0;
   const limit = profile?.briefs_limit || PLAN_LIMITS[plan] || 2;
   const usagePct = limit >= 999 ? 100 : Math.min(100, (used / limit) * 100);
-  const usageColor =
-    usagePct >= 90 ? "#8b1a1a" : usagePct >= 70 ? "#92400e" : "var(--text-primary)";
+
+  const selectedBrief = briefs.find((b) => b.id === selectedId) || null;
+  const score = selectedBrief
+    ? parseVerificationScore(selectedBrief.brief_content)
+    : null;
+  const sources = selectedBrief
+    ? extractSources(selectedBrief.brief_content)
+    : "";
+  const briefContent = selectedBrief
+    ? showSourcesInBrief
+      ? selectedBrief.brief_content
+      : getBriefWithoutSources(selectedBrief.brief_content)
+    : "";
+
+  const scoreColor = score
+    ? score.score >= 90
+      ? "var(--success)"
+      : score.score >= 70
+        ? "#92400e"
+        : "var(--error)"
+    : "var(--success)";
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-base)" }}>
-      {/* NAV */}
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ background: "var(--bg-base)" }}
+    >
+      {/* ═══ NAV — existing codebrief-app pattern ═══ */}
       <nav
         className="sticky top-0 z-50"
         style={{ background: "#111111", borderBottom: "1px solid #222222" }}
       >
-        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+        <div className="px-6 py-3 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3">
             <div
               className="w-7 h-7 flex items-center justify-center"
               style={{ border: "1px solid rgba(245,242,238,0.3)" }}
             >
-              <span className="text-[10px] font-bold tracking-tight" style={{ color: "#f5f2ee" }}>CB</span>
+              <span
+                className="text-[10px] font-bold tracking-tight"
+                style={{ color: "#f5f2ee" }}
+              >
+                CB
+              </span>
             </div>
             <span
               className="text-sm font-medium tracking-widest uppercase"
@@ -144,15 +252,22 @@ export default function DashboardPage() {
           </a>
 
           <div className="flex items-center gap-5">
-            <span className="text-xs" style={{ color: "rgba(245,242,238,0.35)" }}>
+            <span
+              className="text-xs hidden sm:inline"
+              style={{ color: "rgba(245,242,238,0.35)" }}
+            >
               {user.email}
             </span>
             <a
               href="/#generate"
               className="px-4 py-2 text-xs font-medium tracking-widest uppercase transition-colors"
               style={{ background: "#f5f2ee", color: "#111111" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "#e5e0d8")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "#f5f2ee")}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "#e5e0d8")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "#f5f2ee")
+              }
             >
               New Brief
             </a>
@@ -160,8 +275,12 @@ export default function DashboardPage() {
               onClick={handleSignOut}
               className="text-xs tracking-wide transition-colors"
               style={{ color: "rgba(245,242,238,0.35)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(245,242,238,0.7)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,242,238,0.35)")}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "rgba(245,242,238,0.7)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "rgba(245,242,238,0.35)")
+              }
             >
               Sign out
             </button>
@@ -169,363 +288,1013 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      <main className="flex-1 max-w-7xl mx-auto px-8 py-12 w-full">
-        {/* Page heading */}
-        <div className="mb-10">
-          <p className="section-label mb-2">Account</p>
-          <h1
-            className="text-2xl font-light tracking-tight"
-            style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+      {/* ═══ 3-PANEL LAYOUT — Grammarly canvas root: display flex, flex 1 1 0% ═══ */}
+      <div
+        style={{
+          display: "flex",
+          flex: "1 1 0%",
+          overflow: "hidden",
+        }}
+      >
+        {/* ─── LEFT SIDEBAR — Brief list + Plan (desktop) ─── */}
+        <aside
+          className="hidden lg:flex"
+          style={{
+            width: "300px",
+            minWidth: "300px",
+            borderRight: "1px solid var(--border-light)",
+            flexDirection: "column",
+            overflow: "hidden",
+            background: "var(--bg-warm)",
+          }}
+        >
+          {/* Plan summary — compact, from existing plan card */}
+          <div
+            style={{
+              padding: "16px",
+              borderBottom: "1px solid var(--border-light)",
+            }}
           >
-            Dashboard
-          </h1>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* LEFT COLUMN — Plan + Upgrade */}
-          <div className="lg:col-span-1 space-y-5">
-            {/* Plan card */}
             <div
               style={{
-                background: "#ffffff",
-                border: "1px solid var(--border-medium)",
-                borderTop: "2px solid var(--text-primary)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginBottom: "8px",
               }}
             >
-              <div className="px-6 py-5">
-                <p
-                  className="text-[9px] font-semibold tracking-widest uppercase mb-3"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  Current Plan
-                </p>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span
-                    className="text-xl font-light tracking-tight"
-                    style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
-                  >
-                    {PLAN_LABELS[plan] || plan}
-                  </span>
-                  <span
-                    className="text-[9px] font-semibold tracking-widest uppercase px-2 py-0.5"
-                    style={{
-                      background: plan === "free" ? "var(--bg-warm)" : "#111111",
-                      color: plan === "free" ? "var(--text-muted)" : "#f5f2ee",
-                    }}
-                  >
-                    {plan}
-                  </span>
-                </div>
-
-                {/* Usage */}
-                <div className="mb-1 flex items-center justify-between">
-                  <p className="text-[9px] tracking-widest uppercase" style={{ color: "var(--text-muted)" }}>
-                    Briefs used
-                  </p>
-                  <p
-                    className="text-[10px] font-medium"
-                    style={{ color: usageColor }}
-                  >
-                    {limit >= 999 ? `${used} / Unlimited` : `${used} / ${limit}`}
-                  </p>
-                </div>
-                {limit < 999 && (
-                  <div
-                    className="w-full h-1 overflow-hidden"
-                    style={{ background: "var(--bg-stone)" }}
-                  >
-                    <div
-                      className="h-full transition-all"
-                      style={{
-                        width: `${usagePct}%`,
-                        background: usageColor,
-                      }}
-                    />
-                  </div>
-                )}
-              </div>
+              <p
+                className="text-[9px] font-semibold tracking-widest uppercase"
+                style={{ color: "var(--text-muted)" }}
+              >
+                {PLAN_LABELS[plan]} Plan
+              </p>
+              <span
+                className="text-[10px] font-medium"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                {limit >= 999 ? `${used} used` : `${used} / ${limit}`}
+              </span>
             </div>
-
-            {/* Upgrade card */}
-            {plan === "free" && (
+            {limit < 999 && (
               <div
                 style={{
-                  background: "#111111",
-                  border: "1px solid #222",
-                  borderTop: "2px solid #333",
+                  height: "2px",
+                  background: "var(--bg-stone)",
+                  overflow: "hidden",
                 }}
               >
-                <div className="px-6 py-5">
-                  <p
-                    className="text-[9px] font-semibold tracking-widest uppercase mb-3"
-                    style={{ color: "#b5a898" }}
-                  >
-                    Upgrade
-                  </p>
-                  <div className="space-y-3">
-                    {[
-                      { key: "solo", label: "Solo", price: "$49/mo", briefs: "15 briefs" },
-                      { key: "firm", label: "Firm", price: "$99/mo", briefs: "Unlimited + 5 users", popular: true },
-                      { key: "enterprise", label: "Enterprise", price: "$199/mo", briefs: "Unlimited + priority" },
-                    ].map((p) => (
-                      <button
-                        key={p.key}
-                        onClick={() => handleUpgrade(p.key)}
-                        className="w-full flex items-center justify-between px-4 py-3 text-left transition-colors"
-                        style={{
-                          background: p.popular ? "rgba(245,242,238,0.06)" : "transparent",
-                          border: "1px solid rgba(245,242,238,0.1)",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(245,242,238,0.1)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = p.popular ? "rgba(245,242,238,0.06)" : "transparent")}
-                      >
-                        <div>
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <span className="text-xs font-medium" style={{ color: "#f5f2ee" }}>{p.label}</span>
-                            {p.popular && (
-                              <span
-                                className="text-[8px] font-semibold tracking-widest uppercase px-1.5 py-0.5"
-                                style={{ background: "#b5a898", color: "#111111" }}
-                              >
-                                Popular
-                              </span>
-                            )}
-                          </div>
-                          <span className="text-[10px]" style={{ color: "rgba(245,242,238,0.35)" }}>{p.briefs}</span>
-                        </div>
-                        <span className="text-xs font-medium" style={{ color: "rgba(245,242,238,0.6)" }}>{p.price}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
+                <div
+                  style={{
+                    height: "100%",
+                    width: `${usagePct}%`,
+                    background:
+                      usagePct >= 90
+                        ? "var(--error)"
+                        : "var(--text-primary)",
+                    transition: "width 0.3s ease",
+                  }}
+                />
               </div>
             )}
-
-            {plan !== "free" && (
-              <div
+            {plan === "free" && (
+              <button
+                onClick={() => handleUpgrade("solo")}
+                className="w-full mt-3 py-1.5 text-[9px] font-semibold tracking-widest uppercase transition-colors"
                 style={{
-                  background: "var(--bg-warm)",
-                  border: "1px solid var(--border-light)",
+                  background: "var(--text-primary)",
+                  color: "var(--bg-base)",
+                  border: "none",
+                  cursor: "pointer",
                 }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.background = "var(--text-secondary)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.background = "var(--text-primary)")
+                }
               >
-                <div className="px-6 py-5">
-                  <p
-                    className="text-[9px] font-semibold tracking-widest uppercase mb-2"
-                    style={{ color: "var(--text-muted)" }}
-                  >
-                    Subscription
-                  </p>
-                  <p className="text-xs mb-4" style={{ color: "var(--text-secondary)", fontWeight: 300 }}>
-                    Manage billing, invoices, and plan changes.
-                  </p>
-                  <button
-                    onClick={() => handleUpgrade("portal")}
-                    className="text-xs font-medium tracking-widest uppercase transition-colors"
-                    style={{ color: "var(--text-primary)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-                  >
-                    Manage Billing &rarr;
-                  </button>
-                </div>
-              </div>
+                Upgrade
+              </button>
             )}
           </div>
 
-          {/* RIGHT COLUMN — Brief history */}
-          <div className="lg:col-span-2">
+          {/* Brief list header */}
+          <div
+            style={{
+              padding: "12px 16px",
+              borderBottom: "1px solid var(--border-light)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <p
+              className="text-[9px] font-semibold tracking-widest uppercase"
+              style={{ color: "var(--text-muted)" }}
+            >
+              Briefs
+            </p>
+            <span
+              className="text-[10px]"
+              style={{ color: "var(--text-muted)" }}
+            >
+              {briefs.length}
+            </span>
+          </div>
+
+          {/* Brief list — scrollable, from existing brief history */}
+          <div style={{ flex: "1 1 0%", overflow: "auto" }}>
+            {briefs.length === 0 ? (
+              <div style={{ padding: "32px 16px", textAlign: "center" }}>
+                <p
+                  className="text-xs mb-2"
+                  style={{ color: "var(--text-muted)", fontWeight: 300 }}
+                >
+                  No briefs yet.
+                </p>
+                <a
+                  href="/#generate"
+                  className="text-[10px] font-medium tracking-widest uppercase"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  Generate your first &rarr;
+                </a>
+              </div>
+            ) : (
+              briefs.map((brief) => (
+                <button
+                  key={brief.id}
+                  onClick={() =>
+                    setSelectedId(
+                      selectedId === brief.id ? null : brief.id
+                    )
+                  }
+                  className="w-full text-left transition-colors"
+                  style={{
+                    padding: "12px 16px",
+                    borderBottom: "1px solid var(--border-light)",
+                    borderLeft:
+                      selectedId === brief.id
+                        ? "2px solid var(--text-primary)"
+                        : "2px solid transparent",
+                    background:
+                      selectedId === brief.id
+                        ? "var(--bg-base)"
+                        : "transparent",
+                    cursor: "pointer",
+                    display: "block",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedId !== brief.id)
+                      e.currentTarget.style.background = "var(--bg-stone)";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedId !== brief.id)
+                      e.currentTarget.style.background = "transparent";
+                  }}
+                >
+                  <p
+                    className="text-xs font-medium truncate mb-0.5"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {brief.building_type}
+                  </p>
+                  <p
+                    className="text-[10px] truncate"
+                    style={{
+                      color: "var(--text-muted)",
+                      fontWeight: 300,
+                    }}
+                  >
+                    {brief.location}
+                    {brief.square_footage &&
+                      ` · ${brief.square_footage} SF`}
+                  </p>
+                  <p
+                    className="text-[9px] mt-1"
+                    style={{ color: "var(--border-medium)" }}
+                  >
+                    {new Date(brief.created_at).toLocaleDateString(
+                      "en-US",
+                      { month: "short", day: "numeric", year: "numeric" }
+                    )}
+                  </p>
+                </button>
+              ))
+            )}
+          </div>
+        </aside>
+
+        {/* ─── CENTER — Document viewer ─── */}
+        <main
+          style={{
+            flex: "1 1 0%",
+            overflow: "auto",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {selectedBrief ? (
+            <>
+              {/* Mobile back button */}
+              <button
+                className="lg:hidden px-4 py-3 text-left text-xs font-medium"
+                onClick={() => setSelectedId(null)}
+                style={{
+                  color: "var(--text-muted)",
+                  borderBottom: "1px solid var(--border-light)",
+                  background: "var(--bg-warm)",
+                }}
+              >
+                &larr; Back to briefs
+              </button>
+
+              {/* Report header — existing dark pattern from codebrief-app */}
+              <div
+                className="flex items-center justify-between px-8 py-4"
+                style={{ background: "#111111", flexShrink: 0 }}
+              >
+                <div>
+                  <p
+                    className="text-[8px] font-bold tracking-[0.2em] uppercase mb-1"
+                    style={{ color: "#b5a898" }}
+                  >
+                    Code Analysis Report
+                  </p>
+                  <p
+                    className="text-sm font-light"
+                    style={{ color: "#f5f2ee" }}
+                  >
+                    {selectedBrief.building_type} —{" "}
+                    {selectedBrief.location}
+                  </p>
+                </div>
+                <button
+                  onClick={() => window.print()}
+                  className="px-3 py-1.5 text-[9px] font-medium tracking-widest uppercase transition-colors"
+                  style={{
+                    border: "1px solid rgba(245,242,238,0.15)",
+                    color: "rgba(245,242,238,0.5)",
+                    background: "transparent",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#f5f2ee")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color =
+                      "rgba(245,242,238,0.5)")
+                  }
+                >
+                  Export PDF
+                </button>
+              </div>
+
+              {/* Document content — Grammarly editor: 800px max-width */}
+              <div
+                style={{
+                  flex: "1 1 0%",
+                  overflow: "auto",
+                  padding: "32px",
+                }}
+              >
+                <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+                  <div
+                    className="brief-content"
+                    dangerouslySetInnerHTML={{
+                      __html: marked.parse(briefContent, {
+                        async: false,
+                      }) as string,
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Mobile scoring — shown below document on small screens */}
+              {score && (
+                <div
+                  className="lg:hidden"
+                  style={{
+                    borderTop: "1px solid var(--border-light)",
+                    padding: "16px 24px",
+                    background: "var(--bg-warm)",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "16px",
+                      marginBottom: "12px",
+                    }}
+                  >
+                    <div>
+                      <p
+                        className="text-[9px] font-semibold tracking-widest uppercase mb-1"
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        Verification Score
+                      </p>
+                      <span
+                        style={{
+                          fontSize: "1.25rem",
+                          fontWeight: 600,
+                          color: scoreColor,
+                        }}
+                      >
+                        {score.score}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "0.75rem",
+                          color: "var(--text-muted)",
+                          marginLeft: "4px",
+                        }}
+                      >
+                        / 100
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        flex: 1,
+                        display: "flex",
+                        gap: "12px",
+                        fontSize: "0.6875rem",
+                      }}
+                    >
+                      <span style={{ color: "var(--success)" }}>
+                        {score.confirmed} confirmed
+                      </span>
+                      <span style={{ color: "#92400e" }}>
+                        {score.verify} verify
+                      </span>
+                    </div>
+                  </div>
+                  {sources && (
+                    <button
+                      onClick={() => handleDownloadSources(selectedBrief)}
+                      className="text-[9px] font-medium tracking-widest uppercase"
+                      style={{
+                        color: "var(--text-muted)",
+                        background: "none",
+                        border: "1px solid var(--border-light)",
+                        padding: "4px 10px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      ↓ Download Sources
+                    </button>
+                  )}
+                </div>
+              )}
+
+              {/* Report footer — existing dark pattern from codebrief-app */}
+              <div
+                className="px-8 py-3 flex items-center justify-between"
+                style={{ background: "#111111", flexShrink: 0 }}
+              >
+                <span
+                  className="text-[9px] tracking-widest uppercase"
+                  style={{ color: "rgba(245,242,238,0.3)" }}
+                >
+                  Generated by CodeBrief
+                </span>
+                <span
+                  className="text-[9px]"
+                  style={{ color: "rgba(245,242,238,0.2)" }}
+                >
+                  codebrief.codes
+                </span>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* ─── Mobile: show brief list when nothing selected ─── */}
+              <div className="lg:hidden" style={{ flex: "1 1 0%" }}>
+                {/* Mobile plan summary */}
+                <div
+                  style={{
+                    padding: "16px",
+                    borderBottom: "1px solid var(--border-light)",
+                    background: "var(--bg-warm)",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div>
+                      <p className="section-label mb-1">Account</p>
+                      <h1
+                        className="text-xl font-light tracking-tight"
+                        style={{ color: "var(--text-primary)" }}
+                      >
+                        Dashboard
+                      </h1>
+                    </div>
+                    <div style={{ textAlign: "right" }}>
+                      <p
+                        className="text-[9px] font-semibold tracking-widest uppercase"
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        {PLAN_LABELS[plan]} Plan
+                      </p>
+                      <p
+                        className="text-[10px]"
+                        style={{ color: "var(--text-secondary)" }}
+                      >
+                        {limit >= 999
+                          ? `${used} used`
+                          : `${used} / ${limit} briefs`}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile brief list */}
+                <div
+                  style={{
+                    borderBottom: "1px solid var(--border-light)",
+                    padding: "12px 16px",
+                  }}
+                >
+                  <p
+                    className="text-[9px] font-semibold tracking-widest uppercase"
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    {briefs.length} {briefs.length === 1 ? "Brief" : "Briefs"}
+                  </p>
+                </div>
+                {briefs.length === 0 ? (
+                  <div
+                    style={{
+                      padding: "48px 16px",
+                      textAlign: "center",
+                    }}
+                  >
+                    <p
+                      className="text-sm mb-2"
+                      style={{
+                        color: "var(--text-secondary)",
+                        fontWeight: 300,
+                      }}
+                    >
+                      No briefs yet.
+                    </p>
+                    <a
+                      href="/#generate"
+                      className="text-xs font-medium tracking-widest uppercase"
+                      style={{ color: "var(--text-primary)" }}
+                    >
+                      Generate your first brief &rarr;
+                    </a>
+                  </div>
+                ) : (
+                  briefs.map((brief) => (
+                    <button
+                      key={brief.id}
+                      onClick={() => setSelectedId(brief.id)}
+                      className="w-full text-left transition-colors"
+                      style={{
+                        padding: "12px 16px",
+                        borderBottom: "1px solid var(--border-light)",
+                        display: "flex",
+                        alignItems: "start",
+                        gap: "12px",
+                        cursor: "pointer",
+                        background: "transparent",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.background =
+                          "var(--bg-warm)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.background = "transparent")
+                      }
+                    >
+                      {/* Icon — existing codebrief-app document icon */}
+                      <div
+                        className="w-7 h-7 flex items-center justify-center flex-shrink-0 mt-0.5"
+                        style={{
+                          border: "1px solid var(--border-light)",
+                          background: "var(--bg-warm)",
+                        }}
+                      >
+                        <svg
+                          className="w-3.5 h-3.5"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <rect
+                            x="2"
+                            y="1"
+                            width="10"
+                            height="12"
+                            rx="0"
+                            stroke="var(--text-muted)"
+                            strokeWidth="1"
+                          />
+                          <path
+                            d="M4 4h6M4 6.5h6M4 9h4"
+                            stroke="var(--text-muted)"
+                            strokeWidth="0.8"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p
+                          className="text-sm font-medium truncate mb-0.5"
+                          style={{ color: "var(--text-primary)" }}
+                        >
+                          {brief.building_type}
+                        </p>
+                        <p
+                          className="text-xs truncate"
+                          style={{
+                            color: "var(--text-muted)",
+                            fontWeight: 300,
+                          }}
+                        >
+                          {brief.location}
+                          {brief.square_footage &&
+                            ` · ${brief.square_footage} SF`}
+                          {brief.stories &&
+                            ` · ${brief.stories} stories`}
+                        </p>
+                      </div>
+                      <span
+                        className="text-[10px] flex-shrink-0"
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        {new Date(brief.created_at).toLocaleDateString(
+                          "en-US",
+                          {
+                            month: "short",
+                            day: "numeric",
+                          }
+                        )}
+                      </span>
+                    </button>
+                  ))
+                )}
+              </div>
+
+              {/* ─── Desktop: empty state when nothing selected ─── */}
+              <div
+                className="hidden lg:flex"
+                style={{
+                  flex: "1 1 0%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <div style={{ textAlign: "center" }}>
+                  {/* Document icon — existing codebrief-app SVG */}
+                  <div
+                    className="w-12 h-12 mx-auto mb-4 flex items-center justify-center"
+                    style={{
+                      border: "1px solid var(--border-light)",
+                      background: "var(--bg-warm)",
+                    }}
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <rect
+                        x="2"
+                        y="1"
+                        width="10"
+                        height="12"
+                        rx="0"
+                        stroke="var(--text-muted)"
+                        strokeWidth="1"
+                      />
+                      <path
+                        d="M4 4h6M4 6.5h6M4 9h4"
+                        stroke="var(--text-muted)"
+                        strokeWidth="0.8"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <p
+                    className="text-sm font-light mb-1"
+                    style={{ color: "var(--text-secondary)" }}
+                  >
+                    Select a brief to view
+                  </p>
+                  <p
+                    className="text-[10px]"
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    Or{" "}
+                    <a
+                      href="/#generate"
+                      className="font-medium tracking-wide uppercase"
+                      style={{ color: "var(--text-primary)" }}
+                    >
+                      generate a new one
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </main>
+
+        {/* ─── RIGHT SIDEBAR — Scoring panel (Grammarly _writingScoreView pattern) ─── */}
+        {selectedBrief && score && (
+          <aside
+            className="hidden lg:flex"
+            style={{
+              width: "342px",
+              minWidth: "342px",
+              borderLeft: "1px solid var(--border-light)",
+              flexDirection: "column",
+              overflow: "auto",
+              background: "var(--bg-base)",
+            }}
+          >
+            {/* Score section — Grammarly: font-size 1.25rem, font-weight 600, progress bar */}
             <div
               style={{
-                background: "#ffffff",
-                border: "1px solid var(--border-medium)",
-                borderTop: "2px solid var(--text-primary)",
+                padding: "16px 16px 12px",
+                borderBottom: "1px solid var(--border-light)",
               }}
             >
-              {/* Header */}
+              <p
+                className="text-[9px] font-semibold tracking-widest uppercase mb-2"
+                style={{ color: "var(--text-muted)" }}
+              >
+                Verification Score
+              </p>
               <div
-                className="px-6 py-4 flex items-center justify-between"
-                style={{ borderBottom: "1px solid var(--border-light)" }}
+                style={{
+                  display: "flex",
+                  alignItems: "baseline",
+                  gap: "4px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    color: scoreColor,
+                  }}
+                >
+                  {score.score}
+                </span>
+                <span
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  / 100
+                </span>
+              </div>
+              {/* Progress bar — Grammarly --bar-progress pattern */}
+              <div
+                style={{
+                  height: "4px",
+                  background: "var(--bg-stone)",
+                  marginTop: "8px",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: `${score.score}%`,
+                    background: scoreColor,
+                    transition: "width 0.3s ease",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Categories — Grammarly colored dot + title + counter pattern */}
+            <div
+              style={{
+                padding: "12px 16px",
+                borderBottom: "1px solid var(--border-light)",
+              }}
+            >
+              <p
+                className="text-[9px] font-semibold tracking-widest uppercase mb-3"
+                style={{ color: "var(--text-muted)" }}
+              >
+                Breakdown
+              </p>
+
+              {/* CONFIRMED — Grammarly teal dot mapped to CodeBrief success green */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "6px 0",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: "var(--success)",
+                    flexShrink: 0,
+                  }}
+                />
+                <span
+                  style={{
+                    flex: 1,
+                    fontSize: "0.8125rem",
+                    color: "var(--text-primary)",
+                  }}
+                >
+                  Confirmed
+                </span>
+                <span
+                  style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 600,
+                    color: "var(--success)",
+                    minWidth: "20px",
+                    textAlign: "right",
+                  }}
+                >
+                  {score.confirmed}
+                </span>
+              </div>
+
+              {/* VERIFY — Grammarly red/amber dot mapped to CodeBrief warning */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "6px 0",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: "#92400e",
+                    flexShrink: 0,
+                  }}
+                />
+                <span
+                  style={{
+                    flex: 1,
+                    fontSize: "0.8125rem",
+                    color: "var(--text-primary)",
+                  }}
+                >
+                  Verify with AHJ
+                </span>
+                <span
+                  style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 600,
+                    color: "#92400e",
+                    minWidth: "20px",
+                    textAlign: "right",
+                  }}
+                >
+                  {score.verify}
+                </span>
+              </div>
+
+              {/* Total */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "6px 0",
+                  borderTop: "1px solid var(--border-light)",
+                  marginTop: "4px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    flexShrink: 0,
+                  }}
+                />
+                <span
+                  style={{
+                    flex: 1,
+                    fontSize: "0.8125rem",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  Total requirements
+                </span>
+                <span
+                  style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 600,
+                    color: "var(--text-secondary)",
+                    minWidth: "20px",
+                    textAlign: "right",
+                  }}
+                >
+                  {score.total}
+                </span>
+              </div>
+            </div>
+
+            {/* Project details — from existing codebrief-app brief metadata */}
+            <div
+              style={{
+                padding: "12px 16px",
+                borderBottom: "1px solid var(--border-light)",
+              }}
+            >
+              <p
+                className="text-[9px] font-semibold tracking-widest uppercase mb-3"
+                style={{ color: "var(--text-muted)" }}
+              >
+                Project Details
+              </p>
+              {[
+                {
+                  label: "Type",
+                  value: selectedBrief.building_type,
+                },
+                {
+                  label: "Location",
+                  value: selectedBrief.location,
+                },
+                {
+                  label: "Size",
+                  value: selectedBrief.square_footage
+                    ? `${selectedBrief.square_footage} SF`
+                    : "—",
+                },
+                {
+                  label: "Stories",
+                  value: selectedBrief.stories || "—",
+                },
+                ...(selectedBrief.occupancy_type
+                  ? [
+                      {
+                        label: "Occupancy",
+                        value: selectedBrief.occupancy_type,
+                      },
+                    ]
+                  : []),
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "4px 0",
+                  }}
+                >
+                  <span
+                    className="text-[10px]"
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    {item.label}
+                  </span>
+                  <span
+                    className="text-[10px] font-medium"
+                    style={{
+                      color: "var(--text-primary)",
+                      textAlign: "right",
+                      maxWidth: "60%",
+                    }}
+                  >
+                    {item.value}
+                  </span>
+                </div>
+              ))}
+              <p
+                className="text-[9px] mt-2"
+                style={{ color: "var(--border-medium)" }}
+              >
+                {new Date(selectedBrief.created_at).toLocaleDateString(
+                  "en-US",
+                  {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                  }
+                )}
+              </p>
+            </div>
+
+            {/* Sources — with download + incorporate toggle */}
+            <div
+              style={{
+                padding: "12px 16px",
+                flex: "1 1 0%",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "12px",
+                }}
               >
                 <p
                   className="text-[9px] font-semibold tracking-widest uppercase"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  Brief History
+                  Sources
                 </p>
-                <span className="text-[10px]" style={{ color: "var(--text-muted)" }}>
-                  {briefs.length} {briefs.length === 1 ? "brief" : "briefs"}
-                </span>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "8px",
+                    alignItems: "center",
+                  }}
+                >
+                  <button
+                    onClick={() =>
+                      setShowSourcesInBrief(!showSourcesInBrief)
+                    }
+                    className="text-[9px] tracking-wide transition-colors"
+                    style={{
+                      color: showSourcesInBrief
+                        ? "var(--text-primary)"
+                        : "var(--text-muted)",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {showSourcesInBrief ? "In doc ✓" : "Show in doc"}
+                  </button>
+                  {sources && (
+                    <button
+                      onClick={() =>
+                        handleDownloadSources(selectedBrief)
+                      }
+                      className="text-[9px] font-medium tracking-widest uppercase transition-colors"
+                      style={{
+                        color: "var(--text-muted)",
+                        background: "none",
+                        border: "1px solid var(--border-light)",
+                        padding: "3px 8px",
+                        cursor: "pointer",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.color =
+                          "var(--text-primary)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.color =
+                          "var(--text-muted)")
+                      }
+                    >
+                      ↓
+                    </button>
+                  )}
+                </div>
               </div>
 
-              {briefs.length === 0 ? (
-                <div className="px-6 py-16 text-center">
-                  <p className="text-sm mb-1" style={{ color: "var(--text-secondary)", fontWeight: 300 }}>
-                    No briefs yet.
-                  </p>
-                  <a
-                    href="/#generate"
-                    className="text-xs font-medium tracking-widest uppercase transition-colors"
-                    style={{ color: "var(--text-primary)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
-                  >
-                    Generate your first brief &rarr;
-                  </a>
-                </div>
+              {sources ? (
+                <div
+                  className="brief-content"
+                  style={{ fontSize: "0.6875rem", lineHeight: 1.6 }}
+                  dangerouslySetInnerHTML={{
+                    __html: marked.parse(sources, {
+                      async: false,
+                    }) as string,
+                  }}
+                />
               ) : (
-                <div>
-                  {briefs.map((brief, i) => (
-                    <div
-                      key={brief.id}
-                      style={{
-                        borderBottom: i < briefs.length - 1 ? "1px solid var(--border-light)" : "none",
-                      }}
-                    >
-                      {/* Row */}
-                      <button
-                        onClick={() =>
-                          setExpandedId(expandedId === brief.id ? null : brief.id)
-                        }
-                        className="w-full flex items-start justify-between px-6 py-4 text-left transition-colors"
-                        onMouseEnter={(e) =>
-                          (e.currentTarget.style.background = "var(--bg-warm)")
-                        }
-                        onMouseLeave={(e) =>
-                          (e.currentTarget.style.background = "transparent")
-                        }
-                      >
-                        <div className="flex items-start gap-4 flex-1 min-w-0">
-                          {/* Icon */}
-                          <div
-                            className="w-7 h-7 flex items-center justify-center flex-shrink-0 mt-0.5"
-                            style={{ border: "1px solid var(--border-light)", background: "var(--bg-warm)" }}
-                          >
-                            <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
-                              <rect x="2" y="1" width="10" height="12" rx="0" stroke="var(--text-muted)" strokeWidth="1" />
-                              <path d="M4 4h6M4 6.5h6M4 9h4" stroke="var(--text-muted)" strokeWidth="0.8" strokeLinecap="round" />
-                            </svg>
-                          </div>
-                          <div className="min-w-0">
-                            <p
-                              className="text-sm font-medium truncate mb-0.5"
-                              style={{ color: "var(--text-primary)" }}
-                            >
-                              {brief.building_type}
-                            </p>
-                            <p
-                              className="text-xs truncate"
-                              style={{ color: "var(--text-muted)", fontWeight: 300 }}
-                            >
-                              {brief.location}
-                              {brief.square_footage && ` · ${brief.square_footage} SF`}
-                              {brief.stories && ` · ${brief.stories} stories`}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-4 flex-shrink-0 ml-4">
-                          <span
-                            className="text-[10px]"
-                            style={{ color: "var(--text-muted)" }}
-                          >
-                            {new Date(brief.created_at).toLocaleDateString("en-US", {
-                              month: "short",
-                              day: "numeric",
-                              year: "numeric",
-                            })}
-                          </span>
-                          <span
-                            className="text-sm font-light transition-transform"
-                            style={{
-                              color: "var(--text-muted)",
-                              transform: expandedId === brief.id ? "rotate(45deg)" : "none",
-                            }}
-                          >
-                            +
-                          </span>
-                        </div>
-                      </button>
-
-                      {/* Expanded report */}
-                      {expandedId === brief.id && (
-                        <div
-                          style={{
-                            borderTop: "1px solid var(--border-light)",
-                            background: "var(--bg-base)",
-                          }}
-                        >
-                          {/* Report header */}
-                          <div className="px-6 py-4 flex items-center justify-between" style={{ background: "#111111" }}>
-                            <div>
-                              <p
-                                className="text-[8px] font-bold tracking-[0.2em] uppercase mb-1"
-                                style={{ color: "#b5a898" }}
-                              >
-                                Code Analysis Report
-                              </p>
-                              <p className="text-sm font-light" style={{ color: "#f5f2ee" }}>
-                                {brief.building_type} — {brief.location}
-                              </p>
-                            </div>
-                            <button
-                              onClick={() => window.print()}
-                              className="px-3 py-1.5 text-[9px] font-medium tracking-widest uppercase transition-colors"
-                              style={{ border: "1px solid rgba(245,242,238,0.15)", color: "rgba(245,242,238,0.5)" }}
-                              onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f2ee")}
-                              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,242,238,0.5)")}
-                            >
-                              Export PDF
-                            </button>
-                          </div>
-
-                          {/* Content */}
-                          <div className="px-6 py-6">
-                            <div
-                              className="brief-content"
-                              dangerouslySetInnerHTML={{
-                                __html: marked.parse(brief.brief_content, { async: false }) as string,
-                              }}
-                            />
-                          </div>
-
-                          {/* Footer */}
-                          <div
-                            className="px-6 py-3 flex items-center justify-between"
-                            style={{ background: "#111111" }}
-                          >
-                            <span className="text-[9px] tracking-widest uppercase" style={{ color: "rgba(245,242,238,0.3)" }}>
-                              Generated by CodeBrief
-                            </span>
-                            <span className="text-[9px]" style={{ color: "rgba(245,242,238,0.2)" }}>
-                              codebrief.ai
-                            </span>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                <p
+                  className="text-[10px]"
+                  style={{
+                    color: "var(--text-muted)",
+                    fontStyle: "italic",
+                  }}
+                >
+                  No sources found in this brief.
+                </p>
               )}
             </div>
-          </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer
-        style={{
-          background: "var(--bg-warm)",
-          borderTop: "1px solid var(--border-light)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
-          <span className="text-[11px]" style={{ color: "var(--text-muted)" }}>
-            &copy; {new Date().getFullYear()} CodeBrief
-          </span>
-          <span className="text-[11px]" style={{ color: "var(--border-medium)" }}>
-            Pre-design code intelligence for architects
-          </span>
-        </div>
-      </footer>
+          </aside>
+        )}
+      </div>
     </div>
   );
 }
