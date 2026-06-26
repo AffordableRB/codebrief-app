@@ -163,6 +163,7 @@ export default function LoginPage() {
               border: "1px solid var(--border-medium)",
               background: "#ffffff",
               color: "var(--text-primary)",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "var(--bg-warm)")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#ffffff")}
@@ -222,7 +223,7 @@ export default function LoginPage() {
               type="submit"
               disabled={loading}
               className="w-full py-2.5 text-xs font-medium tracking-widest uppercase transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              style={{ background: "#111111", color: "#f5f2ee" }}
+              style={{ background: "#111111", color: "#f5f2ee", cursor: loading ? "not-allowed" : "pointer" }}
               onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = "#333333"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#111111"; }}
             >
